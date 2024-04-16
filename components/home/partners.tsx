@@ -34,7 +34,7 @@ const partnersLogo = [
 ]
 const PartnersSection: React.FC = () => {
     return (
-        <div className="mx-auto max-w-7xl p-6 lg:px-8 mt-6">
+        <div className="mx-auto max-w-7xl p-6 lg:px-8 mb-8">
             <div className='w-[60%] mb-8'>
                 <h3 className='text-[#424247] text-[64px] text-start leading-[74px]'>At Zorft Technologies, we're more than just a tech company</h3>
                 <p className='text-[18px] leading-[40px] text-start text-[#8f8f92]'>We're your strategic partner in unlocking the full potential of your digital presence. </p>
