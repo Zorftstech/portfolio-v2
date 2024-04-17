@@ -43,7 +43,7 @@ const PartnersSection: React.FC = () => {
             <Marquee>
                 {partnersLogo.map(partner => (
                     <div key={partner.id}>
-                        <Image src={partner.src} width={180} height={40} alt={partner.name} objectFit='contain'/>
+                        <Image src={partner.src} width={150} height={30} alt={partner.name} objectFit='contain'/>
                     </div>
                 ))}
             </Marquee>
