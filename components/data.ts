@@ -1,3 +1,41 @@
+export const partnersLogo = [
+    {
+        id: 1,
+        src: '/mfa-logo.svg',
+        name: 'MyFoodAngels',
+    },
+    {
+        id: 2,
+        src: '/teqia-logo.svg',
+        name: 'Teqia Foundation',
+    },
+    {
+        id: 3,
+        src: '/provarex-logo.svg',
+        name: 'Provarex',
+    },
+    {
+        id: 4,
+        src: '/trayde-logo.svg',
+        name: 'Trayde By Zorfts Technologies',
+    },
+    {
+        id: 5,
+        src: '/repairfind-logo.svg',
+        name: 'RepairFind',
+    },
+    {
+        id: 6,
+        src: '/erlota-logo.svg',
+        name: 'Erlota',
+    }, 
+    {
+        id: 7,
+        src: '/chefzine-logo.svg',
+        name: 'ChefZine'
+    }
+
+]
 
 export const footerLinks = [
     {
@@ -136,4 +174,155 @@ export const whyChooseUs = [
         title: 'Future-Proof Technology',
         text: 'We leverage cutting-edge advancements to ensure your solutions are not only functional today but adaptable for tomorrows challenges.',
     },
-]
+];
+
+export const portfolioProjects = [
+  {
+    id: 1,
+    img: '/project-a.svg',
+    name: "MyFoodAngels",
+    title: 'Ecommerce Commerce',
+    stack: 'Design, Development',
+    date: '2024',
+    timeline: '5 months',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 1,
+    img: '/project-b.svg',
+    name: "Erlota",
+    title: 'Ecommerce',
+    stack: 'Design, Development, Deployment',
+    date: '2020',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 1,
+    img: '/project-c.svg',
+    name: "MLB Foundation",
+    title: 'NGO Foundation',
+    stack: 'Design, Development, Deployment',
+    date: '2024',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 4,
+    img: '/project-d.svg',
+    name: "Trayde NG",
+    title: 'Multi-vendor Ecommerce Platform',
+    stack: 'Design, Development, Deployment',
+    date: '2023',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+];

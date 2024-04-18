@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const AchievementsSection: React.FC = () => {
     return (
-        <div className='mx-auto flex max-w-7xl items-center justify-center flex-col p-6 mb-8 lg:px-8'>
+        <div className='mx-auto flex max-w-7xl items-center justify-center flex-col  p-24 mb-8 lg:px-8'>
             <div className='flex justify-center items-start flex-row w-[100%]'>
                 {/* =========== achievements texts =============== */}
                 <div className='w-[50%]'>
