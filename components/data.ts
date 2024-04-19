@@ -1,3 +1,41 @@
+export const partnersLogo = [
+    {
+        id: 1,
+        src: '/mfa-logo.svg',
+        name: 'MyFoodAngels',
+    },
+    {
+        id: 2,
+        src: '/teqia-logo.svg',
+        name: 'Teqia Foundation',
+    },
+    {
+        id: 3,
+        src: '/provarex-logo.svg',
+        name: 'Provarex',
+    },
+    {
+        id: 4,
+        src: '/trayde-logo.svg',
+        name: 'Trayde By Zorfts Technologies',
+    },
+    {
+        id: 5,
+        src: '/repairfind-logo.svg',
+        name: 'RepairFind',
+    },
+    {
+        id: 6,
+        src: '/erlota-logo.svg',
+        name: 'Erlota',
+    }, 
+    {
+        id: 7,
+        src: '/chefzine-logo.svg',
+        name: 'ChefZine'
+    }
+
+]
 
 export const footerLinks = [
     {
@@ -48,3 +86,271 @@ export const footerLinks = [
         ]
     }
 ];
+
+export const servicesData = [
+    {
+        id: 1,
+        title: 'Website Development',
+        link: '/services',
+        text: 'Create a user-friendly, visually stunning website that converts visitors into loyal customers. We build websites optimized for all devices, ensuring a seamless experience across desktops, tablets, and mobiles.',
+    },
+    {
+        id: 2,
+        title: 'App Development',
+        link: '',
+        text: 'Bring your mobile app idea to life, whether its a game-changing business tool or a consumer-facing application. We specialize in developing native apps for iOS and Android, ensuring a smooth and intuitive user experience.',
+    },
+    {
+        id: 3,
+        title: 'App Design & Web Design',
+        link: '',
+        text: 'Our design gurus create visually compelling app and web interfaces that are not only aesthetically pleasing but also strategically crafted to enhance user engagement and drive conversions.',
+    },
+    {
+        id:  4,
+        title: 'Brand Identity Design',
+        link: '',
+        text: 'Establish a strong and recognizable brand presence with a logo, color scheme, and overall visual identity that resonates with your target audience.',
+    },
+    {
+        id: 5,
+        title: 'IT Consulting',
+        link: '',
+        text: 'Get expert guidance on navigating the complex world of IT. Our consultants will assess your needs, recommend the best solutions, and help you develop a comprehensive IT strategy for the future.',
+    },
+    {
+        id: 6,
+        title: 'Cyber Security',
+        link: '',
+        text: 'Protect your valuable data and systems from cyber threats. We offer a range of cybersecurity solutions, including penetration testing, vulnerability assessments, and security awareness training, to safeguard your digital assets.',
+    },
+    {
+        id: 7,
+        title: 'IT Outsourcing',
+        link: '',
+        text: 'Free up your internal resources by outsourcing your IT needs to our team of experts. We provide ongoing IT support, system maintenance, and network management, allowing you to focus on your core business.',
+    },
+    {
+        id: 8,
+        title: 'Data Analysis',
+        link: '',
+        text: ' Unlock the power of your data. Our data analysts will help you turn raw data into actionable insights that inform your marketing strategies, product development, and overall business decisions.'
+    }
+];
+
+export const whyChooseUs = [
+    {
+        id: 1,
+        title: 'Seamless Collaboration',
+        text: 'Your project is a partnership, not just a transaction. We believe in open communication and collaboration at every stage. Your input is invaluable, and we work closely with you to bring your vision to life.',
+    },
+    {
+        id: 2,
+        title: 'All-Encompassing Solutions',
+        text: 'From conception to execution, we provide a holistic range of IT services under one roof. No need to juggle multiple vendors – we handle it all.',
+    },
+    {
+        id: 3,
+        title: 'Future-Proof Technology',
+        text: 'We leverage cutting-edge advancements to ensure your solutions are not only functional today but adaptable for tomorrows challenges.',
+    },
+    {
+        id: 4,
+        title: 'Relentless Innovation',
+        text: 'We are a team that thrives on challenges and embraces innovation. We constantly explore new technologies to stay ahead of the curve and deliver the best possible solutions.',
+    },
+    {
+        id: 5,
+        title: 'Unwavering Security',
+        text: 'Cybersecurity is paramount. We prioritize robust security measures to protect your data and ensure the integrity of your systems.',
+    },
+    {
+        id: 6,
+        title: 'Client-centric Approach',
+        text: 'Your satisfaction is our priority. We go extra mile to ensure that working with us is not just a project, but a positive and enriching experience',
+    },
+    {
+        id: 7,
+        title: 'Future-Proof Technology',
+        text: 'We leverage cutting-edge advancements to ensure your solutions are not only functional today but adaptable for tomorrows challenges.',
+    },
+];
+
+export const portfolioProjects = [
+  {
+    id: 1,
+    img: '/project-a.svg',
+    name: "MyFoodAngels",
+    title: 'Ecommerce Commerce',
+    stack: 'Design, Development',
+    date: '2024',
+    timeline: '5 months',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 1,
+    img: '/project-b.svg',
+    name: "Erlota",
+    title: 'Ecommerce',
+    stack: 'Design, Development, Deployment',
+    date: '2020',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 1,
+    img: '/project-c.svg',
+    name: "MLB Foundation",
+    title: 'NGO Foundation',
+    stack: 'Design, Development, Deployment',
+    date: '2024',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+  {
+    id: 4,
+    img: '/project-d.svg',
+    name: "Trayde NG",
+    title: 'Multi-vendor Ecommerce Platform',
+    stack: 'Design, Development, Deployment',
+    date: '2023',
+    timeline: '1 week',
+    problem_statement: '',
+    what_we_did: [
+        {
+            id: 1,
+            description: '',
+            solution: [
+                {
+                    id: 1,
+                    title: 'design',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 2,
+                    title: 'development',
+                    img: '',
+                    description: ''
+                },
+                {
+                    id: 1,
+                    title: 'deployment',
+                    img: '',
+                    description: ''
+                },
+            ]
+        }
+    ],
+    url: ''
+  },
+];
+
+export const faqs = [
+    {
+        id: 1,
+        question: 'How long has Zorft Technologies been in business?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 2,
+        question: 'What industries does Zorft Technologies specialize in?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 3,
+        question: 'How does Zorft Technologies ensure data security and confidentiality?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 4,
+        question: 'Does Zorft Technologies offer ongoing support and maintenance for projects?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 5,
+        question: ' How can I request a custom quote for my project?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+]
