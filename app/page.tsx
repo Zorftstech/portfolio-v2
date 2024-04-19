@@ -1,4 +1,5 @@
 import AchievementsSection from "@/components/home/achievements";
+import FaqSection from "@/components/home/faq";
 import HeroSection from "@/components/home/hero";
 import PartnersSection from "@/components/home/partners";
 import PortfolioSection from "@/components/home/portfolio";
@@ -11,6 +12,7 @@ export default function Home() {
       <PartnersSection />
       <AchievementsSection />
       <PortfolioSection />
+      <FaqSection />
     </main>
   );
 }

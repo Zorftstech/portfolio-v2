@@ -326,3 +326,31 @@ export const portfolioProjects = [
     url: ''
   },
 ];
+
+export const faqs = [
+    {
+        id: 1,
+        question: 'How long has Zorft Technologies been in business?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 2,
+        question: 'What industries does Zorft Technologies specialize in?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 3,
+        question: 'How does Zorft Technologies ensure data security and confidentiality?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 4,
+        question: 'Does Zorft Technologies offer ongoing support and maintenance for projects?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+    {
+        id: 5,
+        question: ' How can I request a custom quote for my project?',
+        answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
+    },
+]
