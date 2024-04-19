@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { portfolioProjects } from '../data';
+import Image from 'next/image';
 
 const PortfolioSection: React.FC = () => {
     return (
@@ -14,7 +15,7 @@ const PortfolioSection: React.FC = () => {
                     {portfolioProjects.map((project) => (
                         <div key={project.id} className="group relative">
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
-                                <img
+                                <Image
                                 src={project.img}
                                 alt={project.name}
                                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"

@@ -5,10 +5,10 @@ import PartnersSection from "@/components/home/partners";
 import PortfolioSection from "@/components/home/portfolio";
 import Image from "next/image";
 
-export default function Home() {
+export default function Contact() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-        <div>About page</div>
+        <div>Contact page</div>
     </main>
   );
 }
