@@ -9,10 +9,9 @@ const PartnersSection: React.FC = () => {
     return (
         <div className="mx-auto max-w-7xl  p-24 lg:px-8 mb-8">
             <div className='w-[60%] mb-8'>
-                <h3 className='text-[#424247] text-[64px] text-start leading-[74px] font-semibold'>At Zorft Technologies, we're more than just a tech company</h3>
-                <p className='text-[18px] leading-[40px] text-start text-[#8f8f92]'>We're your strategic partner in unlocking the full potential of your digital presence. </p>
+                <h3 className='text-[#424247] text-[64px] text-start leading-[74px] font-semibold'>At Zorft Technologies, we&#x201A;re more than just a tech company</h3>
+                <p className='text-[18px] leading-[40px] text-start text-[#8f8f92]'>We&#x201A;re your strategic partner in unlocking the full potential of your digital presence. </p>
             </div>
-            {/* <Image src="/partner_img.png" alt="Partnership image" layout="responsive" /> */}
             <Marquee>
                 {partnersLogo.map(partner => (
                     <div key={partner.id}>
