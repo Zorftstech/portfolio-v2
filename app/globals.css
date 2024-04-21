@@ -19,3 +19,20 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (min-width: 1024px) { 
+  .hover-effect {
+    transition: color 150ms ease-in 300ms, background-color 300ms ease-in 10ms; /* Transition properties */
+  }
+
+  .hover-effect:hover h4,
+  .hover-effect:hover p,
+  .hover-effect:hover span {
+    color: white;
+  }
+
+  .hover-effect:hover {
+    background-color: #00439D;
+  }
+}
+
