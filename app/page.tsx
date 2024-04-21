@@ -3,6 +3,8 @@ import FaqSection from "@/components/home/faq";
 import HeroSection from "@/components/home/hero";
 import PartnersSection from "@/components/home/partners";
 import PortfolioSection from "@/components/home/portfolio";
+import ServicesSection from "@/components/home/services";
+import TechnologiesWeUse from "@/components/home/technologies";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,7 +13,9 @@ export default function Home() {
       <HeroSection />
       <PartnersSection />
       <AchievementsSection />
+      <ServicesSection />
       <PortfolioSection />
+      <TechnologiesWeUse />
       <FaqSection />
     </main>
   );

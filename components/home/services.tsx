@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { servicesData } from '../data';
 
-const Services: React.FC = () => {
+const ServicesSection: React.FC = () => {
   // State to track the index of the service being hovered over
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -23,7 +23,7 @@ const Services: React.FC = () => {
           {servicesData.map((service, index) => (
             <div 
               key={service.id} 
-              className='hover-effect border-2 rounded-xl border-gray-200 px-5 py-8 mb-6 lg:mb-0 min-w-[344px]' 
+              className='hover-effect border-2 rounded-xl border-gray-200 px-5 py-8 mb-6 lg:mb-0 min-w-[344px] cursor-pointer' 
               onMouseEnter={() => setHoveredIndex(index)}  // Set the hovered index when mouse enters
               onMouseLeave={() => setHoveredIndex(null)}   // Reset hovered index when mouse leaves
             >
@@ -32,7 +32,7 @@ const Services: React.FC = () => {
               <p className='text-sm lg:text-base text-[#5F5E6C] min-h-40'>{service.text}</p>
               <div className='flex justify-between w-2/5 lg:w-1/3 mt-5'>
                 <img src={hoveredIndex === index ? service.hoveredImageSrc : service.imageSrc} alt='' width={15.5} height={4} />
-                <span className='text-[#424247]'>Learn More</span>
+                <a href='/' className='text-[#424247] cursor-pointer no-underline'>Learn More</a>
               </div>
             </div>
           ))}
@@ -42,4 +42,4 @@ const Services: React.FC = () => {
   );
 }
 
-export default Services;
+export default ServicesSection;
