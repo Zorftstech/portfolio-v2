@@ -22,12 +22,12 @@ body {
 
 @media (min-width: 1024px) { 
   .hover-effect {
-    transition: color 150ms ease-in 300ms, background-color 300ms ease-in 10ms; /* Transition properties */
+    transition: color .3s ease-in .2s, background-color .3s ease-in 10ms; /* Transition properties */
   }
 
   .hover-effect:hover h4,
   .hover-effect:hover p,
-  .hover-effect:hover span {
+  .hover-effect:hover a {
     color: white;
   }
 
