@@ -19,6 +19,8 @@ const PortfolioSection: React.FC = () => {
                                 src={project.img}
                                 alt={project.name}
                                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                                width={100}
+                                height={100}
                                 />
                             </div>
                             <div className="mt-4 flex justify-between">
