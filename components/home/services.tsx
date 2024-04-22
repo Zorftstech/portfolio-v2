@@ -31,7 +31,7 @@ const ServicesSection: React.FC = () => {
               <h4 className='text-xl lg:text-2xl font-bold text-gray-700 mb-4'>{service.title}</h4>
               <p className='text-sm lg:text-base text-[#5F5E6C] min-h-40'>{service.text}</p>
               <div className='flex justify-between w-2/5 lg:w-1/3 mt-5'>
-                <img src={hoveredIndex === index ? service.hoveredImageSrc : service.imageSrc} alt='' width={15.5} height={4} />
+                <img src={hoveredIndex === index ? service.hoveredImageSrc : service.imageSrc} alt='icon' width={15.5} height={4} />
                 <a href='/' className='text-[#424247] cursor-pointer no-underline'>Learn More</a>
               </div>
             </div>

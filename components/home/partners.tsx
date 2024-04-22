@@ -14,7 +14,7 @@ const PartnersSection: React.FC = () => {
             </div>
             <Marquee>
                 {partnersLogo.map(partner => (
-                    <div key={partner.id}>
+                    <div key={partner.id} className='px-4'>
                         <Image src={partner.src} width={150} height={30} alt={partner.name} objectFit='contain'/>
                     </div>
                 ))}
