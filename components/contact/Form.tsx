@@ -5,7 +5,7 @@ import React from 'react';
 const FormSection: React.FC = () => {
     return (
         <div className='mx-auto max-w-7xl  p-24 lg:px-8 mb-8 '>
-            <div className='bg-[#004AAD] rounded-xl p-10 flex justify-start items-start gap-8 text-[#8AACD9] w-[1000px] pt-[60px]'>
+            <div className='bg-[#004AAD] rounded-xl p-10 flex justify-start items-start gap-8 text-[#8AACD9] w-[1000px] pt-[60px]–'>
                 <h3 className='text-[32px] font-semibold leading-10 text-white'>Send us a <br />message</h3>
 
                 <form className='flex justify-start items-center gap-6 flex-col'>

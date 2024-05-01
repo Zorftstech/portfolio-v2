@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import ListLink from '../listLink';
 
 const InfoSection: React.FC = () => {
     return (
@@ -19,9 +20,9 @@ const InfoSection: React.FC = () => {
                 <div className='mx-4 w-[25%]'>
                     <h4 className='text-[24px] font-semibold uppercase mb-8'>phone</h4>
                     <ul>
-                        <li><Link href={''}>+44 749 2651 487</Link></li>
-                        <li><Link href={''}>+234(0) 805 5932 267</Link></li>
-                        <li><Link href={''}>+234(0) 813 0343 768</Link></li>
+                        <ListLink url='tel:+447492651487' data='+44 749 2651 487' />
+                        <ListLink url='tel:08055932267' data='+234(0) 805 5932 267' />
+                        <ListLink data='+234(0) 813 0343 768' url='tel:08130343768' />
                     </ul>
                 </div>
 
@@ -32,9 +33,8 @@ const InfoSection: React.FC = () => {
                 <div className='mx-4 w-[25%]'>
                     <h4 className='text-[24px] font-semibold uppercase mb-8'>mail</h4>
                     <ul>
-                        <li><Link href={''} > zorftstech@gmail.com</Link></li>
-                        <li><Link href={''}> info@zorftstech.com</Link> </li>
-                        <li><Link href={''} ></Link></li>
+                        <ListLink data='zorftstech@gmail.com' url='mailto:zorftstech@gmail.com' />
+                        <ListLink url='info@zorftstech.com' data='mailto:info@zorftstech.com' />
                     </ul>
                 </div>
 
@@ -45,9 +45,10 @@ const InfoSection: React.FC = () => {
                 <div className='w-[25%] ml-6'>
                     <h4 className='text-[24px] font-semibold uppercase mb-8'>Follow us</h4>
                     <ul>
-                        <li><Link href={'https://www.linkedin.com/company/zorfts-technologies/'} target='_blank'>LinkedIn</Link></li>
-                        <li><Link href={'https://twitter.com/zorftstech'} target='_blank'>Twitter</Link></li>
-                        <li><Link href={'https://www.instagram.com/zorftstech?igsh=MXhndDB2dDk3OTE3Mw=='} target='_blank'>Instagram</Link></li>
+                        <ListLink url='https://www.linkedin.com/company/zorfts-technologies/' data='LinkedIn' />
+                        <ListLink url='https://twitter.com/zorftstech' data='Twitter' />
+                        <ListLink url='https://www.instagram.com/zorftstech?igsh=MXhndDB2dDk3OTE3Mw==' data='Instagram' />
+                        
                     </ul>
                 </div>
             </div>
