@@ -1,10 +1,4 @@
-
-
-import AchievementsSection from "@/components/home/achievements";
-import FaqSection from "@/components/home/faq";
-import HeroSection from "@/components/home/hero";
-import PartnersSection from "@/components/home/partners";
-import PortfolioSection from "@/components/home/portfolio";
+import React from 'react'
 import ServicesSection from "@/components/home/services";
 import Image from "next/image";
 

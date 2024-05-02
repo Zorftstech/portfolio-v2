@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Fragment, useState } from 'react'
 import { FaArrowRight, FaSearch } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
+import ListLink from './listLink';
 
 const callsToAction = [
   { name: 'Contact Us', href: '#', icon: FaArrowRight },
@@ -27,7 +28,7 @@ export default function Navbar() {
                 <li className='px-2'>Partners</li>
                 <li className='px-2'>Portfolio</li>
                 <li className='px-2 flex gap-1 items-center flex-row'>Technologies <RiArrowDownSLine className='text-2xl'/></li>
-                <li className='px-2'>Blog</li>
+                <li className='px-2 cursor-pointer'><Link href={'/blog'}> Blog</Link></li>
                 <li>Talents</li>
             </ul>
         </div>
