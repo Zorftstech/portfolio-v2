@@ -517,4 +517,31 @@ export const valuesData = [
       description: "Operating with honesty, transparency, and integrity in all our interactions.",
     },
   ];
+
+  export const partners = [
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    }
+  ]
   

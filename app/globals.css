@@ -44,3 +44,8 @@ body {
   /* height: 595px;
   width: 1256px; */
 }
+
+.ourPartner {
+  background-image: url("../public/OurPartners.svg");
+  border-radius: 0px;
+}
