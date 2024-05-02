@@ -483,3 +483,36 @@ export const faqs = [
         answer: 'Zorft Technologies was founded in 20XX and has been serving clients with innovative technology solutions for over [number] years. Our journey is marked by a commitment to excellence, creativity, and client satisfaction.'
     },
 ]
+
+export const blog = [
+    {
+        id: 1,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-a.svg',
+    },
+    {
+        id: 2,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-b.svg',
+    },
+    {
+        id: 3,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-c.svg',
+    },
+    {
+        id: 4,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-b.svg',
+    },
+    {
+        id: 5,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-a.svg',
+    },
+]
