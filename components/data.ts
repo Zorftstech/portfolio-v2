@@ -33,6 +33,16 @@ export const partnersLogo = [
         id: 7,
         src: '/chefzine-logo.svg',
         name: 'ChefZine'
+    },
+    {
+        id: 8,
+        src: '/scaleup-logo.jpg',
+        name: 'ScaleUp Tech',
+    },
+    {
+        id: 9,
+        src: '/olabode-logo.png',
+        name: 'Olabode Consulting',
     }
 
 ]
