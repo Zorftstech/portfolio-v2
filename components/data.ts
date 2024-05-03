@@ -534,3 +534,64 @@ export const blog = [
         img: '/blog-a.svg',
     },
 ]
+export const slides = [
+    {
+      mission: "To empower businesses through technology, creativity, and innovation, enabling them to achieve their goals and drive sustainable growth."
+    },
+    {
+      mission: "empower businesses through technology, creativity, and innovation, enabling them to achieve their goals and drive sustainable growth."
+    },
+    {
+      mission: "businesses through technology, creativity, and innovation, enabling them to achieve their goals and drive sustainable growth."
+    },
+    {
+      mission: "through technology, creativity, and innovation, enabling them to achieve their goals and drive sustainable growth."
+    }
+];
+
+export const valuesData = [
+    {
+      title: "Excellence",
+      description: "Striving for excellence in everything we do.",
+    },
+    {
+      title: "Collaboration",
+      description: "Fostering collaborative relationships with clients, partners, and team members.",
+    },
+    {
+      title: "Innovation",
+      description: "Embracing creativity and innovation to solve complex challenges.",
+    },
+    {
+      title: "Integrity",
+      description: "Operating with honesty, transparency, and integrity in all our interactions.",
+    },
+  ];
+
+  export const partners = [
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    },
+    {
+        src: 'partner.svg',
+        name: ''
+    }
+  ]
+  
