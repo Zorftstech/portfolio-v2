@@ -36,3 +36,16 @@ body {
   }
 }
 
+.bg-cover {
+  background-image: linear-gradient(to bottom, #FFFFFF, transparent, #004AAD), linear-gradient(to bottom, #0C0C0C, transparent), url("../public/image-19.svg");
+  background-blend-mode: overlay;
+  border-radius: 50px;
+  overflow: hidden;
+  /* height: 595px;
+  width: 1256px; */
+}
+
+.ourPartner {
+  background-image: url("../public/OurPartners.svg");
+  border-radius: 0px;
+}
