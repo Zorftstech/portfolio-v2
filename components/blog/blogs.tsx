@@ -7,7 +7,7 @@ import { blog } from '../data'
 function Blogs() {
   return (
     <div className="mx-auto max-w-7xl  p-24 lg:px-8 mb-8">
-        <h3 className='text-[32px] font-semibold'>Blogs</h3>
+        <h3 className='text-[52px] font-semibold'>Blogs</h3>
 
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {blog.map((item) => (
