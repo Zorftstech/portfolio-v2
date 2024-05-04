@@ -15,11 +15,24 @@ const OurPartners: React.FC = () => {
             </p>
         </div>
       </div>
-      <div className='grid grid-cols-6 lg:gap-[150.82px] overflow-hidden w-[439.51px] lg:w-[1638px] h-[109.88px] lg:h-[156.01px] lg:py-[40px]'>
-        {partners.map((partner, index) => (
-            <div key={index} className='w-[] lg:w-[233.15px] lg:h-[76.01px]'>
-                <Image src={partner.src} alt={partner.name} width={233.15} height={76.01} />
-            </div>
+      <div className='overflow-hidden w-full bg-[#3B3D3F] mt-10 lg:mt-96'>
+        <div className='mx-auto grid grid-cols-6 gap-[185px] lg:gap-[150.82px] w-[439.51px] lg:w-[1638px] h-[109.88px] lg:h-[156.01px] lg:py-[40px] my-1 -skew-y-2 bg-[white]'>
+          {partners.map((partner, index) => (
+              <div key={index} className='w-[158.36px] lg:w-[233.15px] h-[51.63px] lg:h-[76.01px] ml-[-33px] pt-7 lg:pt-0'>
+                  <Image src={partner.src} alt={partner.name} width={233.15} height={76.01} />
+              </div>
+          ))}
+        </div>
+      </div>
+      <div className='mx-auto grid lg:grid-cols-2 lg:gap-x-40 lg:gap-y-52 max-w-7xl p-24 my-8 lg:px-8 w-full'>
+        {partners.slice(0, 4).map((partner, index) => (
+          <div key={index} className='w-[px] lg:w-[px] h-[px] lg:h-[px] ml-[px] pt- lg:pt-'>
+            <center><Image src={partner.src} alt={partner.name} width={233.15} height={76.01} /></center>
+            <p className='lg:text-[16px] lg:leading-[25px] text-[#777680] text-center'>
+              {partner.text}
+              <span>recognition for ScienceSoft's sexpertise in SharePoint intranets from Microsoft.</span>
+            </p>
+          </div>
         ))}
       </div>
     </div>

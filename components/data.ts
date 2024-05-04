@@ -521,27 +521,33 @@ export const valuesData = [
   export const partners = [
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     },
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     },
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     },
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     },
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     },
     {
         src: 'partner.svg',
-        name: ''
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
     }
   ]
   
