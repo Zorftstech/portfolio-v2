@@ -30,7 +30,7 @@ const OurPartners: React.FC = () => {
             <center><Image src={partner.src} alt={partner.name} width={233.15} height={76.01} /></center>
             <p className='lg:text-[16px] lg:leading-[25px] text-[#777680] text-center'>
               {partner.text}
-              <span>recognition for ScienceSoft's sexpertise in SharePoint intranets from Microsoft.</span>
+              <span>recognition for ScienceSofts sexpertise in SharePoint intranets from Microsoft.</span>
             </p>
           </div>
         ))}
