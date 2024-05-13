@@ -520,34 +520,64 @@ export const valuesData = [
 
   export const partners = [
     {
-        src: 'partner.svg',
+        id: 1,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benefitOfParnership.svg',
         name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
     },
     {
-        src: 'partner.svg',
+        id: 2,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benefitOfParnership.svg',
         name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries', 
+    },
+    {    
+        id: 3,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benefitOfParnership.svg',
+        name: '',
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
     },
     {
-        src: 'partner.svg',
+        id: 4,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benefitOfParnership.svg',
         name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
     },
     {
-        src: 'partner.svg',
+        id: 5,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benefitOfParnership.svg',
         name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
     },
     {
-        src: 'partner.svg',
+        id: 6,
+        src_1: 'partner.svg',
+        src_2: 'partnersReview.svg',
+        src_3: 'benfitofpartnership.svg',
         name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
-    },
-    {
-        src: 'partner.svg',
-        name: '',
-        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received'
-    }
+        text: 'Joined Microsoft Partner Network in 2008. Since then, we have built profound expertise in Microsoft products and successfully apply it to projects in healthcare, retail, telecom, banking, and other industries. Among the products we work with are the Dynamics 365 suite, Power Apps, SharePoint, Power BI. We received',
+        review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
+        benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
+    }    
   ]
   
