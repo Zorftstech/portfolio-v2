@@ -34,7 +34,7 @@ const InfoSection: React.FC = () => {
                     <h4 className='text-[24px] font-semibold uppercase mb-8'>mail</h4>
                     <ul>
                         <ListLink data='zorftstech@gmail.com' url='mailto:zorftstech@gmail.com' />
-                        <ListLink url='info@zorftstech.com' data='mailto:info@zorftstech.com' />
+                        <ListLink url='mailto:info@zorftstech.com' data='info@zorftstech.com' />
                     </ul>
                 </div>
 
