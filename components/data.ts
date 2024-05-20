@@ -516,9 +516,9 @@ export const valuesData = [
       title: "Integrity",
       description: "Operating with honesty, transparency, and integrity in all our interactions.",
     },
-  ];
+];
 
-  export const partners = [
+export const partners = [
     {
         id: 1,
         src_1: 'partner.svg',
@@ -579,5 +579,49 @@ export const valuesData = [
         review: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris.',
         benefit: 'Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries',
     }    
-  ]
+]
   
+export const portfolioData: { id: number; navItem: string; img: string; title: string; text: string; } [] = [
+    {
+        id: 1,
+        navItem: 'All',
+        img: 'portfolio-a.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+    {
+        id: 2,
+        navItem: 'Mobile App Development',
+        img: 'portfolio-b.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+    {
+        id: 3,
+        navItem: 'Website Development', 
+        img: 'portfolio-c.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+    {
+        id: 4,
+        navItem: 'Brand Design', 
+        img: 'portfolio-d.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+    {
+        id: 5,
+        navItem: 'Graphics Design',
+        img: 'portfolio-e.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    }, 
+    {
+        id: 6,
+        navItem: 'Graphics Design',
+        img: 'portfolio-f.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    } 
+]
