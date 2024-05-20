@@ -2,16 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Zorfts Technologies",
-    default: "Zorfts Technologies ",
-  },
-  description: "Zorfts Technologies - Web",
-
+  title: "Zorfts Technologies Ltd",
+  description:
+    "At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business. ",
   category: "technology",
   openGraph: {
     title: "Zorfts Technologies - Web",
@@ -51,6 +49,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

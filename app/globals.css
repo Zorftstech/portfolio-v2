@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
 }
+html { 
+  scroll-behavior: smooth;
+}
 body {
   color: #000;
 }
@@ -15,4 +18,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@media (min-width: 1024px) { 
+  .hover-effect {
+    transition: color .3s ease-in .2s, background-color .3s ease-in 10ms; /* Transition properties */
+  }
+
+  .hover-effect:hover h4,
+  .hover-effect:hover p,
+  .hover-effect:hover a {
+    color: white;
+  }
+
+  .hover-effect:hover {
+    background-color: #00439D;
+  }
+}
+
+.bg-cover {
+  background-image: linear-gradient(to bottom, #FFFFFF, transparent, #004AAD), linear-gradient(to bottom, #0C0C0C, transparent), url("../public/image-19.svg");
+  background-blend-mode: overlay;
+  border-radius: 50px;
+  overflow: hidden;
+  /* height: 595px;
+  width: 1256px; */
+}
+
+.ourPartner {
+  background-image: url("../public/OurPartners.svg");
+  border-radius: 0px;
 }
