@@ -625,3 +625,36 @@ export const portfolioData: { id: number; navItem: string; img: string; title: s
         text: 'E-commerce company'
     } 
 ]
+
+export const sidePanel: { id: number; img: string; text: string; } [] = [
+    {
+        id: 1,
+        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
+        img: 'sidePanel-a.svg',
+    },
+    {
+        id: 2,
+        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
+        img: 'sidePanel-b.svg',
+    },
+    {
+        id: 3,
+        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
+        img: 'sidePanel-c.svg',
+    }
+]
+
+export const seeMoreProjects: { id: number; img: string; title: string; text: string;} [] = [
+    {
+        id: 1,
+        img: 'project-a.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+    {
+        id: 2,
+        img: 'project-b.svg',
+        title: 'MyFoodAngels',
+        text: 'E-commerce company'
+    },
+]

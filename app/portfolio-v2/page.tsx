@@ -1,5 +1,7 @@
 import CardStack from '@/components/portfolio-v2/cardStack';
 import MyFoodAngels from '@/components/portfolio-v2/myFoodAngel';
+import SeeMoreProjects from '@/components/portfolio-v2/seeMoreProjects';
+import SidePanel from '@/components/portfolio-v2/sidePanel';
 import React from 'react'
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-betw bg-[#1B1B1E]">
       <MyFoodAngels />
       <CardStack />
+      <SidePanel />
+      <SeeMoreProjects />
     </main>
   );
 }
