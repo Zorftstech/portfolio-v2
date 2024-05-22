@@ -677,25 +677,38 @@ export const testimonials = [
 	},
 ];
 
-export const sidePanel: { id: number; img: string; text: string; } [] = [
+export const sidePanel: { 
+	id: number; 
+	title: string;
+	text: string; 
+	img: string; 
+} [] = [
     {
         id: 1,
+		title: 'Design',
         text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
         img: 'sidePanel-a.svg',
     },
     {
         id: 2,
+		title: 'Deployment',
         text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
         img: 'sidePanel-b.svg',
     },
     {
         id: 3,
+		title: 'Deployment',
         text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
         img: 'sidePanel-c.svg',
     }
 ];
 
-export const seeMoreProjects: { id: number; img: string; title: string; text: string;} [] = [
+export const seeMoreProjects: { 
+	id: number; 
+	img: string; 
+	title: string; 
+	text: string;
+} [] = [
     {
         id: 1,
         img: 'project-a.svg',
