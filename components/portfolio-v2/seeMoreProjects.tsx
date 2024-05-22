@@ -11,7 +11,7 @@ interface ProjectDetail {
 
 const SeeMoreProjects: React.FC = () => {
     return (
-        <div className="mx-auto max-w-7xl px-8 my-8 lg:px-8">
+        <div className="mx-auto max-w-7xl px-8 my-8 lg:mt-80 lg:px-8">
             <h2 className='text-[40px] leading-[52px] font-bold text-[#E2E2E2]'>See More Projects</h2>
             <div className='mt-20 lg:pl-5 w-[404px] lg:w-[1188px] overflow-x-scroll lg:overflow-x-hidden'>
                 <div className='flex justify-between w-[790px] lg:w-[1188px]'>

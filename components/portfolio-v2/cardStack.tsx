@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CardStack: React.FC = () => {
     return (
-        <div className="mx-auto flex flex-col max-w-7xl items-start justify-center mt-12 px-8 lg:px-12 lg:w-full">
+        <div className="mx-auto flex flex-col max-w-7xl items-start justify-center mt-12 lg:mt-20 px-8 lg:px-12 lg:w-full">
             <div className='flex flex-col lg:flex-row justify-between bg-[#313137] rounded-xl px-5 lg:px-10 lg:overflow-hidden lg:w-full'>
                 <div className='flex flex-col justify-between max-w-[400px] lg:mr-[px] pr-[px]'>
                     <div>
