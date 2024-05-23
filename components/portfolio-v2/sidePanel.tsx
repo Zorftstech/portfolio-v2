@@ -17,10 +17,18 @@ const SidePanel: React.FC = () => {
     const handleButtonClick = (index: number) => {
         setActiveIndex(index);
         // Update the image of the clicked item
-        const updatedSidePanel = sidePanel.map((item, idx) => 
-            idx === index ? { ...item, img: '/path/to/new/image.jpg' } : item
-        );
-        setSidePanel(updatedSidePanel);
+        if (index === 1) {
+            // Update the image of the first item only if button is clicked
+            const updatedSidePanel = sidePanel.map((item, idx) => 
+                idx === 0 ? { ...item, img: 'sidePanel-d.svg' } : item
+            );
+            setSidePanel(updatedSidePanel);
+        } else {
+            const updatedSidePanel = sidePanel.map((item, idx) => 
+                idx === 0 ? { ...item, img: 'sidePanel-a.svg' } : item
+            );
+            setSidePanel(updatedSidePanel);
+        }
     };
 
     return (
