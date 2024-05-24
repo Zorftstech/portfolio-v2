@@ -3,9 +3,6 @@ import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { Technologies } from "../data";
-import TestimonialCard from "./testimonialCard";
-import WebSolution from "./webSolution";
-import AppSolution from "./appSolution";
 
 const TechnologiesWeUse: React.FC = () => {
 	return (

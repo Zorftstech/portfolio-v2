@@ -3,7 +3,7 @@ import React from "react";
 import { portfolioProjects } from "../data";
 import Image from "next/image";
 
-const WebSolution: React.FC = () => {
+const CyberSolution: React.FC = () => {
 	return (
 		<div className="w-[798px] h-[317px]">
 			<div className="">
@@ -35,4 +35,4 @@ const WebSolution: React.FC = () => {
 	);
 };
 
-export default WebSolution;
+export default CyberSolution;
