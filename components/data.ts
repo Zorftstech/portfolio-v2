@@ -216,17 +216,19 @@ export const whyChooseUs = [
 export const portfolioProjects = [
 	{
 		id: 1,
-		img: "/project-a.svg",
+		img: "/portfolio-a.svg",
+		img_b: "/project-a.svg",
+		img_c: "/myFoodAngels.svg",
 		name: "MyFoodAngels",
 		title: "Ecommerce Commerce",
 		stack: "Design, Development",
 		date: "2024",
 		timeline: "5 months",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
@@ -241,7 +243,7 @@ export const portfolioProjects = [
 						description: "",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
 						img: "",
 						description: "",
@@ -252,18 +254,20 @@ export const portfolioProjects = [
 		url: "",
 	},
 	{
-		id: 1,
-		img: "/project-b.svg",
+		id: 2,
+		img: "/portfolio-b.svg",
+		img_b: "/project-b.svg",
+		img_c: "/",
 		name: "Erlota",
 		title: "Ecommerce",
 		stack: "Design, Development, Deployment",
 		date: "2020",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
@@ -278,7 +282,7 @@ export const portfolioProjects = [
 						description: "",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
 						img: "",
 						description: "",
@@ -289,18 +293,20 @@ export const portfolioProjects = [
 		url: "",
 	},
 	{
-		id: 1,
-		img: "/project-c.svg",
+		id: 3,
+		img: "/portfolio-c.svg",
+		img_b: "/project-c.svg",
+		img_c: "/",
 		name: "MLB Foundation",
 		title: "NGO Foundation",
 		stack: "Design, Development, Deployment",
 		date: "2024",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
@@ -315,7 +321,7 @@ export const portfolioProjects = [
 						description: "",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
 						img: "",
 						description: "",
@@ -327,17 +333,19 @@ export const portfolioProjects = [
 	},
 	{
 		id: 4,
-		img: "/project-d.svg",
+		img: "/portfolio-d.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
 		name: "Trayde NG",
 		title: "Multi-vendor Ecommerce Platform",
 		stack: "Design, Development, Deployment",
 		date: "2023",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
@@ -352,7 +360,85 @@ export const portfolioProjects = [
 						description: "",
 					},
 					{
+						id: 3,
+						title: "deployment",
+						img: "",
+						description: "",
+					},
+				],
+			},
+		],
+		url: "",
+	},
+	{
+		id: 5,
+		img: "/portfolio-e.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
+		name: "Trayde NG",
+		title: "Multi-vendor Ecommerce Platform",
+		stack: "Design, Development, Deployment",
+		date: "2023",
+		timeline: "1 week",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+		what_we_did: [
+			{
+				id: 1,
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+				solution: [
+					{
 						id: 1,
+						title: "design",
+						img: "",
+						description: "",
+					},
+					{
+						id: 2,
+						title: "development",
+						img: "",
+						description: "",
+					},
+					{
+						id: 3,
+						title: "deployment",
+						img: "",
+						description: "",
+					},
+				],
+			},
+		],
+		url: "",
+	},
+	{
+		id: 6,
+		img: "/portfolio-f.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
+		name: "Trayde NG",
+		title: "Multi-vendor Ecommerce Platform",
+		stack: "Design, Development, Deployment",
+		date: "2023",
+		timeline: "1 week",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+		what_we_did: [
+			{
+				id: 1,
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+				solution: [
+					{
+						id: 1,
+						title: "design",
+						img: "",
+						description: "",
+					},
+					{
+						id: 2,
+						title: "development",
+						img: "",
+						description: "",
+					},
+					{
+						id: 3,
 						title: "deployment",
 						img: "",
 						description: "",

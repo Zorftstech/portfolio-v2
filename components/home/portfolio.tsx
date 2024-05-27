@@ -12,11 +12,11 @@ const PortfolioSection: React.FC = () => {
 
                 {/* =========== portfolio grid ============= */}
                 <div className='grid grid-cols-2 gap-x-12 gap-y-10 text-[#fff]'>
-                    {portfolioProjects.map((project) => (
+                    {portfolioProjects.slice(0, 4).map((project) => (
                         <div key={project.id} className="group relative">
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
                                 <Image
-                                src={project.img}
+                                src={project.img_b}
                                 alt={project.name}
                                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                                 width={100}
