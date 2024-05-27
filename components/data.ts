@@ -213,7 +213,35 @@ export const whyChooseUs = [
 	},
 ];
 
-export const portfolioProjects = [
+export interface Solution {
+    id: number;
+    title: string;
+    img: string;
+    description: string;
+}
+
+export interface WhatWeDid {
+    id: number;
+    description: string;
+    solution: Solution[];
+}
+
+export interface PortfolioProject {
+    id: number;
+    img: string;
+	img_b: string;
+	img_c: string;
+    name: string;
+    title: string;
+    stack: string;
+    date: string;
+    timeline: string;
+    problem_statement: string;
+    what_we_did: WhatWeDid[];
+    url: string;
+}
+
+export const portfolioProjects: PortfolioProject[] = [
 	{
 		id: 1,
 		img: "/portfolio-a.svg",

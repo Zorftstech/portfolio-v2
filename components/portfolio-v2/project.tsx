@@ -1,22 +1,26 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { portfolioProjects } from '../data';
+// import { useRouter } from 'next/router';
+import { useSearchParams } from 'next/navigation'
+import { portfolioProjects, PortfolioProject } from '../data'; // Adjust the import path as needed
 
-const Project: React.FC = () => {
-    const router = useRouter();
-    const { id } = router.query;
-    const [project, setProject] = useState(null);
+const ProjectDetails: React.FC = () => {
+    //  const router = useRouter();
+    // const { id } = router.query;
+    const searchParams = useSearchParams();
+    const id = searchParams.get('name');
+    console.log(id)
+    const [project, setProject] = useState<PortfolioProject | undefined>(undefined);
 
     useEffect(() => {
-        if (router.isReady && id) {
-            const proj = portfolioProjects.find(proj => proj.id.toString() === id);
-            setProject(proj);
+        if (id && typeof id === 'string') {
+            const foundProject = portfolioProjects.find(p => p.name.toString() === id);
+            setProject(foundProject);
         }
-    }, [router.isReady, id]);
-    
+    }, [id]);
+
     if (!project) {
-        return <div>Loading...</div>;
+        return <div className='text-[white]'>Project not found</div>;
     }
 
     return (
@@ -34,4 +38,4 @@ const Project: React.FC = () => {
     )
 }
 
-export default Project
+export default ProjectDetails
