@@ -226,6 +226,13 @@ export interface WhatWeDid {
     solution: Solution[];
 }
 
+export interface SeeMoreProjects { 
+	id: number; 
+	img: string; 
+	title: string; 
+	text: string;
+}
+
 export interface PortfolioProject {
     id: number;
     img: string;
@@ -238,6 +245,7 @@ export interface PortfolioProject {
     timeline: string;
     problem_statement: string;
     what_we_did: WhatWeDid[];
+	see_more_projects: SeeMoreProjects[];
     url: string;
 }
 
@@ -261,22 +269,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -300,22 +322,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -339,22 +375,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -378,22 +428,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -417,22 +481,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -456,22 +534,36 @@ export const portfolioProjects: PortfolioProject[] = [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -731,109 +823,3 @@ export const partners = [
 			"Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries",
 	},
 ];
-
-export const portfolioData: {
-	id: number;
-	navItem: string;
-	img: string;
-	title: string;
-	text: string;
-}[] = [
-	{
-		id: 1,
-		navItem: "All",
-		img: "portfolio-a.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 2,
-		navItem: "Mobile App Development",
-		img: "portfolio-b.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 3,
-		navItem: "Website Development",
-		img: "portfolio-c.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 4,
-		navItem: "Brand Design",
-		img: "portfolio-d.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 5,
-		navItem: "Graphics Design",
-		img: "portfolio-e.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 6,
-		navItem: "Graphics Design",
-		img: "portfolio-f.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-];
-export const testimonials = [
-	{
-		id: 1,
-		name: "",
-		img: "",
-		resp: "",
-	},
-];
-
-export const sidePanel: { 
-	id: number; 
-	title: string;
-	text: string; 
-	img: string; 
-} [] = [
-    {
-        id: 1,
-		title: 'Design',
-        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
-        img: 'sidePanel-a.svg',
-    },
-    {
-        id: 2,
-		title: 'Deployment',
-        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
-        img: 'sidePanel-b.svg',
-    },
-    {
-        id: 3,
-		title: 'Deployment',
-        text: 'We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client',
-        img: 'sidePanel-c.svg',
-    }
-];
-
-export const seeMoreProjects: { 
-	id: number; 
-	img: string; 
-	title: string; 
-	text: string;
-} [] = [
-    {
-        id: 1,
-        img: 'project-a.svg',
-        title: 'MyFoodAngels',
-        text: 'E-commerce company'
-    },
-    {
-        id: 2,
-        img: 'project-b.svg',
-        title: 'MyFoodAngels',
-        text: 'E-commerce company'
-    },
-];
-

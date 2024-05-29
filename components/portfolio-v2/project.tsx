@@ -1,12 +1,9 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-// import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation'
 import { portfolioProjects, PortfolioProject } from '../data'; // Adjust the import path as needed
 
 const ProjectDetails: React.FC = () => {
-    //  const router = useRouter();
-    // const { id } = router.query;
     const searchParams = useSearchParams();
     const id = searchParams.get('name');
     console.log(id)
@@ -24,6 +21,7 @@ const ProjectDetails: React.FC = () => {
     }
 
     return (
+        <>
         <div className="mx-auto flex max-w-7xl items-star justify-center flex-col mt-24 px-8 lg:px-12 w-full">
                 <div key={project.id} className='lg:w-[1100px] lg:h-[193px]'>
                     <h2 className='text-[32px] lg:text-[72px] leading-[45px] lg:leading-[80px] font-bold text-[#E2E2E2]'>{project.name}</h2>
@@ -35,6 +33,7 @@ const ProjectDetails: React.FC = () => {
                 </div>
 
         </div>
+        </>
     )
 }
 
