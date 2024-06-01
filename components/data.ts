@@ -235,6 +235,7 @@ export interface SeeMoreProjects {
 
 export interface PortfolioProject {
     id: number;
+	nav_item: string;
     img: string;
 	img_b: string;
 	img_c: string;
@@ -252,6 +253,7 @@ export interface PortfolioProject {
 export const portfolioProjects: PortfolioProject[] = [
 	{
 		id: 1,
+		nav_item: 'All',
 		img: "/portfolio-a.svg",
 		img_b: "/project-a.svg",
 		img_c: "/myFoodAngels.svg",
@@ -305,6 +307,7 @@ export const portfolioProjects: PortfolioProject[] = [
 	},
 	{
 		id: 2,
+		nav_item: 'Mobile App Development',
 		img: "/portfolio-b.svg",
 		img_b: "/project-b.svg",
 		img_c: "/",
@@ -358,6 +361,7 @@ export const portfolioProjects: PortfolioProject[] = [
 	},
 	{
 		id: 3,
+		nav_item: 'Website Development',
 		img: "/portfolio-c.svg",
 		img_b: "/project-c.svg",
 		img_c: "/",
@@ -411,6 +415,7 @@ export const portfolioProjects: PortfolioProject[] = [
 	},
 	{
 		id: 4,
+		nav_item: 'Brand Design',
 		img: "/portfolio-d.svg",
 		img_b: "/project-d.svg",
 		img_c: "/",
@@ -464,6 +469,7 @@ export const portfolioProjects: PortfolioProject[] = [
 	},
 	{
 		id: 5,
+		nav_item: 'Graphics Design',
 		img: "/portfolio-e.svg",
 		img_b: "/project-d.svg",
 		img_c: "/",
@@ -517,6 +523,7 @@ export const portfolioProjects: PortfolioProject[] = [
 	},
 	{
 		id: 6,
+		nav_item: 'Mobile App Development',
 		img: "/portfolio-f.svg",
 		img_b: "/project-d.svg",
 		img_c: "/",
@@ -822,4 +829,114 @@ export const partners = [
 		benefit:
 			"Partnering with Zorft Technologies offers a range of benefits, including access to cutting-edge technology, shared resources, and the opportunity to tap into new markets and industries",
 	},
+];
+
+// blog
+
+export interface Body {
+	id: number;
+	bannar: string;
+	text_1: string;
+	text_2: string;
+}
+
+export interface BlogDetails {
+    id: number;
+    img: string;
+	title: string;
+	user: string;
+	img_b: string;
+    date: string;
+    time: string;
+	body: Body[];
+}
+
+export interface Blog {
+    id: number;
+    title: string;
+    description: string;
+    img: string;
+    link: string;
+	blog_details: BlogDetails[];
+}
+
+export const blogs: Blog[] = [
+    {
+        id: 1,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+						text_1: "In the world of fruits, few things can rival the vibrant allure and refreshing burst of flavor offered by a perfectly ripe orange. From its sun-kissed hue to its tangy sweetness, the humble orange is a true superstar of the produce aisle. But what makes fresh oranges so special? Join us as we peel back the layers and delve into the juicy tale of these citrus wonders, from tree to table. The Essence of Freshness: From Orchard to Market It all begins in the lush orchards where rows of citrus trees sway in the gentle breeze. Here, under the warm embrace of the sun, oranges ripen to perfection, soaking up nutrients from the rich soil below. Cultivated with care and attention to detail, each fruit is handpicked at the peak of its freshness, ensuring that only the finest specimens make their way to market. A Burst of Sunshine: Nutritional Benefits of Fresh Oranges Beyond their irresistible taste, fresh oranges are packed with essential vitamins and minerals that nourish the body and invigorate the senses. Rich in vitamin C, antioxidants, and fiber, these citrus gems offer a host of health benefits, from boosting immunity to supporting digestion. With every juicy bite, you're not just indulging in a delicious treat – you're giving your body a dose of pure sunshine. Versatile and Vibrant: Creative Ways to Enjoy Fresh Oranges Whether squeezed into a glass of morning juice, tossed into a vibrant salad, or blended into a refreshing smoothie, there are countless ways to incorporate fresh oranges into your culinary repertoire. Get creative in the kitchen and experiment with new flavor combinations – from zesty marinades to decadent desserts, the possibilities are endless.",
+						text_2: "From Farm to Fork: Supporting Sustainable Agriculture Behind every fresh orange is a dedicated community of farmers and producers committed to sustainable agriculture practices. By choosing locally sourced produce and supporting small-scale growers, you're not just enjoying superior quality and flavor – you're also contributing to a healthier planet. From reducing carbon emissions to preserving biodiversity, every purchase makes a difference. The Sweet Taste of Satisfaction: A Conclusion Worth Savoring As we conclude our journey through the world of fresh oranges, we're left with a profound appreciation for nature's bounty and the simple pleasures it provides. Whether enjoyed solo as a midday snack or incorporated into your favorite recipes, the humble orange reminds us to slow down, savor the moment, and embrace the joy of delicious, wholesome food. So go ahead, sink your teeth into a juicy slice of sunshine – your taste buds will thank you.",
+					}		
+				]
+			},
+		] 
+    },
+    {
+        id: 2,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+						text_1: "In the world of fruits, few things can rival the vibrant allure and refreshing burst of flavor offered by a perfectly ripe orange. From its sun-kissed hue to its tangy sweetness, the humble orange is a true superstar of the produce aisle. But what makes fresh oranges so special? Join us as we peel back the layers and delve into the juicy tale of these citrus wonders, from tree to table. The Essence of Freshness: From Orchard to Market It all begins in the lush orchards where rows of citrus trees sway in the gentle breeze. Here, under the warm embrace of the sun, oranges ripen to perfection, soaking up nutrients from the rich soil below. Cultivated with care and attention to detail, each fruit is handpicked at the peak of its freshness, ensuring that only the finest specimens make their way to market. A Burst of Sunshine: Nutritional Benefits of Fresh Oranges Beyond their irresistible taste, fresh oranges are packed with essential vitamins and minerals that nourish the body and invigorate the senses. Rich in vitamin C, antioxidants, and fiber, these citrus gems offer a host of health benefits, from boosting immunity to supporting digestion. With every juicy bite, you're not just indulging in a delicious treat – you're giving your body a dose of pure sunshine. Versatile and Vibrant: Creative Ways to Enjoy Fresh Oranges Whether squeezed into a glass of morning juice, tossed into a vibrant salad, or blended into a refreshing smoothie, there are countless ways to incorporate fresh oranges into your culinary repertoire. Get creative in the kitchen and experiment with new flavor combinations – from zesty marinades to decadent desserts, the possibilities are endless.",
+						text_2: "From Farm to Fork: Supporting Sustainable Agriculture Behind every fresh orange is a dedicated community of farmers and producers committed to sustainable agriculture practices. By choosing locally sourced produce and supporting small-scale growers, you're not just enjoying superior quality and flavor – you're also contributing to a healthier planet. From reducing carbon emissions to preserving biodiversity, every purchase makes a difference. The Sweet Taste of Satisfaction: A Conclusion Worth Savoring As we conclude our journey through the world of fresh oranges, we're left with a profound appreciation for nature's bounty and the simple pleasures it provides. Whether enjoyed solo as a midday snack or incorporated into your favorite recipes, the humble orange reminds us to slow down, savor the moment, and embrace the joy of delicious, wholesome food. So go ahead, sink your teeth into a juicy slice of sunshine – your taste buds will thank you.",
+					}		
+				]
+			},
+		] 
+    },
+	{
+        id: 3,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+						text_1: "In the world of fruits, few things can rival the vibrant allure and refreshing burst of flavor offered by a perfectly ripe orange. From its sun-kissed hue to its tangy sweetness, the humble orange is a true superstar of the produce aisle. But what makes fresh oranges so special? Join us as we peel back the layers and delve into the juicy tale of these citrus wonders, from tree to table. The Essence of Freshness: From Orchard to Market It all begins in the lush orchards where rows of citrus trees sway in the gentle breeze. Here, under the warm embrace of the sun, oranges ripen to perfection, soaking up nutrients from the rich soil below. Cultivated with care and attention to detail, each fruit is handpicked at the peak of its freshness, ensuring that only the finest specimens make their way to market. A Burst of Sunshine: Nutritional Benefits of Fresh Oranges Beyond their irresistible taste, fresh oranges are packed with essential vitamins and minerals that nourish the body and invigorate the senses. Rich in vitamin C, antioxidants, and fiber, these citrus gems offer a host of health benefits, from boosting immunity to supporting digestion. With every juicy bite, you're not just indulging in a delicious treat – you're giving your body a dose of pure sunshine. Versatile and Vibrant: Creative Ways to Enjoy Fresh Oranges Whether squeezed into a glass of morning juice, tossed into a vibrant salad, or blended into a refreshing smoothie, there are countless ways to incorporate fresh oranges into your culinary repertoire. Get creative in the kitchen and experiment with new flavor combinations – from zesty marinades to decadent desserts, the possibilities are endless.",
+						text_2: "From Farm to Fork: Supporting Sustainable Agriculture Behind every fresh orange is a dedicated community of farmers and producers committed to sustainable agriculture practices. By choosing locally sourced produce and supporting small-scale growers, you're not just enjoying superior quality and flavor – you're also contributing to a healthier planet. From reducing carbon emissions to preserving biodiversity, every purchase makes a difference. The Sweet Taste of Satisfaction: A Conclusion Worth Savoring As we conclude our journey through the world of fresh oranges, we're left with a profound appreciation for nature's bounty and the simple pleasures it provides. Whether enjoyed solo as a midday snack or incorporated into your favorite recipes, the humble orange reminds us to slow down, savor the moment, and embrace the joy of delicious, wholesome food. So go ahead, sink your teeth into a juicy slice of sunshine – your taste buds will thank you.",
+					}		
+				]
+			},
+		]
+    },
 ];
