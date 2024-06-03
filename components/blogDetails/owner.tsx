@@ -27,7 +27,7 @@ const BlogDetail: React.FC = ()=> {
     }
 
     return (
-        <div className="mx-auto flex flex-col max-w-7xl p-8 mb-8">
+        <div className="mx-auto flex flex-col max-w-7xl px-8 lg:p-8 lg:mb-8">
             {blogDetails.map(detail => (
                 <div key={detail.id}>
                     <Image 
@@ -37,8 +37,8 @@ const BlogDetail: React.FC = ()=> {
                         src={detail.img} 
                         alt="blog-img" 
                     />
-                    <div className="grid grid-cols-3 gap-5 align-center mt-16 mx-24">
-                        <h2 className='text-[40px] leading-[28.89px] text-[#5F5E6C] font-bold mt-5 col-span-2'>{detail.title}</h2>
+                    <div className="grid lg:grid-cols-3 gap-5 align-center lg:mt-16 lg:mx-24">
+                        <h2 className='text-[28px] lg:text-[40px] leading-[38px] lg:leading-[28.89px] text-[#5F5E6C] font-bold mt-5 lg:col-span-2'>{detail.title}</h2>
                         <div className="flex items-center">
                             <Image width={50} height={50} className="object-contain rounded-full" src={detail.img_b} alt="detail-img" />
                             <div className="ml-4">
