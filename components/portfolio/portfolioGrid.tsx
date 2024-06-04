@@ -1,22 +1,25 @@
 import Image from 'next/image';
 import React from 'react';
-import { portfolioData } from '../data';
+import Link from 'next/link';
+import { portfolioProjects, PortfolioProject } from '../data';
 
-interface PortfolioItem {
-    id: number;
-    img: string; 
-    title: string; 
-    text: string;
-  }
+// interface PortfolioItem {
+//     id: number;
+//     img: string; 
+//     title: string; 
+//     text: string;
+//   }
 
 const PortfolioGrid: React.FC = () => {
     return (
         <div className="mx-auto grid lg:grid-cols-2 lg:gap-16 max-w-7xl px-24 my-8 lg:px-8">
-            {portfolioData.map((portfolio: PortfolioItem) => (
-                <div key={portfolio.id}>
-                    <Image src={portfolio.img} alt={portfolio.title} width={497} height={309}  className='rounded-xl'/>
-                    <h4 className='text-[14px] leading-[22px] text-[#FEFEFE] pt-5'>{portfolio.title}</h4>
-                    <h5 className='text-[12px] leading-[18px] text-[#9897A7] pb-5'>{portfolio.text}</h5>
+            {portfolioProjects.map((project) => (
+                <div key={project.id}>
+                    <Link href={`/portfolio/project?name=${project.name}`}>
+                        <Image src={project.img} alt={project.title} width={497} height={309}  className='rounded-xl'/>
+                        <h4 className='text-[14px] leading-[22px] text-[#FEFEFE] pt-5'>{project.name}</h4>
+                        <h5 className='text-[12px] leading-[18px] text-[#9897A7] pb-5'>{project.title}</h5>
+                    </Link>
                 </div>
             ))}
             <button className='mx-auto flex items-center justify-between w-[152px] h-[48px] bg-[#454646] rounded-full px-6 lg:col-span-2'> 

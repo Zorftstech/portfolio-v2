@@ -1,6 +1,6 @@
 "use client"
 import React, {useState, useEffect} from 'react';
-import { portfolioData } from '../data';
+import { portfolioProjects, PortfolioProject } from '../data';
 
 interface PortfolioItem {
   id: number;
@@ -12,8 +12,8 @@ const PortfolioNavbar: React.FC = () => {
     const [activeButton, setActiveButton] = useState<number | null>(null);
 
     useEffect(() => {
-        if (portfolioData.length > 0) {
-          setActiveButton(portfolioData[0].id);
+        if (portfolioProjects.length > 0) {
+          setActiveButton(portfolioProjects[0].id);
         }
       }, []);
 
@@ -24,7 +24,7 @@ const PortfolioNavbar: React.FC = () => {
     return (
         <div className="max-w-7xl my-8 lg:my-24 lg:px-8 overflow-scroll lg:overflow-hidden w-[420px] lg:w-[1050px]">
         <div className='flex items-center justify-start w-[1102px]'>
-        {portfolioData.slice(0, 5).map((portfolio: PortfolioItem) => (
+        {portfolioProjects.slice(0, 5).map((portfolio: PortfolioProject) => (
             <div key={portfolio.id} className=''>
             <button
                 onClick={() => handleButtonClick(portfolio.id)}
@@ -33,9 +33,9 @@ const PortfolioNavbar: React.FC = () => {
                       ? 'bg-[#004AAD] text-white border-blue-500'
                       : 'bg-[] text-[#9897A7] border-[#3B3D3F]'
                   }`}
-                aria-label={`Navigate to ${portfolio.navItem}`}
+                aria-label={`Navigate to ${portfolio.nav_item}`}
             >
-                {portfolio.navItem}
+                {portfolio.nav_item}
             </button>
             </div>
         ))}
