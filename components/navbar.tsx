@@ -25,6 +25,9 @@ export default function Navbar() {
     if (pathname.includes("portfolio")) {
       setNavBG(COLORS[1]);
       setIsOnDarkMode(true);
+    } else {
+      setNavBG(COLORS[0]);
+      setIsOnDarkMode(false);
     }
   }, [pathname]);
 
@@ -35,7 +38,7 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   return (
     <nav
@@ -44,7 +47,7 @@ export default function Navbar() {
     >
       <SideWrapper>
         <div className="flex items-center justify-between py-4">
-          <Link href={"/"} className="cursor-pointer">
+          <Link href={"/"} className="cursor-pointer -ml-[14px]">
             {isOnDarkMode ? (
               <Image
                 src={"/zorfts-white-logo.png"}
