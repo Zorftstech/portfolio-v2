@@ -213,151 +213,364 @@ export const whyChooseUs = [
 	},
 ];
 
-export const portfolioProjects = [
+export interface Solution {
+    id: number;
+    title: string;
+    img: string;
+    description: string;
+}
+
+export interface WhatWeDid {
+    id: number;
+    description: string;
+    solution: Solution[];
+}
+
+export interface SeeMoreProjects { 
+	id: number; 
+	img: string; 
+	title: string; 
+	text: string;
+}
+
+export interface PortfolioProject {
+    id: number;
+	nav_item: string;
+    img: string;
+	img_b: string;
+	img_c: string;
+    name: string;
+    title: string;
+    stack: string;
+    date: string;
+    timeline: string;
+    problem_statement: string;
+    what_we_did: WhatWeDid[];
+	see_more_projects: SeeMoreProjects[];
+    url: string;
+}
+
+export const portfolioProjects: PortfolioProject[] = [
 	{
 		id: 1,
-		img: "/project-a.svg",
+		nav_item: 'All',
+		img: "/portfolio-a.svg",
+		img_b: "/project-a.svg",
+		img_c: "/myFoodAngels.svg",
 		name: "MyFoodAngels",
 		title: "Ecommerce Commerce",
 		stack: "Design, Development",
 		date: "2024",
 		timeline: "5 months",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
 	},
 	{
-		id: 1,
-		img: "/project-b.svg",
+		id: 2,
+		nav_item: 'Mobile App Development',
+		img: "/portfolio-b.svg",
+		img_b: "/project-b.svg",
+		img_c: "/",
 		name: "Erlota",
 		title: "Ecommerce",
 		stack: "Design, Development, Deployment",
 		date: "2020",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
 	},
 	{
-		id: 1,
-		img: "/project-c.svg",
+		id: 3,
+		nav_item: 'Website Development',
+		img: "/portfolio-c.svg",
+		img_b: "/project-c.svg",
+		img_c: "/",
 		name: "MLB Foundation",
 		title: "NGO Foundation",
 		stack: "Design, Development, Deployment",
 		date: "2024",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
 	},
 	{
 		id: 4,
-		img: "/project-d.svg",
+		nav_item: 'Brand Design',
+		img: "/portfolio-d.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
 		name: "Trayde NG",
 		title: "Multi-vendor Ecommerce Platform",
 		stack: "Design, Development, Deployment",
 		date: "2023",
 		timeline: "1 week",
-		problem_statement: "",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 		what_we_did: [
 			{
 				id: 1,
-				description: "",
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
 				solution: [
 					{
 						id: 1,
 						title: "design",
-						img: "",
-						description: "",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
 						id: 2,
 						title: "development",
-						img: "",
-						description: "",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 					{
-						id: 1,
+						id: 3,
 						title: "deployment",
-						img: "",
-						description: "",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
 					},
 				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+		],
+		url: "",
+	},
+	{
+		id: 5,
+		nav_item: 'Graphics Design',
+		img: "/portfolio-e.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
+		name: "Trayde NG",
+		title: "Multi-vendor Ecommerce Platform",
+		stack: "Design, Development, Deployment",
+		date: "2023",
+		timeline: "1 week",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+		what_we_did: [
+			{
+				id: 1,
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+				solution: [
+					{
+						id: 1,
+						title: "design",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+					{
+						id: 2,
+						title: "development",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+					{
+						id: 3,
+						title: "deployment",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+		],
+		url: "",
+	},
+	{
+		id: 6,
+		nav_item: 'Mobile App Development',
+		img: "/portfolio-f.svg",
+		img_b: "/project-d.svg",
+		img_c: "/",
+		name: "Trayde NG",
+		title: "Multi-vendor Ecommerce Platform",
+		stack: "Design, Development, Deployment",
+		date: "2023",
+		timeline: "1 week",
+		problem_statement: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+		what_we_did: [
+			{
+				id: 1,
+				description: "The totality of the steps taken to achieve this project is a lot but we have been able to break down the process. In all, this project was a fun one.",
+				solution: [
+					{
+						id: 1,
+						title: "design",
+						img: "/sidePanel-a.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+					{
+						id: 2,
+						title: "development",
+						img: "/sidePanel-b.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+					{
+						id: 3,
+						title: "deployment",
+						img: "/sidePanel-c.svg",
+						description: "We started out this project by several strategy sessions, trying to understand our customers, target audience, and out client needs. Afterwards, we proceeded to designing this amazing product for our client",
+					},
+				],
+			},
+		],
+		see_more_projects: [
+			{
+				id: 1,
+				img: '/project-a.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
+			},
+			{
+				id: 2,
+				img: '/project-b.svg',
+				title: 'MyFoodAngels',
+				text: 'E-commerce company'
 			},
 		],
 		url: "",
@@ -618,61 +831,104 @@ export const partners = [
 	},
 ];
 
-export const portfolioData: {
+// blog
+
+export interface Body {
 	id: number;
-	navItem: string;
-	img: string;
+	bannar: string;
+}
+
+export interface BlogDetails {
+    id: number;
+    img: string;
 	title: string;
-	text: string;
-}[] = [
+	user: string;
+	img_b: string;
+    date: string;
+    time: string;
+	body: Body[];
+}
+
+export interface Blog {
+    id: number;
+    title: string;
+    description: string;
+    img: string;
+    link: string;
+	blog_details: BlogDetails[];
+}
+
+export const blogs: Blog[] = [
+    {
+        id: 1,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
+    {
+        id: 2,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
 	{
-		id: 1,
-		navItem: "All",
-		img: "portfolio-a.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 2,
-		navItem: "Mobile App Development",
-		img: "portfolio-b.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 3,
-		navItem: "Website Development",
-		img: "portfolio-c.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 4,
-		navItem: "Brand Design",
-		img: "portfolio-d.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 5,
-		navItem: "Graphics Design",
-		img: "portfolio-e.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-	{
-		id: 6,
-		navItem: "Graphics Design",
-		img: "portfolio-f.svg",
-		title: "MyFoodAngels",
-		text: "E-commerce company",
-	},
-];
-export const testimonials = [
-	{
-		id: 1,
-		name: "",
-		img: "",
-		resp: "",
-	},
+        id: 3,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/pexels-olly.jpg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		]
+    },
 ];
