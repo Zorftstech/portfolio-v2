@@ -116,6 +116,32 @@ export const servicesData = [
 		text: "Create a user-friendly, visually stunning website that converts visitors into loyal customers. We build websites optimized for all devices, ensuring a seamless experience across desktops, tablets, and mobiles.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
+		website_development: [
+			{
+				id: 1,
+				title: 'Websites',
+				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
+				img: '/services-d.svg',
+			},
+			{
+				id: 2,
+				title: 'Web Apps',
+				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
+				img: '/services-c.svg',
+			},
+			{
+				id: 3,
+				title: 'Web Portals',
+				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
+				img: '/services-b.svg',
+			},
+			{
+				id: 4,
+				title: 'E-Commerce',
+				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
+				img: '/services-a.svg',
+			}
+		]
 	},
 	{
 		id: 2,
