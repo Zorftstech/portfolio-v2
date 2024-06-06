@@ -24,8 +24,8 @@ export default function Navbar() {
         <div>
             <ul className='flex justify-center items-center flex-row gap-x-3.5 font-light text-base'>
                 <li><Link href={'/about'} className='no-underline cursor-pointer'>About</Link></li>
-                <li className='px-2 flex gap-1 items-center flex-row'>Services <RiArrowDownSLine className='text-2xl' /></li>
-                <li className='px-2'>Partners</li>
+                <li className='px-2 flex gap-1 items-center flex-row'><Link href={'/services'} className='no-underline cursor-pointer'>Services</Link> <RiArrowDownSLine className='text-2xl' /></li>
+                <li className='px-2'><Link href={'/partners'} className='no-underline cursor-pointer'>Partners</Link></li>
                 <li className='px-2'>Portfolio</li>
                 <li className='px-2 flex gap-1 items-center flex-row'>Technologies <RiArrowDownSLine className='text-2xl'/></li>
                 <li className='px-2 cursor-pointer'><Link href={'/blog'}> Blog</Link></li>
