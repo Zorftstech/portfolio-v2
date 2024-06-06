@@ -38,8 +38,8 @@ const InfoSection: React.FC = () => {
               url="mailto:zorftstech@gmail.com"
             />
             <ListLink
-              url="info@zorftstech.com"
-              data="mailto:info@zorftstech.com"
+              url="mailto:info@zorftstech.com"
+              data="info@zorftstech.com"
             />
           </ul>
         </div>

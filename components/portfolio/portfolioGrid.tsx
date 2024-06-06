@@ -12,7 +12,7 @@ import { portfolioProjects, PortfolioProject } from '../data';
 
 const PortfolioGrid: React.FC = () => {
     return (
-        <div className="mx-auto grid lg:grid-cols-2 lg:gap-16 max-w-7xl px-24 my-8 lg:px-8">
+        <div className="mx-auto grid lg:grid-cols-2 lg:gap-16 max-w-7xl px-24 my-10 lg:px-8">
             {portfolioProjects.map((project) => (
                 <div key={project.id}>
                     <Link href={`/portfolio/project?name=${project.name}`}>
