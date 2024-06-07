@@ -9,6 +9,7 @@ import { SideWrapper } from "../shared/Wrappers";
 import { usePathname } from "next/navigation";
 import Services from "./services";
 import Technologies from "./technologies";
+import { Fade as Hamburger } from "hamburger-react";
 
 const callsToAction = [
   { name: "Contact Us", href: "#", icon: FaArrowRight },
@@ -24,6 +25,7 @@ export default function Navbar() {
   const [IsShowingTechnologies, setIsShowingTechnologies] = useState(false);
   const [isShowingBackdrop, setIsShowingBackdrop] = useState(false);
   const pathname = usePathname();
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     if (pathname.includes("portfolio")) {
@@ -63,36 +65,46 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-[1111] w-full ${
+      className={`fixed z-[1111] w-full  ${
         isShowingBackdrop && "h-[100dvh] bg-black/30 backdrop-blur"
-      }`}
+      } overscroll-contain`}
       aria-label="Global"
     >
-      <div className={`${navBG}`}>
+      <div
+        className={`${navBG} overscroll-contain h-[100dvh] lg:h-auto relative`}
+      >
         <SideWrapper>
-          <div className="flex items-center justify-between py-4">
-            <Link href={"/"} className="cursor-pointer -ml-[14px]">
-              {isOnDarkMode ? (
-                <Image
-                  src={"/zorfts-white-logo.png"}
-                  width={220}
-                  height={37}
-                  alt="Zorfts Technologies Ltd"
-                />
-              ) : (
-                <Image
-                  src={"/zorfts-logo.svg"}
-                  width={220}
-                  height={37}
-                  alt="Zorfts Technologies Ltd"
-                />
-              )}
-            </Link>
+          <div className="flex gap-y-10 flex-col lg:flex-row items-center justify-between py-4">
+            <div className="flex lg:block justify-between w-full lg:w-auto">
+              <Link href={"/"} className="cursor-pointer">
+                {isOnDarkMode ? (
+                  <Image
+                    src={"/zorfts-white-logo.png"}
+                    width={220}
+                    height={37}
+                    alt="Zorfts Technologies Ltd"
+                    className="w-full mx-auto"
+                  />
+                ) : (
+                  <Image
+                    src={"/zorfts-logo.svg"}
+                    width={220}
+                    height={37}
+                    alt="Zorfts Technologies Ltd"
+                    className="w-full mx-auto"
+                  />
+                )}
+              </Link>
+
+              <div className="block lg:hidden">
+                <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+              </div>
+            </div>
 
             <div>
               <ul
-                className={`flex justify-center items-center flex-row
-              gap-x-3.5 ${
+                className={`flex flex-col lg:flex-row justify-center items-center
+              gap-x-2.5 gap-y-6 font-bold lg:font-normal  ${
                 isOnDarkMode ? "text-[#9897A7EE]" : "text-dark-gray"
               } text-base tracking-tight`}
               >
@@ -140,14 +152,14 @@ export default function Navbar() {
             </div>
 
             <div>
-              <ul className="flex justify-center items-center flex-row gap-x-4">
+              <ul className="flex flex-col lg:flex-row justify-center items-center gap-x-3 gap-y-6">
                 <Link
                   href={"contact"}
                   className={`w-200px py-3 px-5 text-white ${
                     isOnDarkMode
                       ? "bg-transparent border-[#5F5E6C] border"
                       : "bg-[#004AAD]"
-                  } rounded-3xl flex items-center flex-row gap-2 text-sm`}
+                  } rounded-3xl flex items-center flex-row gap-2 text-xs lg:text-sm`}
                 >
                   <Image
                     src={"/vector-4.svg"}

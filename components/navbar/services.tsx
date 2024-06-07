@@ -44,9 +44,11 @@ const Services = ({
 }: IServiceProps) => {
   return (
     <div
-      className={`${
-        isShowingServices ? "flex" : "hidden"
-      }  justify-between gap-10 xl:gap-20 pt-5 pb-24`}
+      className={`absolute lg:static top-[80px] h-[100dvh]overflow-y-auto 
+        lg:h-auto overscroll-contain ${
+          isShowingServices ? "lg:flex" : "hidden"
+        }  justify-between gap-10 xl:gap-20 pt-5
+      pb-24 ${isOnDarkMode ? "bg-[#313134]" : "bg-white"}`}
     >
       {/* Heading */}
       <p
@@ -58,9 +60,9 @@ const Services = ({
       </p>
 
       {/* Items */}
-      <div className="flex flex-wrap mt-1.5 gap-10 xl:gap-20">
+      <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
         {services.map((item, itemIndex) => (
-          <div key={itemIndex} className="">
+          <div key={itemIndex} className="w-[45%] lg:w-auto">
             <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
               {item.title}
             </p>
@@ -81,7 +83,7 @@ const Services = ({
 
       {/* Close Button */}
       <button
-        className="flex"
+        className="flex mt-20 lg:mt-0"
         type="button"
         onClick={() => handleShowServices(false)}
       >
