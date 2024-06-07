@@ -6,5 +6,5 @@ export const SideWrapper = ({ children }: IChildrenProps) => {
 };
 
 export const TopAndBottomWrapper = ({ children }: IChildrenProps) => {
-  return <div className="pt-[100px] pb-20">{children}</div>;
+  return <div className="pt-[100px] ">{children}</div>;
 };
