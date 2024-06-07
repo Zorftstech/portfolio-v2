@@ -9,6 +9,7 @@ import React, { FormEventHandler, useState } from "react";
 import { toast } from "react-toastify";
 
 const FormSection: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [contactField, setContactField] = useState({
     subject: "",
     email: "",
@@ -28,15 +29,17 @@ const FormSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     if (
       contactField.email === "" ||
       contactField.message === "" ||
       contactField.subject === ""
     ) {
+      setIsSubmitting(false);
       toast.error("All fields are required", { toastId: "error" });
       return;
     }
-    sendContactMessage(contactField);
+    sendContactMessage(contactField).then(() => setIsSubmitting(false));
   };
 
   return (
@@ -80,13 +83,14 @@ const FormSection: React.FC = () => {
           />
 
           <button
-            className="bg-[#E6EDF7] flex justify-center 
+            className={`bg-[#E6EDF7] flex justify-center hover:opacity-90
             items-center gap-4 w-200px py-3 px-5 rounded-3xl
-            text-[#000] mt-10 self-start"
+            text-[#000] mt-10 self-start ${isSubmitting && "opacity-30"}`}
             type="submit"
+            disabled={isSubmitting}
           >
             <Image src={"/vector-3.svg"} alt="icon" width={15.5} height={4} />{" "}
-            Contact Us
+            {isSubmitting ? "Loading" : "Contact Us"}
           </button>
         </form>
       </div>
