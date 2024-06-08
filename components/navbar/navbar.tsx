@@ -18,14 +18,13 @@ const callsToAction = [
 const COLORS = ["bg-white", "bg-[#313134]"];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navBG, setNavBG] = useState(COLORS[0]);
   const [isOnDarkMode, setIsOnDarkMode] = useState(false);
   const [isShowingServices, setIsShowingServices] = useState(false);
   const [IsShowingTechnologies, setIsShowingTechnologies] = useState(false);
   const [isShowingBackdrop, setIsShowingBackdrop] = useState(false);
   const pathname = usePathname();
-  const [isOpen, setOpen] = useState(false);
+  const [isHamburgerOpen, setHamburgerOpen] = useState(false);
 
   useEffect(() => {
     if (pathname.includes("portfolio")) {
@@ -63,15 +62,31 @@ export default function Navbar() {
     }
   };
 
+  const handleHamburgerToggle = (toggled: boolean) => {
+    if (toggled) {
+      setHamburgerOpen(true);
+    } else {
+      if (isShowingServices) {
+        setIsShowingServices(false);
+      }
+      if (IsShowingTechnologies) {
+        setIsShowingTechnologies(false);
+      }
+      setHamburgerOpen(false);
+    }
+  };
+
   return (
     <nav
       className={`fixed z-[1111] w-full  ${
-        isShowingBackdrop && "h-[100dvh] bg-black/30 backdrop-blur"
+        isShowingBackdrop && "lg:h-[100dvh] bg-black/30 backdrop-blur"
       } overscroll-contain`}
       aria-label="Global"
     >
       <div
-        className={`${navBG} overscroll-contain h-[100dvh] lg:h-auto relative`}
+        className={`${navBG} overscroll-contain ${
+          isHamburgerOpen && "h-[100dvh]"
+        } lg:h-auto relative`}
       >
         <SideWrapper>
           <div className="flex gap-y-10 flex-col lg:flex-row items-center justify-between py-4">
@@ -97,11 +112,14 @@ export default function Navbar() {
               </Link>
 
               <div className="block lg:hidden">
-                <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+                <Hamburger
+                  onToggle={(toggled) => handleHamburgerToggle(toggled)}
+                  size={24}
+                />
               </div>
             </div>
 
-            <div>
+            <div className={`${isHamburgerOpen ? "block" : "hidden lg:block"}`}>
               <ul
                 className={`flex flex-col lg:flex-row justify-center items-center
               gap-x-2.5 gap-y-6 font-bold lg:font-normal  ${
@@ -151,7 +169,7 @@ export default function Navbar() {
               </ul>
             </div>
 
-            <div>
+            <div className={`${isHamburgerOpen ? "block" : "hidden lg:block"}`}>
               <ul className="flex flex-col lg:flex-row justify-center items-center gap-x-3 gap-y-6">
                 <Link
                   href={"contact"}
