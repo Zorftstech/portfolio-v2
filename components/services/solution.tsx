@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CyberSolution: React.FC = () => {
 	return (
-		<div className="w-[798px] h-[317px] ml-[-350px] mt-32">
+		<div className="w-[798px] h-[317px] ml-[-395px] mt-32">
 			<div className="">
 				<h1 className="text-[40px] text-[#004AAD] font-bold mb-8 ">
 					What Web Solution Do You Need?
