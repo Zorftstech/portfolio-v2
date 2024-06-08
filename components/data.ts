@@ -56,7 +56,7 @@ export const footerLinks = [
 			{ id: 3, title: "Services", link: "/services" },
 			{ id: 4, title: "Contact Us", link: "/contact" },
 			{ id: 5, title: "Careers", link: "/careers" },
-			{ id: 6, title: "Hire Our Talents", link: "" },
+			{ id: 6, title: "Hire Our Talents", link: "/talents" },
 		],
 	},
 	{
@@ -944,6 +944,56 @@ export const faqs = [
 	},
 ];
 
+export const blog = [
+    {
+        id: 1,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-a.svg',
+    },
+    {
+        id: 2,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-b.svg',
+    },
+    {
+        id: 3,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-c.svg',
+    },
+    {
+        id: 4,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-b.svg',
+    },
+    {
+        id: 5,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-a.svg',
+    },
+    {
+        id: 3,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-c.svg',
+    },
+    {
+        id: 4,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-b.svg',
+    },
+    {
+        id: 5,
+        title: 'Development of AI in 2024',
+        description: 'The global community witnessed a breakthrough in Artificial Intelligence sometime in 2023',
+        img: '/blog-a.svg',
+    },
+]
 export const slides = [
 	{
 		mission:
@@ -1092,7 +1142,7 @@ export const blogs: Blog[] = [
         id: 1,
         title: "Boost your conversion rate",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-        img: "/pexels-olly.jpg",
+        img: "/blog-a.svg",
         link: "/blog",
 		blog_details: [
 			{
@@ -1116,7 +1166,7 @@ export const blogs: Blog[] = [
         id: 2,
         title: "Boost your conversion rate",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-        img: "/pexels-olly.jpg",
+        img: "/blog-b.svg",
         link: "/blog",
 		blog_details: [
 			{
@@ -1140,7 +1190,7 @@ export const blogs: Blog[] = [
         id: 3,
         title: "Boost your conversion rate",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-        img: "/pexels-olly.jpg",
+        img: "/blog-c.svg",
         link: "/blog",
 		blog_details: [
 			{

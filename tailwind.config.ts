@@ -16,6 +16,7 @@ const config: Config = {
 
       colors: {
         "dark-gray": "#424247",
+        "zorft-blue": "#004AAD",
       },
     },
   },

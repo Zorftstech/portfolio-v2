@@ -7,19 +7,22 @@ import ServicesSection from "@/components/home/services";
 import TechnologiesWeUse from "@/components/home/technologies";
 import TestimonialCard from "@/components/home/testimonialCard";
 import WhyChooseUs from "@/components/home/whyChooseUs";
+import { TopAndBottomWrapper } from "@/components/shared/Wrappers";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeroSection />
-      <PartnersSection />
-      <AchievementsSection />
-      <ServicesSection />
-      <WhyChooseUs />
-      <PortfolioSection />
-      <TechnologiesWeUse />
-      <TestimonialCard />
-      <FaqSection />
+      <TopAndBottomWrapper>
+        <HeroSection />
+        <PartnersSection />
+        <AchievementsSection />
+        <ServicesSection />
+        <WhyChooseUs />
+        <PortfolioSection />
+        <TechnologiesWeUse />
+        <TestimonialCard />
+        <FaqSection />
+      </TopAndBottomWrapper>
     </main>
   );
 }
