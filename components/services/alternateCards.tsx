@@ -1,15 +1,29 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation'
 import Image from "next/image";
 import { servicesData, Service } from '../data';
 
 const AlternateCard: React.FC = () => {
-    // Find the service with the id 1
-    const service: Service | undefined = servicesData.find(service => service.id === 1);
+    const searchParams = useSearchParams();
+    const id = searchParams.get('title');
+    console.log(id)
+    const [service, setService] = useState<Service | undefined>(undefined);
+
+    useEffect(() => {
+        if (id && typeof id === 'string') {
+            const currentService = servicesData.find(service => service.title === id && service.content !== null);
+            setService(currentService);
+        }
+    }, [id]);
+
+    if (!service) {
+        return
+    }
 
     return (
         <div className="mx-auto flex max-w-7xl items-center justify-center flex-col mt-28 p-24 my-8 lg:px-8">
-            {service?.content.map((service, index) => (
+            {service.content?.map((service, index) => (
                 <div 
                     key={service.id} 
                     className="flex justify-between my-28" 

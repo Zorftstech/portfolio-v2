@@ -124,7 +124,7 @@ export interface Service {
     text: string;
     hoveredImageSrc: string;
     imageSrc: string;
-    content: Content[];
+    content: Content[] | null;
 }
 
 
@@ -132,7 +132,7 @@ export interface Service {
 export const servicesData: Service[] = [
 	{
 		id: 1,
-		title: "Website Development",
+		title: "Website Design Services",
 		link: "/services",
 		text: "Create a user-friendly, visually stunning website that converts visitors into loyal customers. We build websites optimized for all devices, ensuring a seamless experience across desktops, tablets, and mobiles.",
 		hoveredImageSrc: "/Vector-4.svg",
@@ -166,41 +166,16 @@ export const servicesData: Service[] = [
 	},
 	{
 		id: 2,
-		title: "App Development",
+		title: "Application Development Services",
 		link: "",
 		text: "Bring your mobile app idea to life, whether its a game-changing business tool or a consumer-facing application. We specialize in developing native apps for iOS and Android, ensuring a smooth and intuitive user experience.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 3,
-		title: "App Design & Web Design",
+		title: "Graphics Design Services",
 		link: "",
 		text: "Our design gurus create visually compelling app and web interfaces that are not only aesthetically pleasing but also strategically crafted to enhance user engagement and drive conversions.",
 		hoveredImageSrc: "/Vector-4.svg",
@@ -268,71 +243,21 @@ export const servicesData: Service[] = [
 	},
 	{
 		id: 5,
-		title: "IT Consulting",
+		title: "IT Consultation",
 		link: "",
 		text: "Get expert guidance on navigating the complex world of IT. Our consultants will assess your needs, recommend the best solutions, and help you develop a comprehensive IT strategy for the future.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 6,
-		title: "Cyber Security",
+		title: "Cyber Security Services",
 		link: "",
 		text: "Protect your valuable data and systems from cyber threats. We offer a range of cybersecurity solutions, including penetration testing, vulnerability assessments, and security awareness training, to safeguard your digital assets.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 7,
@@ -341,32 +266,7 @@ export const servicesData: Service[] = [
 		text: "Free up your internal resources by outsourcing your IT needs to our team of experts. We provide ongoing IT support, system maintenance, and network management, allowing you to focus on your core business.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 8,
@@ -375,32 +275,7 @@ export const servicesData: Service[] = [
 		text: " Unlock the power of your data. Our data analysts will help you turn raw data into actionable insights that inform your marketing strategies, product development, and overall business decisions.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 ];
 

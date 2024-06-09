@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { servicesData } from '../data';
 
 const ServicesSection: React.FC = () => {
@@ -33,7 +34,7 @@ const ServicesSection: React.FC = () => {
               <p className='text-sm lg:text-base text-[#5F5E6C] min-h-40'>{service.text}</p>
               <div className='flex justify-between w-2/5 lg:w-1/3 mt-5'>
                 <Image src={hoveredIndex === index ? service.hoveredImageSrc : service.imageSrc} alt='icon' width={15.5} height={4} />
-                <a href='/' className='text-[#424247] cursor-pointer no-underline'>Learn More</a>
+                <Link href={`/services?title=${service.title}`} className='text-[#424247] cursor-pointer no-underline'>Learn More</Link>
               </div>
             </div>
           ))}
