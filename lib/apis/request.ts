@@ -77,6 +77,77 @@ export const fetchSingleBlogPost = async (id: string) => {
   }
 };
 
+export const fetchDataStatistics = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/company-data-statistcs/");
+    // Handle successful response
+    const responseData = response.data;
+    return { success: true, data: responseData };
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchProjects = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/projects/");
+    // Handle successful response
+    const responseData = response.data;
+    return { success: true, data: responseData };
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+export const fetchWhyChooseZorfts = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/why-choose-zorfts/");
+    // Handle successful response
+    const responseData = response.data;
+    return { success: true, data: responseData };
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchSingleProject = async (id: string) => {
+  try {
+    const response: AxiosResponse = await api.get(`/project/${id}`);
+    // Handle successful response
+    const responseData = response.data;
+    return { success: true, data: responseData };
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
 export const sendContactMessage = async (data: IContactData) => {
   try {
     const response: AxiosResponse = await api.post("/contact-us/", data);
