@@ -143,9 +143,15 @@ export default function Navbar() {
                     Services <RiArrowDownSLine className="text-2xl" />
                   </button>
                 </li>
-                <li className="px-2">Partners</li>
                 <li className="px-2">
-                  {" "}
+                  <Link
+                    href={"/partners"}
+                    className="no-underline cursor-pointer text"
+                  >
+                    Partners
+                  </Link>
+                </li>
+                <li className="px-2">
                   <Link
                     href={"/portfolio"}
                     className="no-underline cursor-pointer text"
@@ -165,7 +171,15 @@ export default function Navbar() {
                 <li className="px-2 cursor-pointer">
                   <Link href={"/blog"}> Blog</Link>
                 </li>
-                <li>Talents</li>
+                <li>
+                  {" "}
+                  <Link
+                    href={"/talents"}
+                    className="no-underline cursor-pointer text"
+                  >
+                    Talents
+                  </Link>
+                </li>
               </ul>
             </div>
 
