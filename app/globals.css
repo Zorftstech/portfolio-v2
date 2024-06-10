@@ -49,3 +49,8 @@ body {
   background-image: url("../public/OurPartners.svg");
   border-radius: 0px;
 }
+
+.serviceDetail {
+  background-image: url("../public/serviceDetail-a.png");
+  border-radius: 0px 0px 70px 70px;
+}

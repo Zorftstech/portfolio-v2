@@ -35,7 +35,7 @@ export default function Footer() {
                             <p className='text-[#8F8F92] uppercase mb-8'>{footerLink.title}</p>
                             {footerLink.links.map((item, index) => (
                                 <ul key={index}>
-                                    <li className='text-[#D9D9D9] text-base font-normal leading-10'><Link style={{ cursor: 'pointer' }} href={item.link}>{item.title}</Link></li>
+                                    <li className='text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer'><Link style={{ cursor: 'pointer' }} href={item.link} target={item?.urlTarget}>{item.title}</Link></li>
                                 </ul>
                             ))}
                         </div>

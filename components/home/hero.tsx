@@ -1,25 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const HeroSection: React.FC = () => {
 	return (
-		<div className="mx-auto flex w-full items-center justify-center flex-col sm:p-[24px] lg:p-24  my-8 lg:px-8">
-			<h2 className="sm:text-[32px] lg:text-[82px] sm:leading-[45px] lg:leading-[98px] font-semibold text-center">
+		<div className="flex items-center justify-center flex-col py-12 my-8">
+			<h2 className="text-[82px] leading-[98px] font-semibold text-center tracking-tighter text-[#3B3D3F]">
 				Unlocking possibilities
 				<br /> through <span className="text-[#004AAD]">technology</span>
 			</h2>
-			<p className="text-[#888793] lg:text-[20px] md:text-[18px]  lg:leading-[33px] sm:leading-[24px]  font-light text-center mt-4">
+			<p className="text-[20px] text-[#888793] tracking-tight leading-[33px] text-center my-5">
 				Empowering Businesses and individuals with cutting edge software
 				solutions
 			</p>
 			<div className="flex items-center justify-center gap-4 mx-auto p-4 mb-8">
-				<li className="w-200px py-3 px-5 border-[#bebebe] border-2 rounded-3xl flex items-center flex-row gap-2">
+				<Link
+					href={"/portfolio"}
+					className="py-4 px-6 border-[#bebebe] border rounded-full text-sm text-[#3B3D3F] flex">
 					View our portfolio
-				</li>
-				<li className="w-200px py-3 px-5 text-white bg-[#004AAD] rounded-3xl flex items-center flex-row gap-2">
+				</Link>
+				<Link
+					href={"/contact"}
+					className="py-[18px] px-8 text-white bg-[#004AAD] rounded-full flex items-center flex-row gap-2 text-sm">
 					<FaArrowRight /> Contact Us
-				</li>
+				</Link>
 			</div>
 			<div className="">
 				<Image

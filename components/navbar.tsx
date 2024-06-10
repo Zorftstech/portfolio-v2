@@ -78,14 +78,18 @@ export default function Navbar() {
 								Services <RiArrowDownSLine className="text-2xl" />
 							</li>
 							<li className="px-2">Partners</li>
-							<li className="px-2">Portfolio</li>
+							<li className="px-2 cursor-pointer">
+								<Link href={"/portfolio"}>Portfolio</Link>
+							</li>
 							<li className="px-2 flex gap-1 items-center flex-row">
 								Technologies <RiArrowDownSLine className="text-2xl" />
 							</li>
 							<li className="px-2 cursor-pointer">
 								<Link href={"/blog"}> Blog</Link>
 							</li>
-							<li>Talents</li>
+							<li>
+								<Link href={"/talents"}>Talents</Link>
+							</li>
 						</ul>
 					</div>
 

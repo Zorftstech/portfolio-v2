@@ -1,11 +1,16 @@
 import FormSection from "@/components/contact/Form";
 import InfoSection from "@/components/contact/Info";
+import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 
 export default function Contact() {
   return (
     <main className="flex flex-col items-center justify-between">
-      <InfoSection />
-      <FormSection />
+      <TopAndBottomWrapper>
+        <SideWrapper>
+          <InfoSection />
+          <FormSection />
+        </SideWrapper>
+      </TopAndBottomWrapper>
     </main>
   );
 }
