@@ -3,23 +3,29 @@ import ListLink from "../listLink";
 
 const InfoSection: React.FC = () => {
   return (
-    <div className="mx-auto w-full max-w-7xl p-24 lg:px-8 mb-8">
-      <h1 className="text-[64px] text-start font-semibold text-[#004AAD] mb-12">
+    <div className="mt-20">
+      <h1 className="text-[64px] tracking-tighter text-start font-semibold text-[#004AAD] mb-12">
         Get in touch with us
       </h1>
 
       <div className="mt-10 flex justify-center items-start gap-6">
         <div className="mr-4 w-[25%]">
-          <h4 className="text-[24px] font-semibold uppercase mb-8">Office</h4>
-          <p>Suite C1, Garima Complex, Bosso, Minna, Niger State</p>
+          <h4 className="text-[24px] font-semibold uppercase mb-8 text-[#3B3D3F] tracking-tight">
+            Office
+          </h4>
+          <p className="text-[#5F5E6C] tracking-tight">
+            Suite C1, Garima Complex, Bosso, Minna, Niger State
+          </p>
         </div>
 
         <div className="h-[140px] w-[.8px] bg-slate-400" />
         {/*  ============== divider =============== */}
 
         <div className="mx-4 w-[25%]">
-          <h4 className="text-[24px] font-semibold uppercase mb-8">phone</h4>
-          <ul>
+          <h4 className="text-[24px] font-semibold uppercase mb-8 text-[#3B3D3F] tracking-tight">
+            phone
+          </h4>
+          <ul className="text-[#5F5E6C] tracking-tight">
             <ListLink url="tel:+447492651487" data="+44 749 2651 487" />
             <ListLink url="tel:08055932267" data="+234(0) 805 5932 267" />
             <ListLink data="+234(0) 813 0343 768" url="tel:08130343768" />
@@ -31,8 +37,10 @@ const InfoSection: React.FC = () => {
         {/*  =============== divider ============== */}
 
         <div className="mx-4 w-[25%]">
-          <h4 className="text-[24px] font-semibold uppercase mb-8">mail</h4>
-          <ul>
+          <h4 className="text-[24px] font-semibold uppercase mb-8 text-[#3B3D3F] tracking-tight">
+            mail
+          </h4>
+          <ul className="text-[#5F5E6C] tracking-tight">
             <ListLink
               data="zorftstech@gmail.com"
               url="mailto:zorftstech@gmail.com"
@@ -49,10 +57,10 @@ const InfoSection: React.FC = () => {
         {/*  =============== divider ============== */}
 
         <div className="w-[25%] ml-6">
-          <h4 className="text-[24px] font-semibold uppercase mb-8">
+          <h4 className="text-[24px] font-semibold uppercase mb-8 text-[#3B3D3F] tracking-tight">
             Follow us
           </h4>
-          <ul>
+          <ul className="text-[#5F5E6C] tracking-tight">
             <ListLink
               url="https://www.linkedin.com/company/zorfts-technologies/"
               data="LinkedIn"
