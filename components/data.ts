@@ -52,36 +52,35 @@ export const footerLinks = [
 		title: "Company",
 		links: [
 			{ id: 1, title: "About", link: "/about" },
-			{ id: 2, title: "Technologies", link: "/technologies" },
-			{ id: 3, title: "Services", link: "/services" },
-			{ id: 4, title: "Contact Us", link: "/contact" },
-			{ id: 5, title: "Careers", link: "/careers" },
-			{ id: 6, title: "Hire Our Talents", link: "/talents" },
+			{ id: 2, title: "Technologies", link: "/technologies", urlTarget: '' },
+			{ id: 3, title: "Services", link: "/services", urlTarget: '' },
+			{ id: 4, title: "Contact Us", link: "/contact", urlTarget: '' },
+			{ id: 5, title: "Careers", link: "/careers", urlTarget: '' },
+			{ id: 6, title: "Hire Our Talents", link: "/talents", urlTarget: '' },
 		],
 	},
 	{
 		id: 2,
 		title: "Services",
 		links: [
-			{ id: 1, title: "Web Design", link: "/" },
-			{ id: 2, title: "App Development", link: "/" },
-			{ id: 3, title: "Web Development", link: "/" },
-			{ id: 4, title: "Brand Identity Design", link: "/" },
-			{ id: 5, title: "Game Development", link: "/" },
-			{ id: 6, title: "Data Analysis", link: "/" },
-			{ id: 7, title: "IT Consultancy", link: "/" },
+			{ id: 1, title: "Web Design", link: "/", urlTarget: '' },
+			{ id: 2, title: "App Development", link: "/", urlTarget: '' },
+			{ id: 3, title: "Web Development", link: "/", urlTarget: '' },
+			{ id: 4, title: "Brand Identity Design", link: "/", urlTarget: '' },
+			{ id: 5, title: "Game Development", link: "/", urlTarget: '' },
+			{ id: 6, title: "Data Analysis", link: "/", urlTarget: '' },
+			{ id: 7, title: "IT Consultancy", link: "/", urlTarget: '' },
 		],
 	},
 	{
 		id: 3,
 		title: "Help",
 		links: [
-			{ id: 1, title: "Blog", link: "/blog" },
-			{ id: 2, title: "Terms & Conditions", link: "/terms-and-conditions" },
-			{ id: 3, title: "Privacy Policy", link: "/privacy-policy" },
-			{ id: 4, title: "FAQs", link: "/faqs" },
-			{ id: 5, title: "Help Center", link: "/help-center" },
-			{ id: 6, title: "Privacy Policy", link: "/privacy-policy" },
+			{ id: 1, title: "Blog", link: "/blog", urlTarget: '' },
+			{ id: 2, title: "Terms & Conditions", link: "/terms-and-conditions", urlTarget: '' },
+			{ id: 3, title: "Privacy Policy", link: "/privacy-policy", urlTarget: '' },
+			{ id: 4, title: "FAQs", link: "/faqs", urlTarget: '' },
+			{ id: 5, title: "Help Center", link: "/help-center", surlTarget: '' },
 		],
 	},
 	{
@@ -92,17 +91,26 @@ export const footerLinks = [
 				id: 1,
 				title: "Facebook",
 				link: "https://www.facebook.com/profile.php?id=100082184714974&mibextid=ZbWKwL",
+				urlTarget: '_blank'
 			},
 			{
 				id: 2,
 				title: "Instagram",
 				link: "https://www.instagram.com/zorftstech?igsh=MXhndDB2dDk3OTE3Mw==",
+				urlTarget: '_blank'
 			},
-			{ id: 3, title: "Twitter", link: "https://twitter.com/zorftstech" },
+			{ 
+				id: 3, 
+				title: "Twitter", 
+				link: "https://twitter.com/zorftstech",
+				urlTarget: '_blank'
+			},
 			{
 				id: 4,
 				title: "LinkedIn",
 				link: "https://www.linkedin.com/company/zorfts-technologies/",
+				urlTarget: '_blank'
+
 			},
 		],
 	},
@@ -124,7 +132,7 @@ export interface Service {
     text: string;
     hoveredImageSrc: string;
     imageSrc: string;
-    content: Content[];
+    content: Content[] | null;
 }
 
 
@@ -132,7 +140,7 @@ export interface Service {
 export const servicesData: Service[] = [
 	{
 		id: 1,
-		title: "Website Development",
+		title: "Website Design Services",
 		link: "/services",
 		text: "Create a user-friendly, visually stunning website that converts visitors into loyal customers. We build websites optimized for all devices, ensuring a seamless experience across desktops, tablets, and mobiles.",
 		hoveredImageSrc: "/Vector-4.svg",
@@ -166,41 +174,16 @@ export const servicesData: Service[] = [
 	},
 	{
 		id: 2,
-		title: "App Development",
+		title: "Application Development Services",
 		link: "",
 		text: "Bring your mobile app idea to life, whether its a game-changing business tool or a consumer-facing application. We specialize in developing native apps for iOS and Android, ensuring a smooth and intuitive user experience.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 3,
-		title: "App Design & Web Design",
+		title: "Graphics Design Services",
 		link: "",
 		text: "Our design gurus create visually compelling app and web interfaces that are not only aesthetically pleasing but also strategically crafted to enhance user engagement and drive conversions.",
 		hoveredImageSrc: "/Vector-4.svg",
@@ -268,71 +251,21 @@ export const servicesData: Service[] = [
 	},
 	{
 		id: 5,
-		title: "IT Consulting",
+		title: "IT Consultation",
 		link: "",
 		text: "Get expert guidance on navigating the complex world of IT. Our consultants will assess your needs, recommend the best solutions, and help you develop a comprehensive IT strategy for the future.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 6,
-		title: "Cyber Security",
+		title: "Cyber Security Services",
 		link: "",
 		text: "Protect your valuable data and systems from cyber threats. We offer a range of cybersecurity solutions, including penetration testing, vulnerability assessments, and security awareness training, to safeguard your digital assets.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 7,
@@ -341,32 +274,7 @@ export const servicesData: Service[] = [
 		text: "Free up your internal resources by outsourcing your IT needs to our team of experts. We provide ongoing IT support, system maintenance, and network management, allowing you to focus on your core business.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 	{
 		id: 8,
@@ -375,32 +283,7 @@ export const servicesData: Service[] = [
 		text: " Unlock the power of your data. Our data analysts will help you turn raw data into actionable insights that inform your marketing strategies, product development, and overall business decisions.",
 		hoveredImageSrc: "/Vector-4.svg",
 		imageSrc: "/Vector-3.svg",
-		content: [
-			{
-				id: 1,
-				title: 'Websites',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-d.svg',
-			},
-			{
-				id: 2,
-				title: 'Web Apps',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-c.svg',
-			},
-			{
-				id: 3,
-				title: 'Web Portals',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-b.svg',
-			},
-			{
-				id: 4,
-				title: 'E-Commerce',
-				description: 'Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas convallis arcu. Purus tempus lectus imperdiet egestas libero et sit mauris. Quam accumsan imperdiet in neque et',
-				img: '/services-a.svg',
-			}
-		]
+		content: null,
 	},
 ];
 
@@ -1188,7 +1071,79 @@ export const blogs: Blog[] = [
     },
 	{
         id: 3,
+        title: "AI in today's software development",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-c.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		]
+    },
+    {
+        id: 1,
         title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-a.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
+    {
+        id: 2,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-b.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
+	{
+        id: 3,
+        title: "AI in today's software development",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
         img: "/blog-c.svg",
         link: "/blog",
@@ -1225,38 +1180,50 @@ export const testimonialCards : TestimonialCards[] = [
 	{
 		id: 1,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Sarah Lee, COO, Acme Supply Co.",
+		testimonie: "We partnered with Zorfts Technologies to develop a custom inventory management system for our warehouse. Their team not only delivered a high-quality product on time and within budget, but they also took the time to understand our specific needs and workflows.",
 	},
 	{
 		id: 2,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Dr. David Chen, Founder, HealWell",
+		testimonie: "As a startup in the healthcare industry, we needed a development agency that could translate our innovative ideas into a real-world solution. [Agency Name] exceeded our expectations. ",
 	},
 	{
 		id: 3,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Maria Rodriguez, VP of Product Development, GlobalCorp",
+		testimonie: "We were initially hesitant to outsource our software development, but our experience with [Agency Name] has been nothing short of fantastic. Their communication has been clear and consistent throughout the entire project lifecycle.",
 	},
 	{
 		id: 4,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Michael Garcia, CTO, GreenTech Solutions",
+		testimonie: "Our legacy software system was becoming increasingly cumbersome and outdated. We knew we needed a complete overhaul, but we weren't sure where to start. [Agency Name] came in and became our trusted advisors. ",
 	},
 	{
 		id: 5,
 		img: "/userImage.svg",
 		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		testimonie: "They kept us informed of every step and were always receptive to our feedback. The finished product is exactly what we envisioned, and more importantly, it has helped us achieve our business goals.",
 	},
 	{
 		id: 6,
 		img: "/userImage.svg",
 		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		testimonie: " Their developers are not just coders, they're problem-solvers and strategic thinkers. The new system they built is not only functional but also scalable, allowing us to grow and adapt to future needs. We're confident we've found a development partner for the long haul.",
+	},
+	{
+		id: 7,
+		img: "/userImage.svg",
+		name: "James Bond",
+		testimonie: "They took the time to understand our challenges and goals, then presented us with a comprehensive plan that addressed all our needs.",
+	},
+	{
+		id: 8,
+		img: "/userImage.svg",
+		name: "James Bond",
+		testimonie: "They brought a wealth of expertise to the table and helped us navigate the complexities of developing a HIPAA-compliant mobile app. We consider [Agency Name] a valuable extension of our team and look forward to a long-term partnership.",
 	},
 
 ]

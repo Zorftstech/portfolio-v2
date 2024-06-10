@@ -16,16 +16,16 @@ const PortfolioSection: React.FC = () => {
   console.log(data);
   return (
     <div className="w-[100%] bg-[#004AAD]">
-      <div className="p-24 lg:px-8 mb-8 ">
+      <div className="py-24 lg:px-8 mb-8 ">
         <h2
-          className="text-[64px] text-center leading-[74px] font-semibold text-white mb-[64px]
+          className="text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold text-white mb-[64px]
                 "
         >
           See some of our works here
         </h2>
 
         {/* =========== portfolio grid ============= */}
-        <div className="grid grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
+        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff] px-8">
           {portfolioProjects.slice(0, 4).map((project) => (
             <div key={project.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
@@ -52,6 +52,10 @@ const PortfolioSection: React.FC = () => {
             </div>
           ))}
         </div>
+        <button className='mx-auto flex items-center justify-between w-[130px] h-[48px] bg-transparent border-[0.5px] border-[#FFFFFF] rounded-full px-6 mt-20'> 
+                <Image src={'Vector-4.svg'} alt='' width={15.5} height={4} />
+                <span className='text-[12px] leading-[13px] text-[#FFFFFF]'>See More</span>
+        </button>
       </div>
     </div>
   );

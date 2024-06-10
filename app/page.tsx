@@ -5,7 +5,7 @@ import PartnersSection from "@/components/home/partners";
 import PortfolioSection from "@/components/home/portfolio";
 import ServicesSection from "@/components/home/services";
 import TechnologiesWeUse from "@/components/home/technologies";
-import TestimonialCard from "@/components/home/testimonialCard";
+import Testimonials from "@/components/home/testimonials";
 import WhyChooseUs from "@/components/home/whyChooseUs";
 import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 
@@ -19,9 +19,11 @@ export default function Home() {
           <AchievementsSection />
           <ServicesSection />
           <WhyChooseUs />
+        </SideWrapper>
           <PortfolioSection />
           <TechnologiesWeUse />
-          <TestimonialCard />
+        <SideWrapper>
+          <Testimonials />
           <FaqSection />
         </SideWrapper>
       </TopAndBottomWrapper>

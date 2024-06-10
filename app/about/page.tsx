@@ -10,10 +10,10 @@ export default function Home() {
     <main>
       <TopAndBottomWrapper>
         <SideWrapper>
-          <ServicesSection />
-          <MeetTheTeam />
           <AboutUs />
           <Mission />
+          <ServicesSection />
+          <MeetTheTeam />
         </SideWrapper>
       </TopAndBottomWrapper>
     </main>

@@ -18,10 +18,10 @@ const AchievementsSection: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center flex-col py-24">
-      <div className="flex justify-center items-start flex-row w-[100%]">
+      <div className="grid lg:grid-cols-2 gap-y-10 lg:flex-nowrap justify-center items-start w-[100%]">
         {/* =========== achievements texts =============== */}
-        <div className="w-[50%]">
-          <h2 className="text-[64px] leading-[72px] font-semibold text-[#004AAD] mb-2">
+        <div className="w-[380px] lg:w-[428.15px]">
+          <h2 className="text-[28px] lg:text-[64px] leading-[38px] lg:leading-[72px] font-semibold text-[#004AAD] mb-2">
             Here are some of our achievements
           </h2>
           <p className="text-base text-gray ">
@@ -31,8 +31,8 @@ const AchievementsSection: React.FC = () => {
         </div>
 
         {/* =================== achievements scores */}
-        <div className="w-[50%] grid grid-cols-2 gap-4 text-[#fff]">
-          <div className="w-[303px] h-[340px] bg-[#336EBD] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
+        <div className="w-[] grid grid-cols-2 gap-4 text-[#fff]">
+          <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#336EBD] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
                 {isLoading ? "Year" : extractYear(data[0].founded_date)}
@@ -41,13 +41,13 @@ const AchievementsSection: React.FC = () => {
             </div>
 
             <div>
-              <p>
+              <p className="text-[11px] lg:text-[15px] leading-[16px] lg:leading-[22px]">
                 Below are some stats that shows our progress since we began
                 offering our services
               </p>
             </div>
           </div>
-          <div className="w-[303px] h-[340px] bg-[#5486C8] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
+          <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#5486C8] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
                 <CountUp end={isLoading ? 0 : data[0].no_of_projects} />+
@@ -56,13 +56,13 @@ const AchievementsSection: React.FC = () => {
             </div>
 
             <div>
-              <p>
+              <p className="text-[11px] lg:text-[15px] leading-[16px] lg:leading-[22px]">
                 Below are some stats that shows our progress since we began
                 offering our services
               </p>
             </div>
           </div>
-          <div className="w-[303px] h-[340px] bg-[#00439D] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
+          <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#00439D] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
                 <CountUp end={isLoading ? 0 : data[0].no_of_staffs} />+
@@ -71,13 +71,13 @@ const AchievementsSection: React.FC = () => {
             </div>
 
             <div>
-              <p>
+              <p className="text-[11px] lg:text-[15px] leading-[16px] lg:leading-[22px]">
                 Below are some stats that shows our progress since we began
                 offering our services
               </p>
             </div>
           </div>
-          <div className="w-[303px] h-[340px] bg-[#8AACD9] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
+          <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#8AACD9] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
                 <CountUp end={isLoading ? 0 : data[0].no_of_clients} />+
@@ -86,7 +86,7 @@ const AchievementsSection: React.FC = () => {
             </div>
 
             <div>
-              <p>
+              <p className="text-[11px] lg:text-[15px] leading-[16px] lg:leading-[22px]">
                 Below are some stats that shows our progress since we began
                 offering our services
               </p>
