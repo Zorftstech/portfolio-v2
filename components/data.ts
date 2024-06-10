@@ -1196,7 +1196,79 @@ export const blogs: Blog[] = [
     },
 	{
         id: 3,
+        title: "AI in today's software development",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-c.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		]
+    },
+    {
+        id: 1,
         title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-a.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
+    {
+        id: 2,
+        title: "Boost your conversion rate",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+        img: "/blog-b.svg",
+        link: "/blog",
+		blog_details: [
+			{
+				id: 1,
+				img: '/blogDetails-a.svg',
+				title: 'Development of AI in 2024',
+				user: 'Deborah Oladeji',
+				img_b: '/blogDetails-b.png',
+				date: '4 March, 2024',
+				time: '6 min read',
+				body: [
+					{
+						id: 1,
+						bannar: "/Bannar.svg",
+					}		
+				]
+			},
+		] 
+    },
+	{
+        id: 3,
+        title: "AI in today's software development",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
         img: "/blog-c.svg",
         link: "/blog",
@@ -1233,38 +1305,50 @@ export const testimonialCards : TestimonialCards[] = [
 	{
 		id: 1,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Sarah Lee, COO, Acme Supply Co.",
+		testimonie: "We partnered with Zorfts Technologies to develop a custom inventory management system for our warehouse. Their team not only delivered a high-quality product on time and within budget, but they also took the time to understand our specific needs and workflows.",
 	},
 	{
 		id: 2,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Dr. David Chen, Founder, HealWell",
+		testimonie: "As a startup in the healthcare industry, we needed a development agency that could translate our innovative ideas into a real-world solution. [Agency Name] exceeded our expectations. ",
 	},
 	{
 		id: 3,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Maria Rodriguez, VP of Product Development, GlobalCorp",
+		testimonie: "We were initially hesitant to outsource our software development, but our experience with [Agency Name] has been nothing short of fantastic. Their communication has been clear and consistent throughout the entire project lifecycle.",
 	},
 	{
 		id: 4,
 		img: "/userImage.svg",
-		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		name: "Michael Garcia, CTO, GreenTech Solutions",
+		testimonie: "Our legacy software system was becoming increasingly cumbersome and outdated. We knew we needed a complete overhaul, but we weren't sure where to start. [Agency Name] came in and became our trusted advisors. ",
 	},
 	{
 		id: 5,
 		img: "/userImage.svg",
 		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		testimonie: "They kept us informed of every step and were always receptive to our feedback. The finished product is exactly what we envisioned, and more importantly, it has helped us achieve our business goals.",
 	},
 	{
 		id: 6,
 		img: "/userImage.svg",
 		name: "James Bond",
-		testimonie: "Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat nec. Lorem ipsum",
+		testimonie: " Their developers are not just coders, they're problem-solvers and strategic thinkers. The new system they built is not only functional but also scalable, allowing us to grow and adapt to future needs. We're confident we've found a development partner for the long haul.",
+	},
+	{
+		id: 7,
+		img: "/userImage.svg",
+		name: "James Bond",
+		testimonie: "They took the time to understand our challenges and goals, then presented us with a comprehensive plan that addressed all our needs.",
+	},
+	{
+		id: 8,
+		img: "/userImage.svg",
+		name: "James Bond",
+		testimonie: "They brought a wealth of expertise to the table and helped us navigate the complexities of developing a HIPAA-compliant mobile app. We consider [Agency Name] a valuable extension of our team and look forward to a long-term partnership.",
 	},
 
 ]

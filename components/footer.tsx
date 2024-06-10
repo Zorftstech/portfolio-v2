@@ -29,7 +29,7 @@ export default function Footer() {
                     <p className='text-white my-11'> © 2024 Zorfts Technologies Ltd. - All rights Reseved.</p>
                 </div>
 
-                <div className='w-[70%] flex justify-end items-start gap-6 flex-row'>
+                <div className='w-[70%] flex justify-end items-start gap-6 flex-row sm:flex-column'>
                     {footerLinks.map((footerLink) => (
                         <div className='text-start text-[#D9D9D9] capitalize w-[20%]' key={footerLink.id}>
                             <p className='text-[#8F8F92] uppercase mb-8'>{footerLink.title}</p>
