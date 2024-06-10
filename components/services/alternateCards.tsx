@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation'
 import Image from "next/image";
 import { servicesData, Service } from '../data';
 
-const AlternateCard: React.FC = () => {
+const AlternateCardContent: React.FC = () => {
     const searchParams = useSearchParams();
     const id = searchParams.get('title');
     console.log(id)
@@ -46,6 +46,14 @@ const AlternateCard: React.FC = () => {
                 </div>
             ))}
         </div>
+    );
+};
+
+const AlternateCard: React.FC = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <AlternateCardContent />
+        </Suspense>
     );
 };
 
