@@ -6,11 +6,11 @@ const FaqSection: React.FC = () => {
   return (
     <div className="py-24 mb-8">
       <div className="flex justify-center items-center">
-        <h4 className="text-center bg-slate-300 p-2 rounded text-gray-600 w-[60px]">
+        <h4 className="text-center bg-slate-300 p-2 rounded text-gray-600 w-[49px] lg:w-[60px]">
           FAQ
         </h4>
       </div>
-      <h2 className="text-[#004AAD] text-[64px] text-center leading-[74px] font-semibold">
+      <h2 className="text-[#004AAD] text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold mt-10">
         Any Questions?
       </h2>
       <p className="text-center font-normal leading-7 mt-4">
