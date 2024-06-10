@@ -1,9 +1,19 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { portfolioProjects } from "../data";
 import Image from "next/image";
+import { fetchProjects } from "@/lib/apis/request";
 
 const PortfolioSection: React.FC = () => {
+  const [data, setData] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetchProjects().then((res) => {
+      setData(res?.data.results);
+    });
+  }, []);
+
+  console.log(data);
   return (
     <div className="w-[100%] bg-[#004AAD]">
       <div className="p-24 lg:px-8 mb-8 ">
