@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
 }
-html { 
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -20,9 +20,9 @@ body {
   }
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   .hover-effect {
-    transition: color .3s ease-in .2s, background-color .3s ease-in 10ms; /* Transition properties */
+    transition: color 0.3s ease-in 0.2s, background-color 0.3s ease-in 10ms; /* Transition properties */
   }
 
   .hover-effect:hover h4,
@@ -32,12 +32,14 @@ body {
   }
 
   .hover-effect:hover {
-    background-color: #00439D;
+    background-color: #00439d;
   }
 }
 
 .bg-cover {
-  background-image: linear-gradient(to bottom, #FFFFFF, transparent, #004AAD), linear-gradient(to bottom, #0C0C0C, transparent), url("../public/image-19.svg");
+  background-image: linear-gradient(to bottom, #ffffff, transparent, #004aad),
+    linear-gradient(to bottom, #0c0c0c, transparent),
+    url("../public/image-19.svg");
   background-blend-mode: overlay;
   border-radius: 50px;
   overflow: hidden;
@@ -47,7 +49,8 @@ body {
 
 .ourPartner {
   background-image: url("../public/OurPartners.svg");
-  border-radius: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .serviceDetail {

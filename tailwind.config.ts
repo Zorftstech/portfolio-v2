@@ -18,6 +18,10 @@ const config: Config = {
         "dark-gray": "#424247",
         "zorft-blue": "#004AAD",
       },
+
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

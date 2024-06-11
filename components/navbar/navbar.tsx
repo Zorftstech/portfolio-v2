@@ -195,7 +195,7 @@ export default function Navbar() {
                   } rounded-3xl flex items-center flex-row gap-2 text-xs lg:text-sm`}
                 >
                   <MdOutlinePhoneCallback className="text-[18px]" />
-                  Let's Talk
+                  Let&apos;s Talk
                 </Link>
                 <li>
                   <CiSearch

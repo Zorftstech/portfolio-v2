@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { TopAndBottomWrapper } from "@/components/shared/Wrappers";
+
 import Navbar from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,23 +15,25 @@ export const metadata: Metadata = {
     "At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business. ",
   category: "technology",
   openGraph: {
-    title: "Zorfts Technologies - Web",
-    description: "Zorfts Technologies - Web",
+    title: "Zorfts Technologies Ltd",
+    description:
+      "At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business. ",
     type: "website",
     images: [
       {
         url: "https://res.cloudinary.com/dj25aashz/image/upload/v1713199707/Frame_629312_zdcvs1.jpg",
-        alt: "Zorfts Technologies - Web",
+        alt: "Zorfts Technologies - Ltd",
         width: 720,
         height: 565.5,
       },
     ],
-    siteName: "Zorfts Technologies - Web",
+    siteName: "Zorfts Technologies - Ltd",
     locale: "en_US",
   },
   twitter: {
-    title: "Zorfts Technologies - Web",
-    description: "Zorfts Technologies - Web",
+    title: "Zorfts Technologies Ltd",
+    description:
+      "At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business. ",
     images: [
       {
         url: "https://res.cloudinary.com/dj25aashz/image/upload/v1713199707/Frame_629312_zdcvs1.jpg",
