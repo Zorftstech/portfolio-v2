@@ -4,7 +4,7 @@ import WhatOurPartnersSaid from "@/components/partners/whatOurPartnersSaid";
 import BenefitOfParnership from "@/components/partners/benefitOfPartnership";
 import { TopAndBottomWrapper } from "@/components/shared/Wrappers";
 
-export default function Home() {
+export default function Partners() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <TopAndBottomWrapper>
