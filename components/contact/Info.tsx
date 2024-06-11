@@ -7,6 +7,7 @@ const InfoSection: React.FC = () => {
       <h1 className="text-[64px] tracking-tighter text-start font-semibold text-[#004AAD] mb-12">
         Get in touch with us
       </h1>
+      <p className="text-[#5F5E6C] tracking-tight">From groundbreaking ideas to ambitious expansions, our team is available 24/7 to answer your questions and fuel your success. (This focuses on the broad range of needs they can address.)</p>
 
       <div className="mt-10 flex justify-center items-start gap-6">
         <div className="mr-4 w-[25%]">
