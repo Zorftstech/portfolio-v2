@@ -20,6 +20,7 @@ export default function Footer() {
     sendNewsLetter(subscriberMail).then(() => setIsSubmitting(false));
   };
 
+<<<<<<< HEAD
   return (
     <div className="flex items-center justify-center flex-col px-6 lg:px-8 mt-0 bg-[#1B1B1E]">
       <div className="flex justify-center items-center flex-col text-[#fff] mt-[80px]">
@@ -45,6 +46,47 @@ export default function Footer() {
           >
             {isSubmitting ? "Loading" : "Submit"}
           </button>
+=======
+            <div className='mx-auto max-w-7xl w-[100%] flex justify-between items-start gap-20 flex-wrap lg:flex-nowrap lg:mt-[60px]'>
+                <div className='w-[100%] lg:w-[30%] flex justify-between items-start flex-col'>
+                    <div className='flex justify-between items-start flex-col text-white'>
+                        <Image src={'/zorfts-icon.svg'} alt='Zorfts Technologies Ltd Icon' height={50} width={50} objectFit='contain' />
+                        <p className='text-[#D9D9D9] text-base leading-6 mt-6 hidden lg:block'>At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business.</p>
+                        {/* <p className='text-[#D9D9D9] text-base leading-6 mt-6'>Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat.</p> */}
+                    </div>
+
+                    <p className='text-white my-11 hidden lg:block'> © 2024 Zorfts Technologies Ltd. - All rights Reseved.</p>
+                </div>
+
+                <div className='w-[100%] lg:w-[100%] flex items-start gap-10 flex-col lg:flex-row'>
+                    <div className='flex w-[100%] lg:w-[50%] justify-between'>
+                    {footerLinks.slice(0, 2).map((footerLink) => (
+                        <div className='text-start text-[#D9D9D9] capitalize w-[100%] lg:w-[50%]' key={footerLink.id}>
+                            <p className='text-[#8F8F92] uppercase mb-8'>{footerLink.title}</p>
+                            {footerLink.links.map((item, index) => (
+                                <ul key={index}>
+                                    <li className='text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer'><Link style={{ cursor: 'pointer' }} href={item.link} target={item?.urlTarget}>{item.title}</Link></li>
+                                </ul>
+                            ))}
+                        </div>
+                    ))}
+                    </div>
+                    <div className='flex w-[100%] lg:w-[50%] justify-between'>
+                    {footerLinks.slice(2, 4).map((footerLink) => (
+                        <div className='text-start text-[#D9D9D9] capitalize w-[100%] lg:w-[50%]' key={footerLink.id}>
+                            <p className='text-[#8F8F92] uppercase mb-8'>{footerLink.title}</p>
+                            {footerLink.links.map((item, index) => (
+                                <ul key={index}>
+                                    <li className='text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer'><Link style={{ cursor: 'pointer' }} href={item.link} target={item?.urlTarget}>{item.title}</Link></li>
+                                </ul>
+                            ))}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+
+            </div>
+>>>>>>> 74bf466d64cd1d0010520725c339339267cec814
         </div>
       </div>
 

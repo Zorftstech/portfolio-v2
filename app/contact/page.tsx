@@ -1,5 +1,6 @@
 import FormSection from "@/components/contact/Form";
 import InfoSection from "@/components/contact/Info";
+import Testimonials from "@/components/home/testimonials";
 import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 
 export default function Contact() {
@@ -9,6 +10,8 @@ export default function Contact() {
         <SideWrapper>
           <InfoSection />
           <FormSection />
+
+          <Testimonials />
         </SideWrapper>
       </TopAndBottomWrapper>
     </main>

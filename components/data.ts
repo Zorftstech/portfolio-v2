@@ -110,8 +110,13 @@ export const footerLinks = [
 				title: "LinkedIn",
 				link: "https://www.linkedin.com/company/zorfts-technologies/",
 				urlTarget: '_blank'
-
 			},
+			{
+				id: 5,
+				title: 'WhatsApp',
+				link: 'https://wa.link/f2jhr4',
+				urlTarget: '_blank'
+			}
 		],
 	},
 ];

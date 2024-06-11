@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
           Zorft Technologies is a leading technology company specializing in a
           wide range of services, including brand design, graphics design, web
           and app development, data analytics, software development, and IT
-          consulting. Since our inception in 20XX, we have been dedicated to
+          consulting. Since our inception in 2018, we have been dedicated to
           delivering innovative solutions that empower businesses to thrive in
           the digital age.
         </p>
