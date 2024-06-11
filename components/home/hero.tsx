@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { MdOutlinePhoneCallback } from "react-icons/md";
 
 const HeroSection: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const HeroSection: React.FC = () => {
           href={"/contact"}
           className="py-[18px] px-8 text-white bg-[#004AAD] rounded-full flex items-center flex-row gap-2 text-sm"
         >
-          <FaArrowRight /> Contact Us
+          <MdOutlinePhoneCallback className="text-[18px]" /> Contact Us
         </Link>
       </div>
       <div className="">
