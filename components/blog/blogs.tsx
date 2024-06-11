@@ -6,7 +6,7 @@ import { blogs } from '../data'
 
 function Blogs() {
   return (
-        <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-7xl lg:grid-cols-3 px-8 mb-8">
+        <div className="mx-auto mt-12 grid max-w-lg gap-y-10 gap-x-5 lg:max-w-7xl lg:grid-cols-3 px-8 mb-8">
             {blogs.map(blog => (
                 <div key={blog.id} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
                     <div className="flex-shrink-0">
