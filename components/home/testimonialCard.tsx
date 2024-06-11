@@ -10,7 +10,7 @@ const TestimonialCard: React.FC = () => {
 			<div key={testimonie.id} className="bg-[#F8F8F8] rounded-[26px] w-[385px] lg:w-[400px] h-[fit-content] p-4">
 				<div className="flex flex-row items-center">
 					<Image src={testimonie.img} alt="User Image" width={60} height={60} />
-					<h1 className="text-[26px] text-[#5F5E6C] font-bold ml-4">
+					<h1 className="text-[20px] text-[#5F5E6C] font-bold ml-4">
 						{testimonie.name}
 					</h1>
 				</div>

@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { SideWrapper } from "./shared/Wrappers";
 import { usePathname } from "next/navigation";
+import { MdOutlinePhoneCallback } from "react-icons/md";
 
 const callsToAction = [
   { name: "Contact Us", href: "#", icon: FaArrowRight },
@@ -106,12 +107,7 @@ export default function Navbar() {
                     : "bg-[#004AAD]"
                 } rounded-3xl flex items-center flex-row gap-2 text-sm`}
               >
-                <Image
-                  src={"/vector-4.svg"}
-                  alt="icon"
-                  width={15.5}
-                  height={4}
-                />
+                <MdOutlinePhoneCallback className="text-[18px]" />
                 Contact Us
               </Link>
               <li>
