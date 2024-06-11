@@ -24,7 +24,7 @@ export default function Footer() {
                     <div className='flex justify-between items-start flex-col text-white'>
                         <Image src={'/zorfts-icon.svg'} alt='Zorfts Technologies Ltd Icon' height={50} width={50} objectFit='contain' />
                         <p className='text-[#D9D9D9] text-base leading-6 mt-6 hidden lg:block'>At Zorfts Technologies Ltd, our focus is on crafting bespoke software solutions aligned with the unique requirements and objectives of our clients. We thrive in conceptualizing and implementing groundbreaking software solutions that can grow with your business.</p>
-                        <p className='text-[#D9D9D9] text-base leading-6 mt-6'>Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat.</p>
+                        {/* <p className='text-[#D9D9D9] text-base leading-6 mt-6'>Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat.</p> */}
                     </div>
 
                     <p className='text-white my-11 hidden lg:block'> © 2024 Zorfts Technologies Ltd. - All rights Reseved.</p>

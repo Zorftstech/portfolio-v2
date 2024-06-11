@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { SideWrapper } from "./shared/Wrappers";
 import { usePathname } from "next/navigation";
+import { MdOutlinePhoneCallback } from "react-icons/md";
 
 const callsToAction = [
 	{ name: "Contact Us", href: "#", icon: FaArrowRight },

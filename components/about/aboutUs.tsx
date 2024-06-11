@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
         <p className='text-[18px] lg:text-[20px] leading-[28px] lg:leading-[34px] text-[#5F5E6C] mt-14 md:w-[935px] h-[136px] font-normal'>
             Zorft Technologies is a leading technology company specializing in a wide range of 
             services, including brand design, graphics design, web and app development, data 
-            analytics, software development, and IT consulting. Since our inception in 20XX, 
+            analytics, software development, and IT consulting. Since our inception in 2018, 
             we have been dedicated to delivering innovative solutions that empower businesses 
             to thrive in the digital age.
         </p>
