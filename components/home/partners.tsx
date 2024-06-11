@@ -25,7 +25,7 @@ const PartnersSection: React.FC = () => {
               width={150}
               height={30}
               alt={partner.name}
-              objectFit="contain"
+              className="object-fit"
             />
           </div>
         ))}

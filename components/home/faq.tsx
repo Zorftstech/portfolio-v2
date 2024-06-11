@@ -1,8 +1,17 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { faqs } from "../data";
+import { IFaqData } from "@/lib/types";
+import { fetchFaq } from "@/lib/apis/request";
 
 const FaqSection: React.FC = () => {
+  const [data, setData] = useState<IFaqData[]>([]);
+
+  useEffect(() => {
+    fetchFaq().then((res) => {
+      setData(res?.data.results);
+    });
+  }, []);  
   return (
     <div className="py-24 mb-8">
       <div className="flex justify-center items-center">
@@ -20,26 +29,26 @@ const FaqSection: React.FC = () => {
 
       {/* ================== faq accordion ==================== */}
       <div className="mx-auto max-w-7xl mt-24">
-        {faqs.map((faq) => (
+        {data?.map((faq) => (
           <div
             className="divide-y divide-solid divide-gray-500 w-[100%]"
-            key={faq.id}
+            key={faq?.id}
           >
             <details className="group" open={faq.id === 1}>
-              <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500">
-                {faq.question}
+              <summary className="flex cursor-pointer list-none items-center justify-between py-4 textLg font-medium text-secondary-900 group-open:text-primary-500">
+                {faq?.question}
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     className="block h-5 w-5 group-open:hidden"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M12 4.5v15m7.5-7.5h-15"
                     />
                   </svg>
@@ -47,13 +56,13 @@ const FaqSection: React.FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     className="hidden h-5 w-5 group-open:block"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M19.5 12h-15"
                     />
                   </svg>

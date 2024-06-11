@@ -20,7 +20,6 @@ const FormSection: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    console.log(contactField);
     setContactField((prevState) => ({
       ...prevState,
       [name]: value,

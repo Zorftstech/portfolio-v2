@@ -27,9 +27,66 @@ const handlOtherErrors = (error: any) => {
 export const fetchTeamMembers = async () => {
   try {
     const response: AxiosResponse = await api.get("/auth/meet-the-team/");
-    // Handle successful response
-    const responseData = response.data;
-    return { success: true, data: responseData };
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchPartners = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/brand-partners/");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+export const fetchFaq = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/faq/");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchTestimonials = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/testimonials/");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
   } catch (error) {
     // Handle error response
     if (axios.isAxiosError(error)) {
@@ -80,7 +137,7 @@ export const fetchSingleBlogPost = async (id: string) => {
 export const fetchDataStatistics = async () => {
   try {
     const response: AxiosResponse = await api.get("/company-data-statistcs/");
-    if (response.status === 200) {
+    if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
     }
@@ -99,7 +156,7 @@ export const fetchDataStatistics = async () => {
 export const fetchProjects = async () => {
   try {
     const response: AxiosResponse = await api.get("/projects/");
-    if (response.status === 200) {
+    if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
     }
@@ -117,7 +174,7 @@ export const fetchProjects = async () => {
 export const fetchWhyChooseZorfts = async () => {
   try {
     const response: AxiosResponse = await api.get("/why-choose-zorfts/");
-    if (response.status === 200) {
+    if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
     }
@@ -154,16 +211,44 @@ export const fetchSingleProject = async (id: string) => {
 export const sendContactMessage = async (data: IContactData) => {
   try {
     const response: AxiosResponse = await api.post("/contact-us/", data);
-    // Handle successful response
-    const responseData = response.data;
-    toast.success("Message sent successfully", {
-      toastId: "success",
-    });
-    return { success: true, message: responseData.message };
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      toast.success("Message sent successfully", {
+        toastId: "success",
+      });
+      return { success: true, message: responseData.message };
+    }
   } catch (error) {
     // Handle error response
     if (axios.isAxiosError(error)) {
       if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const sendNewsLetter = async (email: string) => {
+  try {
+    const response: AxiosResponse = await api.post("/newsletter/", {
+      email: email,
+    });
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      toast.success("Subscription successful", {
+        toastId: "success",
+      });
+      return { success: true, message: responseData.message };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        toast.warning(error?.response.data.email[0], {
+          toastId: "warning",
+        });
         return { success: false };
       } else handleNonAxiosError(error);
     } else {

@@ -16,7 +16,7 @@ const WhyChooseUs: React.FC = () => {
   // Initialize the hoveredIndex to 0 to show the first item's content on page load
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   // Find the currently hovered reason, if any
-  const hoveredReason = data[hoveredIndex];
+  const hoveredReason = data && data[hoveredIndex];
 
   return (
     <div className="mx-auto flex flex-col items-center justify-center max-w-7xl px-24 my-8 lg:px-8 lg:py-24 w-full">
@@ -24,11 +24,11 @@ const WhyChooseUs: React.FC = () => {
         Why Choose Zorfts?
       </h2>
       <div className="flex flex-wrap items-center justify-between w-full mt-5 lg:mt-28 lg:ml-5">
-        <div className="bg-[#336EBD] w-[430px] px-9 py-12 self-start rounded-3xl mt-6">
-          <h2 className="text-[18px] lg:text-[20px] leading-[26px] text-[#FFFFFF] font-bold">
+        <div className="bg-[#336EBD] w-[430px] px-9 py-12 self-start rounded-3xl mt-6 transition-all">
+          <h2 className="text-[18px] lg:text-[20px] leading-[26px] text-[#FFFFFF] font-bold transition-all">
             {hoveredReason?.subject}
           </h2>
-          <p className="text-[16px] leading-[26px] text-[#FFFFFF] font-normal mt-3">
+          <p className="text-[16px] leading-[26px] text-[#FFFFFF] font-normal mt-3 transition-all">
             {hoveredReason?.description}
           </p>
         </div>

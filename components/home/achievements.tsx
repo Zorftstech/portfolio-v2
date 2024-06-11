@@ -35,7 +35,7 @@ const AchievementsSection: React.FC = () => {
           <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#336EBD] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
-                {isLoading ? "Year" : extractYear(data[0].founded_date)}
+                {isLoading ? "Year" : extractYear(data && data[0].founded_date)}
               </h2>
               <p>Founded</p>
             </div>
@@ -50,7 +50,8 @@ const AchievementsSection: React.FC = () => {
           <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#5486C8] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
-                <CountUp end={isLoading ? 0 : data[0].no_of_projects} />+
+                <CountUp end={isLoading ? 0 : data && data[0].no_of_projects} />
+                +
               </h2>
               <p>Projects</p>
             </div>
@@ -65,7 +66,7 @@ const AchievementsSection: React.FC = () => {
           <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#00439D] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
-                <CountUp end={isLoading ? 0 : data[0].no_of_staffs} />+
+                <CountUp end={isLoading ? 0 : data && data[0].no_of_staffs} />+
               </h2>
               <p>Staffs</p>
             </div>
@@ -80,7 +81,7 @@ const AchievementsSection: React.FC = () => {
           <div className="w-[178px] lg:w-[303px] h-[199.22px] lg:h-[340px] bg-[#8AACD9] rounded-3xl flex justify-between items-start flex-col text-start px-4 py-6">
             <div className="text-[#fff]">
               <h2 className="text-[64px]">
-                <CountUp end={isLoading ? 0 : data[0].no_of_clients} />+
+                <CountUp end={isLoading ? 0 : data && data[0].no_of_clients} />+
               </h2>
               <p>Happy clients</p>
             </div>
