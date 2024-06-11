@@ -103,12 +103,7 @@ export default function Navbar() {
 										? "bg-transparent border-[#5F5E6C] border"
 										: "bg-[#004AAD]"
 								} rounded-3xl flex items-center flex-row gap-2 text-sm`}>
-								<Image
-									src={"/vector-4.svg"}
-									alt="icon"
-									width={15.5}
-									height={4}
-								/>
+								<MdOutlinePhoneCallback className="text-[18px]" />
 								Contact Us
 							</Link>
 							<li>
