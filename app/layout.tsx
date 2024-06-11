@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { TopAndBottomWrapper } from "@/components/shared/Wrappers";
+
 import Navbar from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
