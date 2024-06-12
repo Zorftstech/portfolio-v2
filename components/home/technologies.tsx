@@ -6,7 +6,7 @@ import { Technologies } from "../data";
 
 const TechnologiesWeUse: React.FC = () => {
 	return (
-		<div className="mx-auto py-24 mb-8 mt-40 w-full">
+		<div className="mx-auto lg:py-24 mt-12 lg:mt-40 w-full">
 			<div className="flex justify-center items-center">
 				<h4 className="text-center bg-[#F2F2F2] p-2 rounded-lg text-[#9C9AA1] w-[130px]">
 					Technologies
@@ -33,10 +33,11 @@ const TechnologiesWeUse: React.FC = () => {
 						}}>
 						<Image
 							src={tech.src}
-							width={180}
-							height={40}
+							width={177.62}
+							height={80}
 							alt={tech.name}
 							objectFit="contain"
+							className="lg:w-[180] lg:h-[40]"
 						/>
 					</div>
 				))}
