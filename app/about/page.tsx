@@ -5,7 +5,7 @@ import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 import AboutUs from "@/components/about/aboutUs";
 import Mission from "@/components/about/mission";
 
-export default function Home() {
+export default function About() {
   return (
     <main>
       <TopAndBottomWrapper>

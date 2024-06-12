@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import Services from "./services";
 import Technologies from "./technologies";
 import { Fade as Hamburger } from "hamburger-react";
+import { MdOutlinePhoneCallback } from "react-icons/md";
 
 const callsToAction = [
   { name: "Contact Us", href: "#", icon: FaArrowRight },
@@ -193,13 +194,8 @@ export default function Navbar() {
                       : "bg-[#004AAD]"
                   } rounded-3xl flex items-center flex-row gap-2 text-xs lg:text-sm`}
                 >
-                  <Image
-                    src={"/vector-4.svg"}
-                    alt="icon"
-                    width={15.5}
-                    height={4}
-                  />
-                  Contact Us
+                  <MdOutlinePhoneCallback className="text-[18px]" />
+                  Let&apos;s Talk
                 </Link>
                 <li>
                   <CiSearch

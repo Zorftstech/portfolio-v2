@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
+import InfoSection from "@/components/privacyPolicy/info";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-        <div>Talents page</div>
-    </main>
-  );
+export default function Privacy() {
+	return (
+		<>
+			<InfoSection/>
+		</>
+	);
 }
