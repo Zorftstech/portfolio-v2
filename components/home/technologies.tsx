@@ -20,7 +20,7 @@ const TechnologiesWeUse: React.FC = () => {
       <p className="text-[#5F5E6C] text-lg lg:text-[20px] lg:leading-[31px] text-center font-normal my-10">
         At Zorft technologies, we make use of modern and efficient technology
         for our projects
-      </p>
+      </p> 
 
 			{/* ============= Marquee for Technologies ============= */}
 			<Marquee>
