@@ -41,7 +41,7 @@ body {
     linear-gradient(to bottom, #0c0c0c, transparent),
     url("../public/image-19.svg");
   background-blend-mode: overlay;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   overflow: hidden;
   /* height: 595px;
   width: 1256px; */

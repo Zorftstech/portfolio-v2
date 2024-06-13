@@ -1232,3 +1232,133 @@ export const testimonialCards : TestimonialCards[] = [
 	},
 
 ]
+
+export interface EmploymentType {
+	id: number;
+	type: string;
+}
+
+export interface Careers {
+	id: number;
+	department: string;
+	description: string;
+	employment_type: EmploymentType[];
+}
+
+export const careers: Careers[] =[
+	{
+		id: 1,
+		department: 'Graphics Design',
+		description: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		employment_type: [
+			{
+				id: 1,
+				type: 'Fulltime',
+			},
+			{
+				id: 2,
+				type: 'Remote',
+			},
+			{
+				id: 3,
+				type: 'Project Work',
+			},
+			{
+				id: 4,
+				type: 'Flexible Schedule',
+			}
+		]
+	},
+	{
+		id: 2,
+		department: 'Graphics Design',
+		description: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		employment_type: [
+			{
+				id: 1,
+				type: 'Fulltime',
+			},
+			{
+				id: 2,
+				type: 'Remote',
+			},
+			{
+				id: 3,
+				type: 'Project Work',
+			},
+			{
+				id: 4,
+				type: 'Flexible Schedule',
+			}
+		]
+	},
+	{
+		id: 3,
+		department: 'Graphics Design',
+		description: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		employment_type: [
+			{
+				id: 1,
+				type: 'Fulltime',
+			},
+			{
+				id: 2,
+				type: 'Remote',
+			},
+			{
+				id: 3,
+				type: 'Project Work',
+			},
+			{
+				id: 4,
+				type: 'Flexible Schedule',
+			}
+		]
+	},
+	{
+		id: 4,
+		department: 'Graphics Design',
+		description: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		employment_type: [
+			{
+				id: 1,
+				type: 'Fulltime',
+			},
+			{
+				id: 2,
+				type: 'Remote',
+			},
+			{
+				id: 3,
+				type: 'Project Work',
+			},
+			{
+				id: 4,
+				type: 'Flexible Schedule',
+			}
+		]
+	},
+	{
+		id: 5,
+		department: 'Graphics Design',
+		description: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		employment_type: [
+			{
+				id: 1,
+				type: 'Fulltime',
+			},
+			{
+				id: 2,
+				type: 'Remote',
+			},
+			{
+				id: 3,
+				type: 'Project Work',
+			},
+			{
+				id: 4,
+				type: 'Flexible Schedule',
+			}
+		]
+	}
+]

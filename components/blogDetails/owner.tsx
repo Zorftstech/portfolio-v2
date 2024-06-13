@@ -6,20 +6,20 @@ import { blogs, BlogDetails } from '../data';
 
 const BlogDetail: React.FC = ()=> {
     const searchParams = useSearchParams();
-    const id = searchParams.get('id');
+    const title = searchParams.get('title');
     const [blogDetails, setBlogDetails] = useState<BlogDetails[]>([]);
 
     useEffect(() => {
-        console.log('ID from searchParams:', id);
-        if (id && typeof id === 'string') {
-            const blog = blogs.find(blog => blog.id.toString() === id);
+        console.log('Title from searchParams:', title);
+        if (title && typeof title === 'string') {
+            const blog = blogs.find(blog => blog.title === title);
             console.log('Blog found:', blog);
             if (blog && blog.blog_details.length > 0) {
                 setBlogDetails(blog.blog_details);
                 console.log('Blog details set:', blog.blog_details);
             }
         }
-    }, [id]);
+    }, [title]);
 
     if (!blogDetails.length) {
         console.log('No blog details found');
