@@ -2,7 +2,7 @@
 import React from "react";
 import { portfolioProjects } from "../data";
 import Image from "next/image";
-import PortfolioGrid from "../home/portfolioGrid";
+import PortfolioGrid from "../shared/portfolioGrid";
 
 const ExploreSomeOfOurprojects: React.FC = () => {
 	return (
