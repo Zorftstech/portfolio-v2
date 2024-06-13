@@ -4,8 +4,11 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 import { FaArrowRight } from "react-icons/fa";
 import { partnersLogo } from "../data";
+import { useAppContext } from "@/lib/context";
 
 const PartnersSection: React.FC = () => {
+  const { store } = useAppContext();
+  const { partners } = store;
   return (
     <div className="py-24 mb-8">
       <div className="w-[100%] lg:w-[60%] mb-8">
@@ -18,13 +21,13 @@ const PartnersSection: React.FC = () => {
         </p>
       </div>
       <Marquee>
-        {partnersLogo.map((partner) => (
+        {partners.map((partner) => (
           <div key={partner.id} className="px-4">
             <Image
-              src={partner.src}
+              src={partner.logo || ""}
               width={150}
               height={30}
-              alt={partner.name}
+              alt={partner?.brand_name}
               className="object-fit"
             />
           </div>

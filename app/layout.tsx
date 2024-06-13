@@ -6,6 +6,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "@/components/navbar/navbar";
+import { ContextWrapper } from "@/lib/context";
+import LayoutRequests from "@/lib/apis/layoutRequest";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,7 +57,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ToastContainer limit={1} />
         <Navbar />
-        {children}
+        <ContextWrapper>
+          <LayoutRequests>{children}</LayoutRequests>
+        </ContextWrapper>
         <Footer />
       </body>
     </html>
