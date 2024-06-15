@@ -20,8 +20,8 @@ export default function Home() {
           <ServicesSection />
           <WhyChooseUs />
         </SideWrapper>
-          <PortfolioSection />
-          <TechnologiesWeUse />
+        <PortfolioSection />
+        <TechnologiesWeUse />
         <SideWrapper>
           <Testimonials />
           <FaqSection />

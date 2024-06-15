@@ -21,8 +21,6 @@ export interface IWhyChoseUseData {
   description: string;
 }
 
-// export interface
-
 export interface IProjectData {
   id: number;
   tags: {
@@ -65,7 +63,7 @@ export interface ITestimonialData {
   related_services: string[];
   name: string;
   comment: string;
-  image: string;
+  image: null | string;
 }
 
 export interface IFaqData {
