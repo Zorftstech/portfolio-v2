@@ -25,7 +25,9 @@ const BePartOfOurTeam: React.FC = () => {
                     <div className="justify-self-start hidden lg:flex lg:gap-10 justify-between lg:justify-start lg:col-span-2 w-full">
                         {career.employment_type.map((employment: EmploymentType) => (
                             <div key={employment.id}>
-                                <Link href={`/careers/career?department=${career.department}`} className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full">{employment.type}</Link>
+                                <Link href={`/careers/career?department=${career.department}`} className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full">
+                                    {employment.type}
+                                </Link>
                             </div>
                         ))}
                     </div>

@@ -1233,6 +1233,25 @@ export const testimonialCards : TestimonialCards[] = [
 
 ]
 
+export interface PersonalData {
+	id: number;
+	first_name: string;
+	last_name: string;
+	email: string;
+	phone_number: string;
+	country: string;
+	address: string;
+	gender: string;
+}
+
+export interface JobApplication {
+	id: number;
+	personal_data: PersonalData[];
+	resume: File;
+    cover_letter: File;
+    additional_attachment: File;
+}
+
 export interface YourRole {
 	id: number;
 	duty: string;
@@ -1256,6 +1275,7 @@ export interface Careers {
 	employment_type: EmploymentType[];
 	your_role: YourRole[];
 	your_skills: YourSkills[];
+	job_application: JobApplication[];
 }
 
 export const careers: Careers[] =[
@@ -1318,6 +1338,26 @@ export const careers: Careers[] =[
 				skill: 'pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 			}
 		],
+		job_application: [
+			{
+				id: 1,
+				personal_data: [
+					{
+						id: 1,
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone_number: '',
+						country: '',
+						address: '',
+						gender: '',
+					}
+				],
+				resume: new File([], 'resume.pdf'), // Placeholder file
+				cover_letter: new File([], 'cover_letter.pdf'), // Placeholder file
+				additional_attachment: new File([], 'additional_attachment.pdf'), // Placeholder file
+			}
+		]
 	},
 	{
 		id: 2,
@@ -1378,6 +1418,26 @@ export const careers: Careers[] =[
 				skill: 'pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 			}
 		],
+		job_application: [
+			{
+				id: 1,
+				personal_data: [
+					{
+						id: 1,
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone_number: '',
+						country: '',
+						address: '',
+						gender: '',
+					}
+				],
+				resume: new File([], 'resume.pdf'), // Placeholder file
+				cover_letter: new File([], 'cover_letter.pdf'), // Placeholder file
+				additional_attachment: new File([], 'additional_attachment.pdf'), // Placeholder file
+			}
+		]
 	},
 	{
 		id: 3,
@@ -1438,6 +1498,26 @@ export const careers: Careers[] =[
 				skill: 'pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 			}
 		],
+		job_application: [
+			{
+				id: 1,
+				personal_data: [
+					{
+						id: 1,
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone_number: '',
+						country: '',
+						address: '',
+						gender: '',
+					}
+				],
+				resume: new File([], 'resume.pdf'), // Placeholder file
+				cover_letter: new File([], 'cover_letter.pdf'), // Placeholder file
+				additional_attachment: new File([], 'additional_attachment.pdf'), // Placeholder file
+			}
+		]
 	},
 	{
 		id: 4,
@@ -1498,6 +1578,26 @@ export const careers: Careers[] =[
 				skill: 'pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 			}
 		],
+		job_application: [
+			{
+				id: 1,
+				personal_data: [
+					{
+						id: 1,
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone_number: '',
+						country: '',
+						address: '',
+						gender: '',
+					}
+				],
+				resume: new File([], 'resume.pdf'), // Placeholder file
+				cover_letter: new File([], 'cover_letter.pdf'), // Placeholder file
+				additional_attachment: new File([], 'additional_attachment.pdf'), // Placeholder file
+			}
+		]
 	},
 	{
 		id: 5,
@@ -1558,5 +1658,25 @@ export const careers: Careers[] =[
 				skill: 'pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 			}
 		],
+		job_application: [
+			{
+				id: 1,
+				personal_data: [
+					{
+						id: 1,
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone_number: '',
+						country: '',
+						address: '',
+						gender: '',
+					}
+				],
+				resume: new File([], 'resume.pdf'), // Placeholder file
+				cover_letter: new File([], 'cover_letter.pdf'), // Placeholder file
+				additional_attachment: new File([], 'additional_attachment.pdf'), // Placeholder file
+			}
+		]
 	}
 ]
