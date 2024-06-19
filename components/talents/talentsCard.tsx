@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Talents } from "../data";
+import { Talents } from "./data";
 
 const TalentsCard: React.FC = () => {
 	return (
-		<div className="grid grid-cols-3 gap-x-3 gap-y-4">
+		<div className="grid grid-cols-3 gap-8 mx-auto">
 			{Talents.map((talent) => (
 				<div
 					key={talent.id}
