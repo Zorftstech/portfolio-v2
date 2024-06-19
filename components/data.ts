@@ -1343,6 +1343,7 @@ export interface EmploymentType {
 export interface Careers {
 	id: number;
 	department: string;
+	summary: string;
 	description: string;
 	employment_type: EmploymentType[];
 	your_role: YourRole[];
@@ -1353,9 +1354,9 @@ export interface Careers {
 export const careers: Careers[] = [
 	{
 		id: 1,
-		department: "Graphics Design",
-		description:
-			"As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.",
+		department: 'Graphics Design',
+		summary: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non massa in purus interdum bibendum at a ligula. Suspendisse potenti. Fusce eget aliquam justo. Donec vitae justo ultricies, pretium dui in, pretium justo. Nulla tincidunt sollicitudin sollicitudin. Donec nec rutrum lectus. Nulla ut efficitur erat. Mauris lacinia enim eu ullamcorper volutpat. Nunc at egestas quam. Nam lacus urna, vehicula ac dapibus a, posuere vel magna. Donec in efficitur est, eu placerat lorem. Nulla eu purus rhoncus odio pulvinar pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 		employment_type: [
 			{
 				id: 1,
@@ -1673,9 +1674,9 @@ export const careers: Careers[] = [
 	},
 	{
 		id: 5,
-		department: "Graphics Design",
-		description:
-			"As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.",
+		department: 'Graphics Design',
+		summary: 'As a graphics designer you will be creating visual text and imagery. You will also design creative content for online campaigns, print ads, websites, and even videos.',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non massa in purus interdum bibendum at a ligula. Suspendisse potenti. Fusce eget aliquam justo. Donec vitae justo ultricies, pretium dui in, pretium justo. Nulla tincidunt sollicitudin sollicitudin. Donec nec rutrum lectus. Nulla ut efficitur erat. Mauris lacinia enim eu ullamcorper volutpat. Nunc at egestas quam. Nam lacus urna, vehicula ac dapibus a, posuere vel magna. Donec in efficitur est, eu placerat lorem. Nulla eu purus rhoncus odio pulvinar pharetra vitae eu leo. Quisque rhoncus vestibulum faucibus.',
 		employment_type: [
 			{
 				id: 1,

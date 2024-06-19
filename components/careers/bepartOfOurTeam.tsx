@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { careers, Careers, EmploymentType } from "../data";
+import { careers, Careers, EmploymentType } from "./data";
 
 const BePartOfOurTeam: React.FC = () => {
     return(
