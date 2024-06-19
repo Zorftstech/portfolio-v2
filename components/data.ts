@@ -1312,11 +1312,8 @@ export interface EmploymentType {
 export interface Careers {
 	id: number;
 	department: string;
-	summary: string;
 	description: string;
 	employment_type: EmploymentType[];
-	your_role: YourRole[];
-	your_skills: YourSkills[];
 }
 
 export const careers: Careers[] = [
@@ -1439,5 +1436,62 @@ export const careers: Careers[] = [
 				type: "Flexible Schedule",
 			},
 		],
+	},
+];
+
+export const Talents = [
+	{
+		id: 1,
+		img: "/talentImg.png",
+		bg: "#004AAD",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
+	},
+	{
+		id: 2,
+		img: "/talentImg.png",
+		bg: "#F8B61B",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
+	},
+	{
+		id: 3,
+		img: "/talentImg.png",
+		bg: "#004AAD",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
+	},
+	{
+		id: 1,
+		img: "/talentImg.png",
+		bg: "#004AAD",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
+	},
+	{
+		id: 2,
+		img: "/talentImg.png",
+		bg: "#F8B61B",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
+	},
+	{
+		id: 3,
+		img: "/talentImg.png",
+		bg: "#004AAD",
+		skill: "Graphics Designer",
+		name: "John Doe",
+		description:
+			"John Doe is a proficient graphic designer with 3+ years experience",
 	},
 ];
