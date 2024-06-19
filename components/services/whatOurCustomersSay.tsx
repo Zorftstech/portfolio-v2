@@ -4,7 +4,7 @@ import TestimonialCard from "../home/testimonialCard";
 
 const WhatOurCustomersSay: React.FC = () => {
 	return (
-		<div className="mx-auto lg:py-24 mt-12 lg:mt-40 w-full">
+		<div className="flex flex-col items-center lg:py-24 mt-20 lg:mt-40 w-full">
 
             <div className="hidden lg:block">
                 {/* ============= Section description ============= */}
@@ -16,7 +16,7 @@ const WhatOurCustomersSay: React.FC = () => {
                 </p>
             </div>
             
-            <div className="lg:hidden">
+            <div className="lg:hidden px-5">
                 <div className="flex justify-start items-center">
                     <h4 className="text-center bg-[#F2F2F2] p-2 rounded-lg text-[#9C9AA1] w-[130px]">
                         Testimonials
@@ -24,7 +24,7 @@ const WhatOurCustomersSay: React.FC = () => {
                 </div>
 
                 {/* ============= Section description ============= */}
-                <h3 className="text-[#3B3D3F] text-4xl lg:text-[64px] lg:leading-[82px] text-start font-bold mt-10">
+                <h3 className="text-[#3B3D3F] text-[28px] lg:text-[64px] leading-[38px] lg:leading-[82px] text-start font-bold mt-10">
                 What they said about us from the people we shared experiences with.
                 </h3>
             </div>

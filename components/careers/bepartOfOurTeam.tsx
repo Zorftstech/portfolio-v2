@@ -18,7 +18,9 @@ const BePartOfOurTeam: React.FC = () => {
                     <div className="justify-self-start flex lg:hidden lg:gap-10 justify-between lg:justify-start lg:col-span-2 w-full">
                         {career.employment_type.slice(0, 3).map((employment: EmploymentType) => (
                             <div key={employment.id}>
-                                <button className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full">{employment.type}</button>
+                                <Link href={`/careers/career?department=${career.department}`} className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full">
+                                    {employment.type}
+                                </Link>
                             </div>
                         ))}
                     </div>

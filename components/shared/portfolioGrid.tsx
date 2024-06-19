@@ -52,10 +52,10 @@ const PortfolioGrid: React.FC = () => {
             </div>
           </div>          ))}
         </div>
-        <button className='mx-auto flex items-center justify-between w-[130px] h-[48px] bg-transparent border-[0.5px] border-[#FFFFFF] rounded-full px-6 mt-20'> 
+        {/* <button className='mx-auto flex items-center justify-between w-[130px] h-[48px] bg-transparent border-[0.5px] border-[#FFFFFF] rounded-full px-6 mt-20'> 
                 <Image src={'Vector-4.svg'} alt='' width={15.5} height={4} />
                 <span className='text-[12px] leading-[13px] text-[#FFFFFF]'>See More</span>
-        </button>
+        </button> */}
       </>
 
     )

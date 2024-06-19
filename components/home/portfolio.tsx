@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import PortfolioGrid from "../portfolio/portfolioGrid";
+import PortfolioGrid from "../shared/portfolioGrid";
 
 const PortfolioSection: React.FC = () => {
   
