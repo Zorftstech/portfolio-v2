@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import Image from "next/image";
 import { servicesData, Service } from '../data';
 
 const ServiceDetailContent: React.FC = () => {

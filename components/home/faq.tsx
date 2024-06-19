@@ -11,7 +11,7 @@ const FaqSection: React.FC = () => {
     fetchFaq().then((res) => {
       setData(res?.data.results);
     });
-  }, []);  
+  }, []);
   return (
     <div className="py-24 mb-8">
       <div className="flex justify-center items-center">
@@ -68,7 +68,7 @@ const FaqSection: React.FC = () => {
                   </svg>
                 </div>
               </summary>
-              <div className="pb-4 text-secondary-500">{faq.answer}</div>
+              <div className="pb-4 text-secondary-500">{faq?.answer}</div>
             </details>
           </div>
         ))}

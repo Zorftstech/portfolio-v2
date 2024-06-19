@@ -4,15 +4,11 @@ import Image from "next/image";
 import { partners } from "../data";
 import { fetchPartners } from "@/lib/apis/request";
 import { IPartners } from "@/lib/types";
+import { useAppContext } from "@/lib/context";
 
 const OurPartners: React.FC = () => {
-  const [data, setData] = useState<IPartners[]>([]);
-
-  useEffect(() => {
-    fetchPartners().then((res) => {
-      setData(res?.data.results);
-    });
-  }, []);
+  const { store } = useAppContext();
+  const { partners } = store;
   return (
     <div className="">
       <div className="ourPartner w-[428px] lg:w-full h-[224px] lg:h-[600px] mx-auto flex justify-center bg-cover bg-center lg:-mt-16">
@@ -32,14 +28,14 @@ const OurPartners: React.FC = () => {
           className="mx-auto grid grid-cols-6 gap-[185px] lg:gap-[150.82px] w-[439.51px] lg:w-full
           h-[109.88px] lg:h-[156.01px] lg:py-[40px] my-1 -skew-y-2 bg-[white] overflow-hidden"
         >
-          {data?.map((partner, index) => (
+          {partners?.map((partner) => (
             <div
-              key={index}
+              key={partner.id}
               className="w-[158.36px] lg:w-[233.15px] h-[51.63px] lg:h-[76.01px] ml-[-33px] pt-7 lg:pt-0"
             >
               <Image
-                src={partner.logo}
-                alt={partner.brand_name}
+                src={partner.logo || ""}
+                alt={partner?.brand_name}
                 width={233.15}
                 height={76.01}
               />
@@ -48,21 +44,21 @@ const OurPartners: React.FC = () => {
         </div>
       </div>
       <div className="mx-auto grid grid-cols-4 overflow-auto lg:overflow-hidden lg:grid-cols-2 gap-[400px] lg:gap-20 max-w-7xl my-8 lg:my-52 px-8 lg:px-0 w-full">
-        {data?.slice(0, 4).map((partner, index) => (
+        {partners?.slice(0, 4)?.map((partner, index) => (
           <div
             key={index}
             className="w-[356px] lg:w-[610px] h-[325px] lg:h-[px] pt- lg:pt-"
           >
             <center>
               <Image
-                src={partner.logo}
-                alt={partner.brand_name}
+                src={partner.logo || ""}
+                alt={partner?.brand_name}
                 width={233.15}
                 height={76.01}
               />
             </center>
             <p className="text-[16px] leading-[25px] text-[#777680] lg:text-center mt-5">
-              {partner.description}
+              {partner?.description}
             </p>
           </div>
         ))}
