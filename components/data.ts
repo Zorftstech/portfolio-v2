@@ -70,6 +70,7 @@ export const footerLinks = [
 			{ id: 5, title: "Game Development", link: "/", urlTarget: '' },
 			{ id: 6, title: "Data Analysis", link: "/", urlTarget: '' },
 			{ id: 7, title: "IT Consultancy", link: "/", urlTarget: '' },
+			{ id: 8, title: "IT Outsourcing", link: "/", urlTarget: '' },
 		],
 	},
 	{
