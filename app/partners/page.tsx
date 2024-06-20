@@ -7,13 +7,14 @@ import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 export default function Partners() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <TopAndBottomWrapper>
+      {/* <TopAndBottomWrapper>
         <OurPartners />
         <SideWrapper>
           <WhatOurPartnersSaid />
           <BenefitOfParnership />
         </SideWrapper>
-      </TopAndBottomWrapper>
+      </TopAndBottomWrapper> */}
+      <div>hi</div>
     </main>
   );
 }
