@@ -16,7 +16,7 @@ const Testimonials: React.FC = () => {
 
 			{/* ============= Section description ============= */}
 			<h3 className="text-[#3B3D3F] text-4xl lg:text-[64px] lg:leading-[82px] text-start font-bold mt-10">
-            What they said about us from the people we shared experiences with.
+            What they said about us<br /> from the people we shared<br /> experiences with.
 			</h3>
 
             <TestimonialCard />

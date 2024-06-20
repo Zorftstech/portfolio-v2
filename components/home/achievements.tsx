@@ -17,7 +17,7 @@ const AchievementsSection: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="flex items-center justify-center flex-col py-24">
+		<div className="flex items-center justify-center flex-col mt-28 lg:my-24">
 			<div className="grid lg:grid-cols-2 gap-y-10 lg:flex-nowrap justify-center items-start w-[100%]">
 				{/* =========== achievements texts =============== */}
 				<div className="w-[380px] lg:w-[428.15px]">
