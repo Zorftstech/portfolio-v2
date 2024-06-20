@@ -17,7 +17,7 @@ const Mission: React.FC = () => {
         </div>
         <SlideShow />
       </div>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 mt-36">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 mt-24 lg:mt-36">
         <div className="">
           <h2 className="text-[48px] leading-[80px] font-bold text-[#004AAD]">
             Values

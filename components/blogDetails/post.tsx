@@ -6,20 +6,20 @@ import { blogs, BlogDetails } from '../data';
 
 const Post: React.FC = () => {
     const searchParams = useSearchParams();
-    const id = searchParams.get('id');
+    const title = searchParams.get('title');
     const [bodyDetails, setBodyDetails] = useState<BlogDetails | null>(null);
 
     useEffect(() => {
-        console.log('ID from searchParams:', id);
-        if (id && typeof id === 'string') {
-            const blog = blogs.find(blog => blog.id.toString() === id);
+        console.log('Title from searchParams:', title);
+        if (title && typeof title === 'string') {
+            const blog = blogs.find(blog => blog.title === title);
             console.log('Blog found:', blog);
             if (blog && blog.blog_details.length > 0) {
                 setBodyDetails(blog.blog_details[0]); // Assuming there's only one blog detail per blog
                 console.log('Blog details set:', blog.blog_details[0]);
             }
         }
-    }, [id]);
+    }, [title]);
 
     if (!bodyDetails) {
         console.log('No blog details found');
@@ -27,10 +27,10 @@ const Post: React.FC = () => {
     }
 
     return (
-        <div className="mx-auto flex flex-col max-w-7xl p-8 mb-32">
+        <div className="mx-auto flex flex-col max-w-7xl px-5 lg:mb-32">
              {bodyDetails.body.map(detail => (
-                <div key={detail.id} className='w-[998px]'>
-                    <div className="align-center w-[400px] lg:w-[830px]">
+                <div key={detail.id} className='w-full lg:w-[998px]'>
+                    <div className="align-center lg:w-[830px]">
                         <p className='text-[18px] leading-[30px] text-[#5F5E6C]'>
                             In the world of fruits, few things can rival the vibrant allure and refreshing burst of flavor offered by a perfectly ripe orange. From its sun-kissed hue to its tangy sweetness, the humble orange is a true superstar of the produce aisle. But what makes fresh oranges so special? Join us as we peel back the layers and delve into the juicy tale of these citrus wonders, from tree to table.
                         </p>

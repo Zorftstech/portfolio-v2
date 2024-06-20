@@ -35,7 +35,7 @@ const WhyChooseUs: React.FC = () => {
         <div className="flex flex-col">
           {data?.map((reason, index) => (
             <div
-              key={reason.id}
+              key={reason?.id}
               onMouseEnter={() => setHoveredIndex(index)} // Set the hovered index when mouse enters
               onMouseLeave={() => setHoveredIndex(0)} // Reset hovered index to 0 when mouse leaves
               className="cursor-pointer my-2 justify-self-start lg:ml-[-650px]"
@@ -47,7 +47,7 @@ const WhyChooseUs: React.FC = () => {
                     color: hoveredIndex === index ? "#004AAD" : "#D0D0D0",
                   }}
                 >
-                  {reason.subject}
+                  {reason?.subject}
                 </li>
               </ul>
             </div>

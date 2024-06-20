@@ -67,9 +67,6 @@ export default function Footer() {
               implementing groundbreaking software solutions that can grow with
               your business.
             </p>
-            <p className="text-[#D9D9D9] text-base leading-6 mt-6">
-              Lorem ipsum dolor sit amet consectetur. Odio rhoncus consequat.
-            </p>
           </div>
 
           <p className="text-white my-11 hidden lg:block">
