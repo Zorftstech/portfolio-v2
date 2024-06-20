@@ -55,12 +55,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ToastContainer limit={1} />
-        <Navbar />
         <ContextWrapper>
-          <LayoutRequests>{children}</LayoutRequests>
+          <LayoutRequests>
+            <ToastContainer limit={1} />
+            <Navbar />
+            {children}
+            <Footer />
+          </LayoutRequests>
         </ContextWrapper>
-        <Footer />
       </body>
     </html>
   );

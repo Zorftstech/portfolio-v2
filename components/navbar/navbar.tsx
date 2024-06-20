@@ -16,6 +16,7 @@ const callsToAction = [
   { name: "Contact Us", href: "#", icon: FaArrowRight },
   { name: "Search", href: "#", icon: FaSearch },
 ];
+
 const COLORS = ["bg-white", "bg-[#313134]"];
 
 export default function Navbar() {

@@ -25,7 +25,7 @@ const PortfolioGrid: React.FC = () => {
               alt={project?.brand_name}
               width={497}
               height={309}
-              className="rounded-xl"
+              className="rounded-xl max-h-[425px] h-full object-cover"
             />
             <h4 className="text-[14px] leading-[22px] text-[#FEFEFE] pt-5">
               {project?.brand_name}

@@ -1,35 +1,8 @@
 "use client";
+import { useAppContext } from "@/lib/context";
+import hyphenateSpaces from "@/lib/helpers/hyphenateSpaces";
 import Link from "next/link";
 import { BiX } from "react-icons/bi";
-
-const services = [
-  {
-    title: "development",
-    list: [
-      { name: "App development", link: "" },
-      { name: "Game development", link: "" },
-      { name: "Web development", link: "" },
-    ],
-  },
-  {
-    title: "design",
-    list: [
-      { name: "Brand identity design", link: "" },
-      { name: "Graphics design", link: "" },
-      { name: "App design", link: "" },
-      { name: "Web design", link: "" },
-    ],
-  },
-  {
-    title: "others",
-    list: [
-      { name: "Cybersecurity", link: "" },
-      { name: "IT consulting", link: "" },
-      { name: "IT outsourcing", link: "" },
-      { name: "Data analysis", link: "" },
-    ],
-  },
-];
 
 interface IServiceProps {
   isOnDarkMode: boolean;
@@ -42,6 +15,8 @@ const Services = ({
   isOnDarkMode,
   isShowingServices,
 }: IServiceProps) => {
+  const { store } = useAppContext();
+  const { services } = store;
   return (
     <div
       className={`absolute lg:static top-[80px] h-[100dvh]overflow-y-auto 
@@ -61,23 +36,26 @@ const Services = ({
 
       {/* Items */}
       <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
-        {services.map((item, itemIndex) => (
-          <div key={itemIndex} className="w-[45%] lg:w-auto">
+        {services?.map((item) => (
+          <Link
+            href={`/${hyphenateSpaces(item.name)}?id=${item.id}`}
+            key={item.id}
+            className="w-[45%] lg:w-auto block"
+          >
             <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
-              {item.title}
+              {item.name}
             </p>
-            {item.list.map((listItem, listItemIndex) => (
-              <Link
+            {item.content.map((listItem) => (
+              <p
                 className={`text-sm md:text-base ${
                   isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[##424247]"
                 } block`}
-                href={listItem.link}
-                key={listItemIndex}
+                key={listItem.id}
               >
-                {listItem.name}
-              </Link>
+                {listItem.title}
+              </p>
             ))}
-          </div>
+          </Link>
         ))}
       </div>
 
