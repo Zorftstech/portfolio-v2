@@ -4,10 +4,10 @@ import ListLink from "../listLink";
 const InfoSection: React.FC = () => {
   return (
     <div className="mt-20">
-      <h1 className="text-[64px] tracking-tighter text-start font-semibold text-[#004AAD] mb-12">
+      <h1 className="text-[64px] tracking-tighter text-start font-semibold text-[#004AAD]">
         Get in touch with us
       </h1>
-      <p className="text-[#5F5E6C] tracking-tight">From groundbreaking ideas to ambitious expansions, our team is available 24/7 to answer your questions and fuel your success. (This focuses on the broad range of needs they can address.)</p>
+      <p className="text-[#5F5E6C] tracking-tight mb-12 text-[18px]">From groundbreaking ideas to ambitious expansions, our team is available 24/7 to answer your questions and fuel your success.</p>
 
       <div className="mt-10 flex justify-center items-start gap-6">
         <div className="mr-4 w-[25%]">
