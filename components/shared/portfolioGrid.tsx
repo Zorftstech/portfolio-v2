@@ -5,14 +5,15 @@ import Link from "next/link";
 import { RiCircleFill } from "react-icons/ri";
 import { extractYear } from "@/lib/helpers/extractYearfromDateString";
 import { useAppContext } from "@/lib/context";
+import { SideWrapper } from "./Wrappers";
 
 const PortfolioGrid: React.FC = () => {
     const { store } = useAppContext();
     const { projects } = store;
 
     return(
-        <>
-        <div className="mx-auto grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff] px-8">
+        <SideWrapper>
+        <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff] px-8">
           {projects.slice(0, 4).map((project) => (
             <div key={project.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
@@ -56,7 +57,7 @@ const PortfolioGrid: React.FC = () => {
                 <Image src={'Vector-4.svg'} alt='' width={15.5} height={4} />
                 <span className='text-[12px] leading-[13px] text-[#FFFFFF]'>See More</span>
         </button> */}
-      </>
+      </SideWrapper>
 
     )
 }

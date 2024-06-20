@@ -1,8 +1,9 @@
-import PortfolioGrid from "@/components/portfolio/portfolioGrid";
+import PortfolioGridDark from "@/components/portfolio/portfolioGridDark";
 import PortfolioNavbar from "@/components/portfolio/portfolioNavbar";
 import SomeOfOurWork from "@/components/portfolio/someOfOurWork";
 import { SideWrapper, TopAndBottomWrapper } from "@/components/shared/Wrappers";
 import React from "react";
+
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <SideWrapper>
           <SomeOfOurWork />
           <PortfolioNavbar />
-          <PortfolioGrid />
+          <PortfolioGridDark />
         </SideWrapper>
       </TopAndBottomWrapper>
     </main>
