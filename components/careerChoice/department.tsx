@@ -25,7 +25,7 @@ const Department: React.FC = () => {
     }
 
     return (
-        <div className="pt-10 lg:pt-32 pb-14 lg:pb-64">
+        <div className="mt-10 lg:mt-32">
             <div key={career.id} className="">
                 <div className="w-[372px] lg:w-[1200px] text-start">
                     <h2 className="text-[24px] lg:text-[48px] leading-[50px] lg:leading-[50px] text-[#004AAD] font-bold mb-8">{career.department}</h2>
@@ -58,10 +58,10 @@ const Department: React.FC = () => {
                    
                 </div>
 
-                <button className="lg:justify-self-end flex py-[16px] px-[24px] rounded-full bg-[#00439D] w-[157px] justify-between my-16">
+                {/* <button className="lg:justify-self-end flex py-[16px] px-[24px] rounded-full bg-[#00439D] w-[157px] justify-between my-16">
                     <Image src={'/Vector-4.svg'} alt="" width={24} height={4} className="self-center" />
                     <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">Apply Now</span>
-                </button>
+                </button> */}
             </div>
         </div>
     );

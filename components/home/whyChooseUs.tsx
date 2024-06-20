@@ -19,7 +19,7 @@ const WhyChooseUs: React.FC = () => {
   const hoveredReason = data && data[hoveredIndex];
 
   return (
-    <div className="mx-auto flex flex-col items-center justify-center max-w-7xl px-24 my-8 lg:px-8 lg:py-24 w-full">
+    <div className="mx-auto flex flex-col items-center justify-center mt-24 lg:my-24 w-full">
       <h2 className="text-[24px] leading-[27.6px] text-[#004AAD] font-bold self-start">
         Why Choose Zorfts?
       </h2>
