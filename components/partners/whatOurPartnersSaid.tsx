@@ -4,7 +4,7 @@ import { partners } from "../data";
 
 const WhatOurPartnersSaid: React.FC = () => {
   return (
-    <div className="my-8 px-8 w-full">
+    <div className="my-8 w-full">
       <h2 className="text-[28px] lg:text-[64px] leading-[38px] lg:leading-[52px] font-bold text-[#004AAD] text-center lg:mb-[150px]">
         What our Partners said
       </h2>

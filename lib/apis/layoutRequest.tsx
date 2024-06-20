@@ -17,7 +17,7 @@ const LayoutRequests = ({ children }: IChildrenProps) => {
     fetchProjects().then((res) => {
       setProjects(res?.data.results);
     });
-  }, []);
+  }, [setPartners, setProjects]);
   return <>{children}</>;
 };
 
