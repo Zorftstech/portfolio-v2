@@ -3,7 +3,7 @@ import Image from "next/image";
 import Solution from "@/components/services/solution";
 import TalentsCard from "@/components/talents/talentsCard";
 
-function Talents() {
+const Talents: React.FC = () => {
 	return (
 		<>
 			<div className="flex  justify-center gap-14">
