@@ -6,7 +6,7 @@ import { MdOutlinePhoneCallback } from "react-icons/md";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="flex items-center justify-center flex-col py-12 my-8">
+    <div className="flex items-center justify-center flex-col mt-12 lg:my-24">
       <h2 className="text-4xl lg:text-[82px] leading-[45px] lg:leading-[98px] font-semibold text-center tracking-tighter text-[#3B3D3F]">
         Unlocking possibilities
         <br /> through <span className="text-[#004AAD]">technology</span>

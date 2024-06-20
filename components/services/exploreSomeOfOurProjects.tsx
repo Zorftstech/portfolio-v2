@@ -6,17 +6,15 @@ import PortfolioGrid from "../shared/portfolioGrid";
 
 const ExploreSomeOfOurprojects: React.FC = () => {
 	return (
-		<div className="mx-auto py-24 lg:px-8 lg:mt-40 w-full bg-[#004AAD]">
+		<div className="mx-auto py-10 lg:py-24 lg:mt-40 w-full bg-[#004AAD]">
 
-      <div className="mx-auto max-w-7xl  text-[#fff] px-8">
+      <div className="mx-auto max-w-7xl text-[#fff]">
           <div className="col-span-2 w-full lg:w-[713px] mt-5">
-            <h3 className="text-[#FFFFFF] text-[28px] lg:text-[64px] leading-[38px] lg:leading-[82px] text-start font-bold">
+            <h3 className="text-[#FFFFFF] text-[28px] lg:text-[64px] leading-[38px] lg:leading-[82px] text-start font-bold hidden lg:block">
                   Explore some of our Web Design projects
             </h3>
             <h2
-            className="text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold text-white mb-[64px]
-                  "
-            >
+            className="text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold text-white mb-[64px] lg:hidden">
               See some of our works here
             </h2>
 
