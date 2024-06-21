@@ -97,3 +97,54 @@ export interface IPartners {
   description: string;
   created_at: string;
 }
+
+export interface IBlog {
+  id: number;
+  cover_image: string;
+  title: string;
+  content: string;
+  related_blogs: string[];
+  author: number;
+  author_full_name: string;
+  created_at: string;
+}
+
+export interface IService {
+  id: number;
+  content: [
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    }
+  ];
+  name: string;
+  main_title: string;
+  main_description: string;
+  is_subservice: boolean;
+  image: null | string;
+  created_at: string;
+  link: null | string;
+  sub_title: string;
+  sub_description: string;
+  parent_service: null | string;
+}
