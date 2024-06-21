@@ -1,0 +1,10 @@
+.arrowLink {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: transform 250ms all-ease-in-out; /* Smooth transition */
+  }
+  
+  .arrowLink:hover .icon {
+    transform: translateX(8px); /* Move icon 5px right on hover */
+  }

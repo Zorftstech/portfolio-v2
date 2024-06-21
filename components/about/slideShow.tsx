@@ -1,8 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import './slideShow.css'
-import Image from 'next/image';
-import { slides } from '../data';
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { slides } from './data';
 
 const SlideShow: React.FC = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
@@ -57,10 +57,12 @@ const SlideShow: React.FC = () => {
         {/* Next/prev buttons */}
         <div className='hidden lg:grid grid-cols-2 gap-6 mr-16'>
           <a className="pre" onClick={() => plusSlides(-1)}>
-            <Image src={'/Vector-5.svg'} width={15.5} height={4} alt={''} />
+            {/* <Image src={'/Vector-5.svg'} width={15.5} height={4} alt={''} /> */}
+            <FaArrowLeftLong className='text-[20px]' />
           </a>
           <a className="nex" onClick={() => plusSlides(1)}>
-            <Image src={'/Vector-3.svg'} width={15.5} height={4} alt={''} />
+            {/* <Image src={'/Vector-3.svg'} width={15.5} height={4} alt={''} /> */}
+            <FaArrowRightLong className='text-[20px]' />
           </a>
         </div>
       </div>
