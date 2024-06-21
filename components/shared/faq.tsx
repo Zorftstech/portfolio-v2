@@ -35,7 +35,7 @@ const FaqSection: React.FC = () => {
             key={faq?.id}
           >
             <details className="group" open={faq.id === 1}>
-              <summary className="flex cursor-pointer list-none items-center justify-between py-4 textLg font-medium text-secondary-900 group-open:text-primary-500">
+              <summary className="flex cursor-pointer list-none items-center justify-between py-4 textLg font-bold text-2xl text-secondary-900 group-open:text-primary-500">
                 {faq?.question}
                 <div>
                   <svg
@@ -68,7 +68,7 @@ const FaqSection: React.FC = () => {
                   </svg>
                 </div>
               </summary>
-              <div className="pb-4 text-secondary-500">{faq?.answer}</div>
+              <div className="pb-4 text-secondary-400 leading-7 text-[16px] tracking-wide">{faq?.answer}</div>
             </details>
           </div>
         ))}
