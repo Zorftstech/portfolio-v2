@@ -21,9 +21,7 @@ const MeetTheTeam = () => {
         Meet our Team
       </h2>
       <p className="w-[380px] lg:w-[590px] -tracking-[0.5px] text-[#5F5E6C] mt-5 md:text-lg">
-        Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas
-        convallis arcu. Purus tempus lectus imperdiet egestas libero et sit
-        mauris. Quam accumsan imperdiet in neque
+      Get to know the passionate and talented individuals who make <span className="font-bold text-zorft-blue">Zorfts Technologies Ltd</span> tick! Our team is a diverse group of experts, each bringing a unique blend of skills and experience to the table. We're all united by a common goal: to create exceptional solutions that empower our clients and push the boundaries of what's possible.
       </p>
 
       <div className="mb-32 mt-10 flex flex-wrap justify-center gap-2.5 lg:gap-5">

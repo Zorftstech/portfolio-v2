@@ -23,9 +23,7 @@ const Mission: React.FC = () => {
             Values
           </h2>
           <p className="text-[18px] lg:text-[20px] leading-[28px] lg:leading-[30px] text-[#5F5E6C] lg:w-[390px] lg:h-[150px]">
-            Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas
-            convallis arcu. Purus tempus lectus imperdiet egestas libero et sit
-            mauris. Quam accumsan imperdiet in neque et
+          We prioritize building trust and exceeding client expectations through transparency, honesty, and a commitment to their success.
           </p>
         </div>
         <ul className="list-disc grid lg:grid-cols-2 gap-10 lg:gap-24 ml-5 lg:ml-0">
