@@ -6,7 +6,7 @@ function BlogCard() {
   return (
     <div className="lg:py-24 mb-8">
       <h3 className="text-[50px] leading-[80px] text-[#3B3D3F] font-bold px-5 lg:px-8 tracking-tight">
-        Blog
+        Blogs
       </h3>
       <Blogs />
     </div>

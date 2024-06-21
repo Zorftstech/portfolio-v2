@@ -79,7 +79,7 @@ const BlogItem = ({ blog }: { blog: IBlog }) => {
             className="text-[#004AAD] underline capitalize font-semibold"
             href={`/blog/title=${hyphenateSpaces(blog?.title)}?id=${blog?.id}`}
           >
-            see more
+            Read more
           </Link>
         </div>
       </div>
