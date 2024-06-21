@@ -6,7 +6,7 @@ import { Talents } from "./data";
 
 const TalentsCard: React.FC = () => {
 	return (
-		<div className="grid grid-cols-3 gap-8 mx-auto">
+		<div className="grid grid-rows-1 xl:grid-cols-3 gap-8 mx-auto">
 			{Talents.map((talent) => (
 				<div
 					key={talent.id}
