@@ -29,6 +29,9 @@ export default function Navbar() {
   const [isHamburgerOpen, setHamburgerOpen] = useState(false);
 
   useEffect(() => {
+    setIsShowingBackdrop(false);
+    setIsShowingServices(false);
+    setIsShowingTechnologies(false);
     if (pathname.includes("portfolio")) {
       setNavBG(COLORS[1]);
       setIsOnDarkMode(true);
