@@ -21,7 +21,7 @@ const PartnersSection: React.FC = () => {
         </p>
       </div>
       <Marquee>
-        {partners.map((partner) => (
+        {partners?.map((partner) => (
           <div key={partner.id} className="px-4">
             <Image
               src={partner.logo || ""}

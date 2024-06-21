@@ -1,10 +1,14 @@
-"use client"
-import Image from 'next/image';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { servicesData } from '../data';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import Link from "next/link";
+import { useAppContext } from "@/lib/context";
+import hyphenateSpaces from "@/lib/helpers/hyphenateSpaces";
+import { ServiceLearnMore } from "@/lib/svgs";
 
 const ServicesSection: React.FC = () => {
+  const { store } = useAppContext();
+  const { services } = store;
   // State to track the index of the service being hovered over
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -25,7 +29,7 @@ const ServicesSection: React.FC = () => {
       {/* ============= Services grid ============= */}
       <div className="overflow-x-scroll lg:overflow-visible mt-8 lg:mt-20 w-[380px] lg:w-full">
         <div className="grid grid-cols-10 lg:grid-cols-3 gap-x-96 lg:gap-10 lg:w-full">
-          {servicesData.map((service, index) => (
+          {services?.map((service, index) => (
             <div
               key={service.id}
               className="hover-effect border-2 rounded-3xl border-gray-200 px-5 py-8 mb-6 lg:mb-0 min-w-[344px] cursor-pointer"
@@ -33,11 +37,25 @@ const ServicesSection: React.FC = () => {
               onMouseLeave={() => setHoveredIndex(null)} // Reset hovered index when mouse leaves
             >
               {/* ============= Service info ============= */}
-              <h4 className='text-xl lg:text-2xl font-bold text-gray-700 mb-4'>{service.title}</h4>
-              <p className='text-sm lg:text-base text-[#5F5E6C] min-h-40'>{service.text}</p>
-              <div className='flex justify-between w-2/5 lg:w-1/3 mt-5'>
-                <Image src={hoveredIndex === index ? service.hoveredImageSrc : service.imageSrc} alt='icon' width={15.5} height={4} />
-                <Link href={`/services?title=${service.title}`} className='text-[#424247] cursor-pointer no-underline'>Learn More</Link>
+              <h4 className="text-xl lg:text-2xl font-bold text-gray-700 mb-4">
+                {service.main_title}
+              </h4>
+              <p className="text-sm lg:text-base text-[#5F5E6C] min-h-40">
+                {service?.main_description}
+              </p>
+              <div className="flex justify-between w-2/5 lg:w-1/3 mt-5 items-center">
+                <ServiceLearnMore
+                  color={hoveredIndex === index ? "#E6EDF7" : "#424247"}
+                />
+
+                <Link
+                  href={`/services/${hyphenateSpaces(service.name)}?id=${
+                    service.id
+                  }`}
+                  className="text-[#424247] cursor-pointer no-underline"
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
           ))}
