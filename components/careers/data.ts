@@ -12,9 +12,9 @@ export interface PersonalData {
 export interface JobApplication {
   id: number;
   personal_data: PersonalData[];
-  resume: File;
-  cover_letter: File;
-  additional_attachment: File;
+  // resume: File;
+  //   cover_letter: File;
+  //   additional_attachment: File;
 }
 
 export interface YourRole {
@@ -123,9 +123,9 @@ export const careers: Careers[] = [
             gender: "",
           },
         ],
-        resume: new File([], "resume.pdf"), // Placeholder file
-        cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
-        additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
+        // resume: new File([], "resume.pdf"), // Placeholder file
+        // cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
+        // additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
       },
     ],
   },
@@ -208,9 +208,9 @@ export const careers: Careers[] = [
             gender: "",
           },
         ],
-        resume: new File([], "resume.pdf"), // Placeholder file
-        cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
-        additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
+        // resume: new File([], "resume.pdf"), // Placeholder file
+        // cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
+        // additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
       },
     ],
   },
@@ -293,9 +293,9 @@ export const careers: Careers[] = [
             gender: "",
           },
         ],
-        resume: new File([], "resume.pdf"), // Placeholder file
-        cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
-        additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
+        // resume: new File([], "resume.pdf"), // Placeholder file
+        // cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
+        // additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
       },
     ],
   },
@@ -378,9 +378,9 @@ export const careers: Careers[] = [
             gender: "",
           },
         ],
-        resume: new File([], "resume.pdf"), // Placeholder file
-        cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
-        additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
+        // resume: new File([], "resume.pdf"), // Placeholder file
+        // cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
+        // additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
       },
     ],
   },
@@ -463,9 +463,9 @@ export const careers: Careers[] = [
             gender: "",
           },
         ],
-        resume: new File([], "resume.pdf"), // Placeholder file
-        cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
-        additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
+        // resume: new File([], "resume.pdf"), // Placeholder file
+        // cover_letter: new File([], "cover_letter.pdf"), // Placeholder file
+        // additional_attachment: new File([], "additional_attachment.pdf"), // Placeholder file
       },
     ],
   },
