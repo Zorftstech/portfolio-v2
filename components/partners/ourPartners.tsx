@@ -1,9 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { partners } from "../data";
-import { fetchPartners } from "@/lib/apis/request";
-import { IPartners } from "@/lib/types";
 import { useAppContext } from "@/lib/context";
 
 const OurPartners: React.FC = () => {
