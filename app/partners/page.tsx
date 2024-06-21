@@ -13,7 +13,7 @@ export default function Partners() {
           <WhatOurPartnersSaid />
           <BenefitOfParnership />
         </SideWrapper>
-      </TopAndBottomWrapper>
+      </TopAndBottomWrapper> 
     </main>
   );
 }
