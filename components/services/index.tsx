@@ -2,7 +2,7 @@
 import { IService } from "@/lib/types";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import ExploreSomeOfOurprojects from "./exploreSomeOfOurProjects";
 import WhatOurCustomersSay from "./whatOurCustomersSay";
 import TechnologiesWeUse from "../home/technologies";
@@ -11,7 +11,7 @@ import ServiceDetail from "./service";
 import Solution from "./solution";
 import { fetchSingleService } from "@/lib/apis/request";
 
-const ServiceInnerPage = () => {
+const ServiceInnerPageComp = () => {
   const searchParams = useSearchParams();
   const serviceId = searchParams.get("id");
   const [serviceDetails, setServiceDetails] = useState<IService>();
@@ -66,4 +66,12 @@ const ServiceInnerPage = () => {
   }
 };
 
-export default ServiceInnerPage;
+export default ServiceInnerPageComp;
+
+export function ServiceInnerPage() {
+  return (
+    <Suspense>
+      <ServiceInnerPageComp />
+    </Suspense>
+  );
+}
