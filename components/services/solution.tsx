@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-const CyberSolution: React.FC = () => {
+const Solution: React.FC = () => {
 	return (
 		<div className="mx-auto flex flex-col max-w-7xl items-start justify-center px-8 w-[428px] lg:w-[1280px] lg:mt-32 mt-7">
 			<div className="w-[380px] lg:w-[798px] h-[402px] lg:h-[317px]">
@@ -36,4 +36,4 @@ const CyberSolution: React.FC = () => {
 	);
 };
 
-export default CyberSolution;
+export default Solution;

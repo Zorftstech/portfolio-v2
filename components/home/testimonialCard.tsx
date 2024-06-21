@@ -13,7 +13,7 @@ const TestimonialCard: React.FC = () => {
     });
   }, []);
   return (
-    <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-4 py-24 my-8 lg:px-8">
+    <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-4 lg:py-24 my-8 lg:px-8">
       {data?.map((testimony) => (
         <div
           key={testimony?.id}

@@ -1,9 +1,9 @@
-import React from "react";
+import Talents from "@/components/talents/talents";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-[10rem]">
-        <div>Talents page</div>
-    </main>
-  );
+	return (
+		<main className="flex min-h-screen flex-col justify-between pt-[12rem]">
+			<Talents />
+		</main>
+	);
 }

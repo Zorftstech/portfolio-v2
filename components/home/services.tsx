@@ -9,7 +9,7 @@ const ServicesSection: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col items-center justify-center py-24 my-8 w-full">
+    <div className="flex flex-col items-center justify-center mt-28 lg:my-24 w-full">
       {/* ============= Section description ============= */}
       <h2 className="text-[28px] lg:text-7xl leading-[38px] font-bold text-[#004AAD] text-center mb-8 lg:mb-12">
         Services that we provide
