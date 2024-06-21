@@ -98,6 +98,26 @@ export const fetchTestimonials = async () => {
     }
   }
 };
+export const fetchPartnersTestimonials = async () => {
+  try {
+    const response: AxiosResponse = await api.get(
+      "/testimonials-brandpartners/"
+    );
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
 
 export const fetchBlogPosts = async () => {
   try {

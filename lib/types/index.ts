@@ -148,3 +148,14 @@ export interface IService {
   sub_description: string;
   parent_service: null | string;
 }
+
+export interface IPartnerTestimonial {
+  id: number;
+  name: string;
+  position: string;
+  comment: string;
+  image: string;
+  related_services: [];
+  related_brand: number;
+  related_brand_name: string;
+}
