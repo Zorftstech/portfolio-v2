@@ -34,7 +34,7 @@ const BePartOfOurTeam: React.FC = () => {
                         ))}
                     </div>
                     <button className="lg:justify-self-end flex py-[16px] px-[24px] rounded-full bg-[#00439D] w-[157px] justify-between">
-                        <Image src={'/Vector-4.svg'} alt="" width={24} height={4} className="self-center" />
+                        <Image src={'/Vector-4.svg'} alt="Careers" width={24} height={4} className="self-center" />
                         <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">Contact Us</span>
                     </button>
                 </div>
