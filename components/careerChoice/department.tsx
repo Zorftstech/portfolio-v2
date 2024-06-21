@@ -22,9 +22,13 @@ const Department: React.FC = () => {
     }
   }, [department]);
 
-  if (!career) {
-    return <div>Department not found</div>;
-  }
+    return (
+        <div className="mt-10 lg:mt-32">
+            <div key={career.id} className="">
+                <div className="w-[372px] lg:w-[1200px] text-start">
+                    <h2 className="text-[24px] lg:text-[48px] leading-[50px] lg:leading-[50px] text-[#004AAD] font-bold mb-8">{career.department}</h2>
+                    <p className="text-[16px] lg:text-[20px] leading-[27px] lg:leading-[31px] text-[#5F5E6C]">{career.description}</p>
+                </div>
 
   return (
     <div className="mt-10 lg:mt-32">
@@ -57,32 +61,13 @@ const Department: React.FC = () => {
           </ol>
         </div>
 
-        <hr className="bg-[#E7E7E7] h-[1px] my-10 lg:my-24" />
-
-        <div className="w-[372px] lg:w-[1200px] text-start">
-          <h4 className="text-[24px] lg:text-[28px] leading-[50px] lg:leading-[50px] text-[#3B3B3B] font-bold mb-5">
-            Your Skills.
-          </h4>
-
-          <ol className="list-decimal pl-7">
-            {career.your_skills.map((skills: YourSkills) => (
-              <li
-                key={skills.id}
-                className="text-[16px] lg:text-[20px] leading-[27px] lg:leading-[31px] text-[#5F5E6C]"
-              >
-                {skills.skill}
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        {/* <button className="lg:justify-self-end flex py-[16px] px-[24px] rounded-full bg-[#00439D] w-[157px] justify-between my-16">
+                {/* <button className="lg:justify-self-end flex py-[16px] px-[24px] rounded-full bg-[#00439D] w-[157px] justify-between my-16">
                     <Image src={'/Vector-4.svg'} alt="" width={24} height={4} className="self-center" />
                     <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">Apply Now</span>
                 </button> */}
-      </div>
-    </div>
-  );
-};
+            </div>
+        </div>
+    );
+}
 
 export default Department;

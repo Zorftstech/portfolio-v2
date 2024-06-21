@@ -10,8 +10,8 @@ const PartnersSection: React.FC = () => {
   const { store } = useAppContext();
   const { partners } = store;
   return (
-    <div className="py-24 mb-8">
-      <div className="w-[100%] lg:w-[60%] mb-8">
+    <div className="pt-28 lg:my-24">
+      <div className="w-[100%] lg:w-[60%] mb-12">
         <h3 className="text-[#3B3D3F] text-4xl lg:text-[64px] leading-[38px] tracking-tight text-start lg:leading-[74px] font-semibold">
           At Zorft Technologies, we&apos;re more than just a tech company
         </h3>

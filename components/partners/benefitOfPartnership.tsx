@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BenefitOfParnership: React.FC = () => {
   return (
-    <div className="mx-auto mt-8 mb-20 lg:my-40 px-8 w-full">
+    <div className="mx-auto mt-8 mb-20 lg:my-40 w-full">
       {partners.slice(0, 1).map((partner, index) => (
         <div
           key={partner.id}
