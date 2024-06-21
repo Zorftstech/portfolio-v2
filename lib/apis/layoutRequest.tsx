@@ -1,13 +1,17 @@
 "use client";
 
-import { fetchPartners, fetchProjects } from "@/lib/apis/request";
+import {
+  fetchPartners,
+  fetchProjects,
+  fetchServices,
+} from "@/lib/apis/request";
 import { useAppContext } from "@/lib/context";
 import { IChildrenProps } from "@/lib/types";
 import React, { useEffect } from "react";
 
 const LayoutRequests = ({ children }: IChildrenProps) => {
   const { store } = useAppContext();
-  const { setPartners, setProjects } = store;
+  const { setPartners, setProjects, setServices } = store;
 
   useEffect(() => {
     fetchPartners().then((res) => {

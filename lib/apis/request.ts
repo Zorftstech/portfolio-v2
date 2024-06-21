@@ -102,9 +102,10 @@ export const fetchTestimonials = async () => {
 export const fetchBlogPosts = async () => {
   try {
     const response: AxiosResponse = await api.get("/blog/");
-    // Handle successful response
-    const responseData = response.data;
-    return { success: true, data: responseData };
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
   } catch (error) {
     // Handle error response
     if (axios.isAxiosError(error)) {
@@ -116,9 +117,9 @@ export const fetchBlogPosts = async () => {
     }
   }
 };
-export const fetchSingleBlogPost = async (id: string) => {
+export const fetchSingleBlogPost = async (blogId: string) => {
   try {
-    const response: AxiosResponse = await api.get(`/blog/${id}`);
+    const response: AxiosResponse = await api.get(`/blog/${blogId}`);
     // Handle successful response
     const responseData = response.data;
     return { success: true, data: responseData };
@@ -126,7 +127,7 @@ export const fetchSingleBlogPost = async (id: string) => {
     // Handle error response
     if (axios.isAxiosError(error)) {
       if (error.response) {
-        return { success: false };
+        return { success: false, message: error.response.data.detail };
       } else handleNonAxiosError(error);
     } else {
       handlOtherErrors(error);
@@ -171,6 +172,7 @@ export const fetchProjects = async () => {
     }
   }
 };
+
 export const fetchWhyChooseZorfts = async () => {
   try {
     const response: AxiosResponse = await api.get("/why-choose-zorfts/");
@@ -190,12 +192,51 @@ export const fetchWhyChooseZorfts = async () => {
   }
 };
 
+export const fetchServices = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/services");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchSingleService = async (id: string) => {
+  try {
+    const response: AxiosResponse = await api.get(`/services/${id}`);
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
 export const fetchSingleProject = async (id: string) => {
   try {
     const response: AxiosResponse = await api.get(`/project/${id}`);
-    // Handle successful response
-    const responseData = response.data;
-    return { success: true, data: responseData };
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
   } catch (error) {
     // Handle error response
     if (axios.isAxiosError(error)) {
