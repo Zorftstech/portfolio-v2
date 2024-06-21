@@ -5,7 +5,6 @@ import Image from "next/image";
 import PortfolioGrid from "../shared/portfolioGrid";
 import { IServiceDetailProps } from "./service";
 
-<<<<<<< HEAD
 const ExploreSomeOfOurprojects: React.FC<IServiceDetailProps> = ({
   serviceDetails,
 }) => {
@@ -24,24 +23,6 @@ const ExploreSomeOfOurprojects: React.FC<IServiceDetailProps> = ({
           </h2>
         </div>
         <div className="mt-14 lg:mt-20 lg:ml-5 lg:h-[460px] overflow-hidden">
-=======
-const ExploreSomeOfOurprojects: React.FC = () => {
-	return (
-		<div className="mx-auto py-10 lg:py-24 lg:mt-40 w-full bg-[#004AAD]">
-
-      <div className="mx-auto max-w-7xl text-[#fff]">
-          <div className="col-span-2 w-full lg:w-[713px] mt-5">
-            <h3 className="text-[#FFFFFF] text-[28px] lg:text-[64px] leading-[38px] lg:leading-[82px] text-start font-bold hidden lg:block">
-                  Explore some of our Web Design projects
-            </h3>
-            <h2
-            className="text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold text-white mb-[64px] lg:hidden">
-              See some of our works here
-            </h2>
-
-          </div>
-          <div className="mt-14 lg:mt-20 lg:ml-5 lg:h-[460px] overflow-hidden">
->>>>>>> bb922532664b7968cdb886d1a3827d93b843a907
           <PortfolioGrid />
         </div>
       </div>
