@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { careers, Careers, YourRole, YourSkills } from "../data";
+import { careers, Careers, YourRole, YourSkills } from "../careers/data";
 
 const Department: React.FC = () => {
   const searchParams = useSearchParams();
