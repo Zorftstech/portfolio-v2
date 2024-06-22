@@ -22,7 +22,8 @@ export default function NotFound() {
               Go back home
             </Link>
             <Link
-              href="https://wa.link/fn63qi5"
+              href="https://wa.link/f2jhr4"
+              target="_blank"
               className="text-sm font-semibold text-gray-900 cursor-pointer"
             >
               Contact support <span aria-hidden="true">&rarr;</span>
