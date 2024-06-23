@@ -24,7 +24,7 @@ const AboutUs: React.FC = () => {
         </p>
       </div>
       <div className="flex justify-center mt-40">
-        <div className="bg-cover w-[380px] lg:w-[1256px] h-[231px] md:h-[595px] rounded-lg lg:rounded-3xl"></div>
+        <div className="bg-[url('/image-19.svg')] bg-no-repeat bg-cover w-[380px] lg:w-[1256px] h-[231px] md:h-[595px] rounded-lg lg:rounded-3xl"></div>
       </div>
     </div>
   );

@@ -32,11 +32,11 @@ const SlideShow: React.FC = () => {
   }, [activeSlideIndex]);
 
   return (
-    <div className="flex flex-col lg:block relative lg:w-[663px] h-[573px] lg:h-[450px]">
+    <div className="flex flex-col gap-y-10 lg:block relative lg:w-[663px] h-[px] lg:h-[450px]">
       {/* Full-width slides/quotes */}
       {slides.map((slide, index) => (
         <div key={index} className={index === activeSlideIndex ? "block" : "block lg:hidden"}>
-          <p className="text-[18px] lg:text-[24px] leading-[28px] lg:leading-[41px] text-[#5F5E6C] w-full h-[112px] lg:h-[128px] mt-8 lg:mt-[130px]">
+          <p className="text-[18px] lg:text-[24px] leading-[28px] lg:leading-[41px] text-[#5F5E6C] w-full lg:h-[128px] lg:mt-[130px]">
             {slide.mission}
           </p>
         </div>

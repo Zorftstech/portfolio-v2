@@ -17,7 +17,7 @@ const MeetTheTeam = () => {
 
   return (
     <section>
-      <h2 className="text-2xl sm:text-3xl md:text-6xl text-left font-bold -tracking-[2.5px] text-zorft-blue">
+      <h2 className="text-2xl sm:text-3xl md:text-6xl text-left font-bold -tracking-[2.5px] text-zorft-blue mt-24 lg:mt-60">
         Meet our Team
       </h2>
       <p className="w-[380px] lg:w-[590px] -tracking-[0.5px] text-[#5F5E6C] mt-5 md:text-lg">
