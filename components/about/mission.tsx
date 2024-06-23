@@ -5,10 +5,10 @@ import { valuesData } from "../data";
 
 const Mission: React.FC = () => {
   return (
-    <div className="mx-auto flex flex-col items-center justify-center py-0 my-8 w-full">
+    <div className="mx-auto flex flex-col items-center justify-center py-0 mt-8 lg:mt-24 w-full">
       <div className="grid lg:grid-cols-2 w-full">
         <div className="">
-          <h4 className="text-[26px] leading-[23px] text-[#8F8F92] w-[117px] h-[23px]">
+          <h4 className="text-[26px] leading-[23px] text-[#8F8F92] bg-[#F2F2F2] lg:bg-white px-3 py-5 lg:px-0 rounded-xl w-[117px]">
             Mission
           </h4>
           <h2 className="text-[32px] lg:text-[48px] leading-[45px] lg:leading-[64px] font-bold text-[#004AAD] w-full h-[128px] mt-8">
@@ -17,7 +17,7 @@ const Mission: React.FC = () => {
         </div>
         <SlideShow />
       </div>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 mt-24 lg:mt-36">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 mt-24 lg:my-36">
         <div className="">
           <h2 className="text-[48px] leading-[80px] font-bold text-[#004AAD]">
             Values

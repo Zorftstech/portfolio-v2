@@ -39,21 +39,21 @@ body {
   }
 }
 
-.bg-cover {
+/* .bg-cover {
   background-image: linear-gradient(to bottom, #ffffff, transparent, #004aad),
     linear-gradient(to bottom, #0c0c0c, transparent),
     url("../public/image-19.svg");
   background-blend-mode: overlay;
   /* border-radius: 50px; */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* height: 595px;
   width: 1256px; */
-}
+/* } */
 
-.ourPartner {
+/* .ourPartner {
   background-image: url("../public/OurPartners.svg");
 }
 
 .serviceDetail {
   background-image: url("../public/serviceDetail-a.png");
-}
+} */

@@ -13,14 +13,14 @@ const PortfolioGrid: React.FC = () => {
 
   return (
     <SideWrapper>
-      <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff] px-8">
+      <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.slice(0, 4).map((project) => (
           <div key={project.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
               <Image
                 src={project.image || ""}
                 alt={project?.brand_name}
-                className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-t-[30px] rounded-b-[10px]"
                 width={100}
                 height={100}
               />
