@@ -6,15 +6,17 @@ import { RiCircleFill } from "react-icons/ri";
 import { extractYear } from "@/lib/helpers/extractYearfromDateString";
 import { useAppContext } from "@/lib/context";
 import { SideWrapper } from "./Wrappers";
+import { IProjectData } from "@/lib/types";
 
-const PortfolioGrid: React.FC = () => {
-  const { store } = useAppContext();
-  const { projects } = store;
+interface IPortfolioGridProps {
+  projects: IProjectData[];
+}
 
+const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
   return (
     <SideWrapper>
       <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff] px-8">
-        {projects?.slice(0, 4).map((project) => (
+        {projects?.map((project) => (
           <div key={project.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">
               <Image
