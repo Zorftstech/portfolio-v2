@@ -1,27 +1,22 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { fetchTestimonials } from "@/lib/apis/request";
 import { ITestimonialData } from "@/lib/types";
+interface ITestimonialCardProps {
+  testimonies: ITestimonialData[];
+}
 
-const TestimonialCard: React.FC = () => {
-  const [data, setData] = useState<ITestimonialData[]>([]);
-
-  useEffect(() => {
-    fetchTestimonials().then((res) => {
-      setData(res?.data.results);
-    });
-  }, []);
+const TestimonialCard: React.FC<ITestimonialCardProps> = ({ testimonies }) => {
   return (
     <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-4 lg:py-24 my-8 lg:px-8">
-      {data?.map((testimony) => (
+      {testimonies?.map((testimony) => (
         <div
           key={testimony?.id}
           className="bg-[#F8F8F8] rounded-[26px] w-[385px] lg:w-[400px] h-[fit-content] p-4"
         >
           <div className="flex flex-row items-center">
             <Image
-              src={testimony?.image || ""}
+              src={testimony?.image || "./userImage.svg"}
               alt="User Image"
               width={60}
               height={60}

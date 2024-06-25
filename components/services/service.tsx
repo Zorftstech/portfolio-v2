@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { IService } from "@/lib/types";
 
 export interface IServiceDetailProps {
@@ -7,7 +7,6 @@ export interface IServiceDetailProps {
 }
 
 const ServiceDetail: React.FC<IServiceDetailProps> = ({ serviceDetails }) => {
-  console.log(serviceDetails);
   return (
     <div className="flex items-center justify-center flex-col w-full">
       <div className="bg-[url('/serviceDetail-a.png')] w-full h-[441px] lg:h-[500px] mx-auto flex justify-center bg-cover bg-center rounded-b-[40px] lg:rounded-b-[70px]">

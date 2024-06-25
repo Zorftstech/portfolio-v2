@@ -42,7 +42,7 @@ const OurPartners: React.FC = () => {
       </div>
       <div className="overflow-auto lg:overflow-hidden w-[428px] lg:w-full">
         <div className="grid grid-cols-4 lg:grid-cols-2 gap-[400px] lg:gap-20 lg:justify-items-center my-8 lg:my-52 w-full">
-          {partners?.slice(0, 4)?.map((partner, index) => (
+          {partners?.map((partner, index) => (
             <div
               key={index}
               className="flex flex-col items-center w-[428px] lg:w-[610px] h-[325px] lg:h-[px] pt- lg:pt-"
