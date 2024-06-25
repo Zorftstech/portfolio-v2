@@ -1,57 +1,125 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import { portfolioProjects, Solution } from "../data";
+import "./styles.css";
+import React, { useEffect, useRef, useState } from "react";
 import { IProjectInformationProps } from "./project";
 
 const SidePanel: React.FC<IProjectInformationProps> = ({ project }) => {
+  console.log(project);
+  const id = "Erlota";
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [currentProcess, setCurrentProcess] = useState<string>("");
+  const [processTab, setProcessTab] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (project) {
+      if (project?.design_process !== "") {
+        setProcessTab((prev) =>
+          prev.includes("Design") ? prev : [...prev, "Design"]
+        );
+      }
+      if (project?.development_process !== "") {
+        setProcessTab((prev) =>
+          prev.includes("Development") ? prev : [...prev, "Development"]
+        );
+      }
+      if (project?.deployment_process !== "") {
+        setProcessTab((prev) =>
+          prev.includes("Deployment") ? prev : [...prev, "Deployment"]
+        );
+      }
+    }
+  }, [project]);
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (project) {
+      setCurrentProcess(project?.design_process);
+    }
+  }, [project]);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.innerHTML = currentProcess;
+
+      // Apply minimal reset styles
+      const applyResetStyles = (element: HTMLElement) => {
+        const tagsToReset = ["p", "img"];
+        tagsToReset.forEach((tag) => {
+          const elements = element.getElementsByTagName(tag);
+          Array.from(elements).forEach((el) => {
+            // Reset styles for p tags
+            if (tag === "p") {
+              el.removeAttribute("style");
+            }
+            // Remove inline width and height for img tags
+            if (tag === "img") {
+              (el as HTMLElement).style.width = "";
+              (el as HTMLElement).style.height = "";
+            }
+          });
+        });
+      };
+
+      applyResetStyles(containerRef.current);
+    }
+  }, [currentProcess, activeIndex]);
+
+  const handleButtonClick = (index: number) => {
+    setActiveIndex(index);
+    switch (index) {
+      case 0:
+        setCurrentProcess(project?.design_process || "");
+        break;
+
+      case 0:
+        setCurrentProcess(project?.development_process || "");
+        break;
+
+      case 0:
+        setCurrentProcess(project?.deployment_process || "");
+        break;
+
+      default:
+        setCurrentProcess(project?.design_process || "");
+        break;
+    }
+  };
   return (
-    <div className="mx-auto flex max-w-7xl items-star justify-between mt-5 lg:mt-28 lg:px-12 w-full">
+    <div className="flex items-star justify-between mt-5 lg:mt-28 lg:px-12 w-full">
       <div className="ml-10 hidden lg:block">
         <div className="flex justify-between w-[200px] relative">
           <div className="h-[430px] w-[3px] bg-[#363636]">
+            {/* Current tab Indicator */}
             <div
               id="indicator"
-              className="h-[50px] bg-[#D1D1D1] mt-3"
-              // style={{
-              //   transform: `translateY(${activeIndex * 175}px)`,
-              //   transition: "transform 0.3s ease-in-out",
-              // }}
+              className="bg-[#D1D1D1] my-[15px]"
+              style={{
+                transform: `translateY(${activeIndex * 200}px)`,
+                transition: "transform 0.4s ease-in-out",
+                height: 400 / processTab.length,
+              }}
             ></div>
           </div>
-          <div className="flex flex-col justify-between py-5">
-            {/* {solutions.map((portfolio: Solution, index: number) => (
-              <div key={portfolio.id} className="ml-[-170px]">
+          <div className="flex flex-col justify-between py-5 h-[430px]">
+            {processTab.map((process, processIndex) => (
+              <div
+                key={processIndex}
+                style={{ height: 430 / processTab.length }}
+                className="ml-[-170px] flex"
+              >
                 <button
                   className="text-[24px] leading-[40px] text-[#68686C] font-bold"
-                  onClick={() => handleButtonClick(index)}
+                  onClick={() => handleButtonClick(processIndex)}
                 >
-                  {portfolio.title}
+                  {process}
                 </button>
               </div>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
       <div className="grid gap-16 lg:gap-32 lg:border-[1px] border-[#464649] rounded-3xl w-[510px] lg:w-[687px] p-8 lg:p-12">
-        {/* {solutions.map((portfolio: Solution) => (
-          <div key={portfolio.id}>
-            <h4 className="text-[32px] leading-[38px] text-[#E2E2E2] font-bold mb-8">
-              {portfolio.title}
-            </h4>
-            <p className="text-[19px] leading-[29px] text-[#9897A7] w-[380px] lg:w-[530px]">
-              {portfolio.description}
-            </p>
-            <Image
-              src={portfolio.img}
-              alt=""
-              width={500}
-              height={257.91}
-              className="object-cover mt-20 lg:w-[596px] lg:h-[463px]"
-            />
-          </div>
-        ))} */}
+        <div ref={containerRef} className="side_panel_card"></div>
       </div>
     </div>
   );
