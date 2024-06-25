@@ -18,7 +18,7 @@ const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
       <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.map((project) => (
           <Link
-            href={`/portfolio/project.slug?id=${project.id}`}
+            href={`/portfolio/${project.slug}?id=${project.id}`}
             key={project.id}
             className="group relative"
           >

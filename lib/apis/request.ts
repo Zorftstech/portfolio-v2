@@ -274,7 +274,7 @@ export const fetchSingleService = async (id: string) => {
 
 export const fetchSingleProject = async (id: string) => {
   try {
-    const response: AxiosResponse = await api.get(`/project/${id}`);
+    const response: AxiosResponse = await api.get(`/projects/${id}`);
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
