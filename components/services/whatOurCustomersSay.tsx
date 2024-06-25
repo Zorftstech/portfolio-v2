@@ -17,7 +17,7 @@ const WhatOurCustomersSay: React.FC<IWhatOurCustomersSayProps> = ({
 
   useEffect(() => {
     fetchServiceTestimonials(id).then((res) => {
-      setData(res?.data.results);
+      setData(res?.data.subservices);
     });
   }, []);
   return (
