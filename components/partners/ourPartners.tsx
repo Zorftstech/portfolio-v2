@@ -40,19 +40,22 @@ const OurPartners: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="overflow-auto lg:overflow-hidden w-[428px] lg:w-full">
-        <div className="grid grid-cols-4 lg:grid-cols-2 gap-[400px] lg:gap-20 lg:justify-items-center my-8 lg:my-52 w-full">
+      <div className="overflow-x-scroll lg:overflow-hidden w-[428px] h-full lg:w-full lg:px-36">
+        <div className="grid grid-cols-4 lg:grid-cols-2 gap-[450px] lg:gap-20 lg:justify-items-center my-8 lg:my-52 w-full">
           {partners?.slice(0, 4)?.map((partner, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-[428px] lg:w-[610px] h-[325px] lg:h-[px] pt- lg:pt-"
+              className="flex flex-col items-center w-[428px] lg:w-[610px] h-[px] lg:h-[px] px-8 lg:px-0 pt-10 lg:pt-0"
             >
-              <Image
-                src={partner.logo || ""}
-                alt={partner?.brand_name}
-                width={233.15}
-                height={76.01}
-              />
+              <div className="min-h-[230px]">
+                <Image
+                  src={partner.logo || ""}
+                  alt={partner?.brand_name}
+                  width={233.15}
+                  height={76.01}
+                  className=""
+                />
+              </div>
               <p className="text-[16px] leading-[25px] text-[#777680] lg:text-center mt-5">
                 {partner?.description}
               </p>
