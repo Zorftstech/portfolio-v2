@@ -19,7 +19,7 @@ const WhatOurCustomersSay: React.FC<IWhatOurCustomersSayProps> = ({
     fetchServiceTestimonials(id).then((res) => {
       setData(res?.data.subservices);
     });
-  }, []);
+  }, [id]);
   return (
     <div className="flex flex-col items-center lg:py-24 mt-20 lg:mt-40 w-full">
       <div className="hidden lg:block">

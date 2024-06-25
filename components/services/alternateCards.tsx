@@ -32,7 +32,7 @@ const Card = ({ index, content }: ICardProps) => {
     if (containerRef.current) {
       containerRef.current.innerHTML = content?.description;
     }
-  }, []);
+  }, [content.description]);
   return (
     <div
       className="flex flex-wrap lg:flex-nonwrap justify-between lg:my-28"
