@@ -17,6 +17,13 @@ const PortfolioNavbar: React.FC = () => {
   const [activeButton, setActiveButton] = useState<number>(0);
   const handleButtonClick = (index: number) => {
     setActiveButton(index);
+    if (index === 0) {
+      setCurrentProjects(projects);
+    }
+
+    if (index === 1) {
+      projects.filter;
+    }
   };
   const { store } = useAppContext();
   const { projects } = store;

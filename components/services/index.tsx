@@ -59,7 +59,10 @@ const ServiceInnerPageComp = () => {
         <Solution serviceDetails={serviceDetails} />
         <AlternateCard serviceDetails={serviceDetails} />
         <TechnologiesWeUse />
-        <WhatOurCustomersSay />
+        <WhatOurCustomersSay
+          id={serviceId || ""}
+          name={serviceDetails?.name || ""}
+        />
         <ExploreSomeOfOurprojects serviceDetails={serviceDetails} />
       </>
     );

@@ -8,7 +8,7 @@ const OurPartners: React.FC = () => {
   const { partners } = store;
   return (
     <div className="">
-      <div className="ourPartner w-[428px] lg:w-full h-[224px] lg:h-[600px] mx-auto flex justify-center bg-cover bg-center lg:rounded-b-[100px] lg:-mt-16">
+      <div className="bg-[url('/OurPartners.svg')] w-[428px] lg:w-full h-[224px] lg:h-[600px] mx-auto flex justify-center bg-cover bg-center lg:rounded-b-[100px] lg:-mt-16">
         <div className="w-[380px] lg:w-[758px] h-[143px] lg:h-[156px] self-end text-center mb-5">
           <h2 className="text-[32px] lg:text-[64px] leading-[45px] lg:leading-[80px] font-bold text-[#FFFFFF]">
             Our Partners

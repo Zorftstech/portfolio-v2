@@ -59,7 +59,7 @@ const BePartOfOurTeam: React.FC = () => {
                 className="self-center"
               />
               <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">
-                Contact Us
+                Apply now
               </span>
             </button>
           </div>

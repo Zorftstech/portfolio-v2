@@ -89,7 +89,7 @@ const JobForm: React.FC = () => {
                         <option value="" disabled selected>Gender</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        {/*<option value="Other">Other</option>*/}
                     </select>
                 </div>
 
@@ -98,7 +98,7 @@ const JobForm: React.FC = () => {
 
                 <div className="w-[372px] lg:w-[1200px] text-start mt-20 lg:mt-0">
                     <h4 className="text-[16px] lg:text-[32px] leading-[27px] lg:leading-[41.6px] text-[#3B3D3F] font-bold">Upload Resume/CV</h4>
-                    <p className="text-[16px] lg:text-[24px] leading-[27px] lg:leading-[31.2px] text-[#5B5B5B] mt-4">
+                    <p className="text-[14px] lg:text-[24px] leading-[27px] lg:leading-[31.2px] text-[#5B5B5B] mt-4">
                         Maximum file size: 5 MB <br />
                         Maximum number of files: 10 <br />
                         Accepted file formats: docx, txt, pdf, doc
@@ -154,9 +154,9 @@ const JobForm: React.FC = () => {
 
                 <hr className="bg-[#E7E7E7] h-[1px] my-10 lg:my-24" />
 
-                <button className="lg:justify-self-end flex py-[20px] px-[28px] rounded-full bg-[#00439D] w-[130px] justify-between my-7 lg:my-16">
+                <button className="lg:justify-self-end flex py-[20px] px-[28px] rounded-full bg-[#00439D] w-[160px] justify-between my-7 lg:my-16">
                     <Image src={'/Vector-4.svg'} alt="" width={24} height={4} className="self-center" />
-                    <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">Apply</span>
+                    <span className="text-[14px] leading-[16.1px] text-[#E7E7E7]">Apply now</span>
                 </button>
             </div>
         </div>
