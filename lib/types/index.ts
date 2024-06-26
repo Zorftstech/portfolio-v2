@@ -103,10 +103,28 @@ export interface IBlog {
   cover_image: string;
   title: string;
   content: string;
-  related_blogs: string[];
+  related_blogs: number[];
   author: number;
   author_full_name: string;
   created_at: string;
+  minutes_read: string;
+  author_image: string;
+}
+
+export interface ITechnologies {
+  stack: {
+    id: number;
+    name: string;
+    description: string;
+  };
+  technologies: {
+    id: number;
+    name: string;
+    logo: string;
+    description: string;
+    stack: number;
+    stack_name: string;
+  }[];
 }
 
 export interface IService {

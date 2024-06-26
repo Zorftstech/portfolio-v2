@@ -253,6 +253,24 @@ export const fetchServices = async () => {
   }
 };
 
+export const fetchTechnologies = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/stacks-with-technologies");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
 export const fetchSingleService = async (id: string) => {
   try {
     const response: AxiosResponse = await api.get(`/services/${id}`);

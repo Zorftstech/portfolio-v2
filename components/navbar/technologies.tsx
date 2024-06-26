@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { BiX } from "react-icons/bi";
 import { SideWrapper } from "../shared/Wrappers";
+import { useAppContext } from "@/lib/context";
 
 const technologies = [
   {
@@ -57,6 +58,9 @@ const Technologies = ({
   isOnDarkMode,
   isShowingTechnologies,
 }: ITechnologiesProps) => {
+  const { store } = useAppContext();
+  const { technologies } = store;
+
   return (
     <div
       className={`absolute lg:static top-[80px] h-[100dvh] overflow-y-auto 
@@ -68,7 +72,7 @@ const Technologies = ({
       <SideWrapper>
         <div className="lg:flex justify-between gap-10 xl:gap-20">
           {/* Heading */}
-          <div className="max-w-[200px]">
+          <div className="max-w-[280px]">
             <p
               className={`${
                 isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[#5F5E6C]"
@@ -77,26 +81,26 @@ const Technologies = ({
               Technologies
             </p>
             <p className="text-[#8F8F92] text-sm md:text-base">
-              Lorem ipsum dolor sit amet consectetur. Quam libero tellus egestas
-              convallis arcu.
+              Zorfts Technologies Ltd creates custom software with cutting-edge
+              technology, tailored to your needs and goals
             </p>
           </div>
 
           {/* Items */}
           <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
-            {technologies.map((item, itemIndex) => (
-              <div key={itemIndex} className="">
+            {technologies?.map((item) => (
+              <div key={item?.stack.id} className="w-[45%] lg:w-auto block">
                 <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
-                  {item.title}
+                  {item?.stack.name}
                 </p>
-                {item.list.map((listItem, listItemIndex) => (
+                {item?.technologies.map((listItem) => (
                   <p
                     className={`text-sm md:text-base ${
                       isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[##424247]"
                     } block`}
-                    key={listItemIndex}
+                    key={listItem?.id}
                   >
-                    {listItem}
+                    {listItem?.name}
                   </p>
                 ))}
               </div>

@@ -56,7 +56,7 @@ const SingleBlog = () => {
       <main className="flex min-h-screen flex-col items-center justify-between">
         <BlogDetail blogDetails={blogDetails} />
         <Post content={blogDetails?.content || ""} />
-        <RelatedTopics />
+        <RelatedTopics blogDetails={blogDetails} />
       </main>
     );
   }

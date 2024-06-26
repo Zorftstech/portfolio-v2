@@ -23,7 +23,7 @@ const PortfolioNavbar: React.FC = () => {
     }
 
     if (index >= 1) {
-      const filteredProjects = projects.filter((project) =>
+      const filteredProjects = projects?.filter((project) =>
         project.tags.some(
           (tag) => tag.name.toLowerCase() === type.toLowerCase()
         )
