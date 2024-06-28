@@ -31,6 +31,20 @@ const Card = ({ index, content }: ICardProps) => {
   useEffect(() => {
     if (containerRef.current) {
       containerRef.current.innerHTML = content?.description;
+      const applyResetStyles = (element: HTMLElement) => {
+        const tagsToReset = ["p", "span"];
+        tagsToReset.forEach((tag) => {
+          const elements = element.getElementsByTagName(tag);
+          Array.from(elements).forEach((el) => {
+            // Reset styles for p tags
+            if (tag === "span") {
+              el.removeAttribute("style");
+            }
+          });
+        });
+      };
+
+      applyResetStyles(containerRef.current);
     }
   }, [content.description]);
   return (

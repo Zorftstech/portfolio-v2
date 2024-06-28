@@ -1,7 +1,13 @@
 "use client";
 
 import React, { createContext, useContext, useState } from "react";
-import { IBlog, IPartners, IProjectData, IService } from "../types";
+import {
+  IBlog,
+  IPartners,
+  IProjectData,
+  IService,
+  ITechnologies,
+} from "../types";
 
 interface IStore {
   partners: IPartners[];
@@ -12,6 +18,8 @@ interface IStore {
   setBlogs: (blogs: IBlog[]) => void;
   services: IService[];
   setServices: (services: IService[]) => void;
+  technologies: ITechnologies[];
+  setTechnologies: (technologies: ITechnologies[]) => void;
 }
 
 interface IAppContextType {
@@ -25,6 +33,7 @@ export function ContextWrapper({ children }: { children: React.ReactNode }) {
   const [projects, setProjects] = useState<IProjectData[]>([]);
   const [blogs, setBlogs] = useState<IBlog[]>([]);
   const [services, setServices] = useState<IService[]>([]);
+  const [technologies, setTechnologies] = useState<ITechnologies[]>([]);
   const store: IStore = {
     partners,
     setPartners,
@@ -34,6 +43,8 @@ export function ContextWrapper({ children }: { children: React.ReactNode }) {
     setBlogs,
     services,
     setServices,
+    technologies,
+    setTechnologies,
   };
 
   return (

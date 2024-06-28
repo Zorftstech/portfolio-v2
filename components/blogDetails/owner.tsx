@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { IBlog } from "@/lib/types";
 import getFullDate from "@/lib/helpers/getFullDate";
+
 export interface BlogDetailProps {
   blogDetails: IBlog | undefined;
 }
@@ -17,8 +18,8 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blogDetails }) => {
         src={blogDetails?.cover_image || ""}
         alt="blog-img"
       />
-      <div className="grid lg:grid-cols-3 gap-5 lg:mt-16">
-        <h2 className="text-[28px] lg:text-[40px] leading-[38px] lg:leading-[28.89px] text-[#5F5E6C] font-bold mt-5 lg:col-span-2">
+      <div className="grid lg:grid-cols-3 gap-5 lg:mt-16 max-w-[900px] mx-auto">
+        <h2 className="text-[28px] lg:text-[40px] leading-[38px] lg:leading-[45px] text-[#5F5E6C] font-bold mt-5 lg:col-span-2">
           {blogDetails?.title}
         </h2>
         <div className="flex items-center">
@@ -26,7 +27,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blogDetails }) => {
             width={50}
             height={50}
             className="object-contain rounded-full"
-            src={""}
+            src={blogDetails?.author_image || ""}
             alt="detail-img"
           />
           <div className="ml-4">
@@ -37,7 +38,9 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blogDetails }) => {
               {getFullDate(blogDetails?.created_at || "")}
             </span>
             <span className="text-sm text-gray-600 mx-2">•</span>
-            <span className="text-sm text-gray-600">Mins Read</span>
+            <span className="text-sm text-gray-600">
+              {blogDetails?.minutes_read}Mins Read
+            </span>
           </div>
         </div>
       </div>

@@ -103,10 +103,28 @@ export interface IBlog {
   cover_image: string;
   title: string;
   content: string;
-  related_blogs: string[];
+  related_blogs: number[];
   author: number;
   author_full_name: string;
   created_at: string;
+  minutes_read: string;
+  author_image: string;
+}
+
+export interface ITechnologies {
+  stack: {
+    id: number;
+    name: string;
+    description: string;
+  };
+  technologies: {
+    id: number;
+    name: string;
+    logo: string;
+    description: string;
+    stack: number;
+    stack_name: string;
+  }[];
 }
 
 export interface IService {
@@ -138,4 +156,30 @@ export interface IPartnerTestimonial {
   related_services: [];
   related_brand: number;
   related_brand_name: string;
+}
+
+export interface ICareerOpenings {
+  id: number;
+  job_title: string;
+  description: string;
+  application_link: string;
+  full_description: string;
+  role: string;
+  skills: string;
+  job_type: [];
+}
+
+export interface IJobFormData {
+  id: number;
+  title: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone_number: string;
+  country: string;
+  address?: string | null;
+  gender: string;
+  resume?: File | null;
+  cover_letter?: File | null;
+  additional_attachment?: File | null;
 }

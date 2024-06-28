@@ -16,7 +16,11 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = ({ testimonies }) => {
         >
           <div className="flex flex-row items-center">
             <Image
-              src={testimony?.image || "./userImage.svg"}
+              src={
+                testimony?.image !== ""
+                  ? testimony?.image || ""
+                  : "./userImage.svg"
+              }
               alt="User Image"
               width={60}
               height={60}

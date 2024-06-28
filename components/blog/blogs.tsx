@@ -2,25 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { blogs } from "../data";
-import { useAppContext } from "@/lib/context";
-import { fetchBlogPosts } from "@/lib/apis/request";
 import { IBlog } from "@/lib/types";
 import hyphenateSpaces from "@/lib/helpers/hyphenateSpaces";
 
-function Blogs() {
-  const { store } = useAppContext();
-  const { blogs, setBlogs } = store;
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    fetchBlogPosts().then((res) => {
-      setBlogs(res?.data.results);
-    });
-  }, [setBlogs]);
+interface IBlogsProps {
+  blogs: IBlog[];
+}
 
+function Blogs({ blogs }: IBlogsProps) {
   return (
-    <div className="mx-auto mt-12 grid max-w-lg gap-y-10 gap-x-5 lg:max-w-7xl grid-cols-2 lg:grid-cols-3 px-5 lg:px-8 mb-8">
-      {blogs.map((blog) => (
+    <div className="mx-auto mt-12 grid gap-y-10 gap-x-5 w-full grid-cols-2 lg:grid-cols-3 mb-8">
+      {blogs?.map((blog) => (
         <BlogItem key={blog.id} blog={blog} />
       ))}
     </div>
@@ -56,7 +48,7 @@ const BlogItem = ({ blog }: { blog: IBlog }) => {
         <Image
           width={500}
           height={192}
-          className="max-h-[300px] w-full object-cover rounded-2xl"
+          className="max-h-[500px] w-full object-cover rounded-2xl h-full"
           src={blog?.cover_image || ""}
           alt="blog-img"
         />

@@ -18,7 +18,7 @@ const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
       <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.map((project) => (
           <Link
-            href={`/portfolio/project.slug?id=${project.id}`}
+            href={`/portfolio/${project.slug}?id=${project.id}`}
             key={project.id}
             className="group relative"
           >
@@ -26,7 +26,7 @@ const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
               <Image
                 src={project.image || ""}
                 alt={project?.brand_name}
-                className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-t-[30px] rounded-b-[10px]"
+                className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-t-[30px] rounded-b-[10px] max-h-[412px]"
                 width={100}
                 height={100}
               />
