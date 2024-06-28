@@ -32,12 +32,12 @@ const Card = ({ index, content }: ICardProps) => {
     if (containerRef.current) {
       containerRef.current.innerHTML = content?.description;
       const applyResetStyles = (element: HTMLElement) => {
-        const tagsToReset = ["p"];
+        const tagsToReset = ["p", "span"];
         tagsToReset.forEach((tag) => {
           const elements = element.getElementsByTagName(tag);
           Array.from(elements).forEach((el) => {
             // Reset styles for p tags
-            if (tag === "p") {
+            if (tag === "span") {
               el.removeAttribute("style");
             }
           });

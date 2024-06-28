@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import { toast } from "react-toastify";
-import { IContactData } from "../types";
+import { IContactData, IJobFormData } from "../types";
 // Create an instance of axios with baseURL
 const api: AxiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL,
@@ -253,14 +253,34 @@ export const fetchServices = async () => {
   }
 };
 
-export const fetchTechnologies = async () => {
+export const fetchCareerOpenings = async () => {
   try {
-    const response: AxiosResponse = await api.get("/stacks-with-technologies");
+    const response: AxiosResponse = await api.get("/careers/");
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
     }
   } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchSingleCareerOpenings = async (id: string) => {
+  try {
+    const response: AxiosResponse = await api.get(`/careers/${id}`);
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
     if (axios.isAxiosError(error)) {
       if (error.response) {
         return { success: false };
@@ -280,6 +300,24 @@ export const fetchSingleService = async (id: string) => {
     }
   } catch (error) {
     // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchTechnologies = async () => {
+  try {
+    const response: AxiosResponse = await api.get("/stacks-with-technologies");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
     if (axios.isAxiosError(error)) {
       if (error.response) {
         return { success: false };
@@ -315,6 +353,29 @@ export const sendContactMessage = async (data: IContactData) => {
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       toast.success("Message sent successfully", {
+        toastId: "success",
+      });
+      return { success: true, message: responseData.message };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const sendJobForm = async (data: any) => {
+  try {
+    const response: AxiosResponse = await api.post("/job-application/", data);
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      console.log(response);
+      toast.success("Application suceessful", {
         toastId: "success",
       });
       return { success: true, message: responseData.message };

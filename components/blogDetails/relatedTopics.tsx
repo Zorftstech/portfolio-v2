@@ -16,7 +16,8 @@ const RelatedTopics: React.FC<BlogDetailProps> = ({ blogDetails }) => {
         blogs.filter((item) => blogDetails?.related_blogs.includes(item.id))
       );
     }
-  }, [blogs]);
+  }, [blogs, blogDetails?.related_blogs]);
+
   return (
     <div>
       <Blogs blogs={topics} />

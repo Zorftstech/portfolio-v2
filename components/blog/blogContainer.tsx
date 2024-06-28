@@ -2,11 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Blogs from "./blogs";
 import { useAppContext } from "@/lib/context";
-import { fetchBlogPosts } from "@/lib/apis/request";
 
 function BlogCard() {
   const { store } = useAppContext();
-  const { blogs, setBlogs } = store;
+  const { blogs } = store;
   const [isLoading, setIsLoading] = useState(true);
 
   return (
