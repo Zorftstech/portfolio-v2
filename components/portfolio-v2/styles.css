@@ -1,0 +1,20 @@
+.side_panel_card p {
+  font-size: 19px;
+  line-height: 29px;
+  color: #9897a7;
+  width: 380px;
+}
+.side_panel_card img {
+  object-fit: cover;
+  margin-top: 5rem;
+}
+@media (min-width: 1024px) {
+  .side_panel_card p {
+    width: 530px;
+  }
+
+  .side_panel_card img {
+    width: 596px;
+    height: 463px;
+  }
+}

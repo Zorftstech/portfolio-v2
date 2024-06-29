@@ -1,14 +1,19 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Blogs from "./blogs";
+import { useAppContext } from "@/lib/context";
 
 function BlogCard() {
+  const { store } = useAppContext();
+  const { blogs } = store;
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="lg:py-24 mb-8">
+    <div className="lg:py-16 mb-8">
       <h3 className="text-[50px] leading-[80px] text-[#3B3D3F] font-bold px-5 lg:px-8 tracking-tight">
         Blogs
       </h3>
-      <Blogs />
+      <Blogs blogs={blogs} />
     </div>
   );
 }

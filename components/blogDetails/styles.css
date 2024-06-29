@@ -1,0 +1,43 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 840px;
+}
+
+.post p,
+.post li,
+.post {
+  color: #5f5e6c;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.post ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post h1,
+.post h2,
+.post h3 {
+  margin-bottom: 16px;
+}
+
+.post h1 {
+  font-size: 30px;
+}
+.post h2 {
+  font-size: 26px;
+}
+.post h3 {
+  font-size: 22px;
+}
+
+.post img {
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
