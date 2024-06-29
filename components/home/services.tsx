@@ -13,12 +13,12 @@ const ServicesSection: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-28 lg:my-24 w-full">
+    <div className="flex flex-col items-center justify-center mt-28 lg:mt-72 w-full">
       {/* ============= Section description ============= */}
-      <h2 className="text-[28px] lg:text-7xl leading-[38px] font-bold text-[#004AAD] text-center mb-8 lg:mb-12">
+      <h2 className="text-2xl sm:text-2xl lg:text-7xl leading-[38px] font-bold text-[#004AAD] text-center mb-8 lg:mb-12">
         Services that we provide
       </h2>
-      <p className="text-lg lg:text-xl text-[#5F5E6C] text-center lg:px-36">
+      <p className="text-base sm:text-lg lg:text-xl text-[#5F5E6C] text-center lg:px-36">
         At Zorfts Technologies Ltd, we propel innovation forward and deliver
         top-tier technology solutions that empower businesses to excel in the
         digital era. Fueled by a passion for excellence and a commitment to
@@ -27,12 +27,12 @@ const ServicesSection: React.FC = () => {
       </p>
 
       {/* ============= Services grid ============= */}
-      <div className="overflow-x-scroll lg:overflow-visible mt-8 lg:mt-20 w-[380px] lg:w-full">
+      <div className="overflow-x-scroll lg:overflow-visible mt-12 lg:mt-20 px- lg:ml-auto w-[21.938rem] lg:w-full">
         <div className="grid grid-cols-10 lg:grid-cols-3 gap-x-96 lg:gap-10 lg:w-full">
           {services?.map((service, index) => (
             <div
               key={service.id}
-              className="hover-effect border-2 rounded-3xl border-gray-200 px-5 py-8 mb-6 lg:mb-0 min-w-[344px] cursor-pointer"
+              className="hover-effect border-2 rounded-3xl border-gray-200 px-5 py-8 mb-6 lg:mb-0 min-w-[21.938rem] cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)} // Set the hovered index when mouse enters
               onMouseLeave={() => setHoveredIndex(null)} // Reset hovered index when mouse leaves
             >

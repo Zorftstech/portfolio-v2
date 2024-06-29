@@ -13,7 +13,7 @@ const PortfolioGrid: React.FC = () => {
 
   return (
     <SideWrapper>
-      <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
+      <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.slice(0, 4).map((project) => (
           <div key={project.id} className="group relative">
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-transparent lg:aspect-none group-hover:scale-104 lg:h-100">

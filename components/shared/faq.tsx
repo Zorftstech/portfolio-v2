@@ -13,13 +13,13 @@ const FaqSection: React.FC = () => {
     });
   }, []);
   return (
-    <div className="py-24 mb-8">
+    <div className="my-24 mb-8">
       <div className="flex justify-center items-center">
         <h4 className="text-center bg-slate-300 p-2 rounded text-gray-600 w-[49px] lg:w-[60px]">
           FAQ
         </h4>
       </div>
-      <h2 className="text-[#004AAD] text-[28px] lg:text-[64px] text-center leading-[38px] lg:leading-[74px] font-semibold mt-10">
+      <h2 className="text-[#004AAD] text-2xl lg:text-6xl text-center leading-[38px] lg:leading-[74px] font-semibold mt-7">
         Any Questions?
       </h2>
       <p className="text-center font-normal leading-7 mt-4">
@@ -28,14 +28,17 @@ const FaqSection: React.FC = () => {
       </p>
 
       {/* ================== faq accordion ==================== */}
-      <div className="mx-auto max-w-7xl mt-24">
+      <div className="mx-auto max-w-7xl mt-10">
+      <hr className="bg-[#E7E7E7] h-[1px] mt-12 mb-3" />
+
         {data?.map((faq) => (
           <div
-            className="divide-y divide-solid divide-gray-500 w-[100%]"
+            className="divide-y divide-solid divide-[#E7E7E7] w-[100%]"
             key={faq?.id}
           >
+            
             <details className="group" open={faq.id === 1}>
-              <summary className="flex cursor-pointer list-none items-center justify-between py-4 textLg font-bold text-2xl text-secondary-900 group-open:text-primary-500">
+              <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-lg font-bold lg:text-2xl text-secondary-900 group-open:text-primary-500">
                 {faq?.question}
                 <div>
                   <svg
@@ -70,6 +73,7 @@ const FaqSection: React.FC = () => {
               </summary>
               <div className="pb-4 text-secondary-400 leading-7 text-[16px] tracking-wide">{faq?.answer}</div>
             </details>
+            <hr className="bg-[#E7E7E7] h-[0px] my-3" />
           </div>
         ))}
       </div>

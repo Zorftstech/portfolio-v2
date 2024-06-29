@@ -10,6 +10,7 @@ import AlternateCard from "./alternateCards";
 import ServiceDetail from "./service";
 import Solution from "./solution";
 import { fetchSingleService } from "@/lib/apis/request";
+import { SideWrapper } from "../shared/Wrappers";
 
 const ServiceInnerPageComp = () => {
   const searchParams = useSearchParams();
@@ -59,7 +60,9 @@ const ServiceInnerPageComp = () => {
         <Solution serviceDetails={serviceDetails} />
         <AlternateCard serviceDetails={serviceDetails} />
         <TechnologiesWeUse />
+        <SideWrapper>
         <WhatOurCustomersSay />
+        </SideWrapper>
         <ExploreSomeOfOurprojects serviceDetails={serviceDetails} />
       </>
     );

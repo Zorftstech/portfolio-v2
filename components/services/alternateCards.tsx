@@ -1,22 +1,20 @@
 "use client";
-import React, { useEffect, useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import React from "react";
 import Image from "next/image";
-import { servicesData, Service } from "../data";
 import { IServiceDetailProps } from "./service";
 
 const AlternateCard: React.FC<IServiceDetailProps> = ({ serviceDetails }) => {
   return (
-    <div className="mx-auto flex gap-14 max-w-7xl items-center justify-center flex-col lg:mt-28 mt-8 px-8">
+    <div className="mx-auto flex gap-14 max-w-7xl items-center justify-center flex-col mt-8 md:mt-16 lg:mt-28 px-8 w-full">
       {serviceDetails?.content?.map((service, index) => (
         <div
           key={service.id}
-          className="flex flex-wrap lg:flex-nonwrap justify-between lg:my-28"
+          className="flex flex-wrap md:flex-nowrap justify-between lg:my-28 w-full"
           style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
         >
           <div
-            className={`w-[100%] lg:w-[520px] ${
-              index % 2 === 0 ? "lg:mr-12" : "lg:ml-12"
+            className={`w-full lg:w-[520px] ${
+              index % 2 === 0 ? "md:mr-12" : "md:ml-12"
             }`}
           >
             <h3 className="text-[28px] lg:text-[40px] leading-[38px] lg:leading-[80px] text-[#3B3D3F] font-bold">
@@ -35,13 +33,16 @@ const AlternateCard: React.FC<IServiceDetailProps> = ({ serviceDetails }) => {
               </a>
             </button>
           </div>
-          <Image
-            src={service?.image}
-            alt={service.title}
-            width={380}
-            height={296.4}
-            className="lg:w-[620px] lg:h-[453px] mt-10 lg:mt-0"
-          />
+          <div className="w-full lg:w-auto mt-10 md:mt-0">
+            <Image
+              src={service?.image}
+              alt={service.title}
+              // layout="responsive"
+              width={620}
+              height={453}
+              className="lg:w-[620px] lg:h-[453px]"
+            />
+          </div>
         </div>
       ))}
     </div>

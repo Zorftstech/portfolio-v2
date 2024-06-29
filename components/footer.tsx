@@ -23,14 +23,14 @@ export default function Footer() {
   return (
     <div className="flex items-center justify-center flex-col px-6 lg:px-8 mt-0 bg-[#1B1B1E]">
       <div className="flex justify-center items-center flex-col text-[#fff] mt-[80px]">
-        <p className="text-[26px] leading-4">Subscribe to our newsletter</p>
+        <p className="sm:text-[26px] leading-4">Subscribe to our newsletter</p>
         <div className="flex flex-wrap lg:flex-nowrap lg:justify-center items-center flex-row gap-4 my-6">
           <input
             onChange={(e) => setSubscriberMail(e.target.value)}
             value={subscriberMail}
             type="email"
             placeholder="Enter your email address"
-            className="outline-none border-0  rounded-3xl py-3 px-8 w-[380px] lg:w-[500px] bg-[#39393E] focus:bg-[#39393E]"
+            className="outline-none border-0  rounded-3xl py-3 px-8 w-full sm:w-[380px] lg:w-[500px] bg-[#39393E] focus:bg-[#39393E]"
           />
           <button
             type="button"
