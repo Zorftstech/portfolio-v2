@@ -4,10 +4,16 @@ import { portfolioProjects } from "../data";
 import Image from "next/image";
 import PortfolioGrid from "../shared/portfolioGrid";
 import { IServiceDetailProps } from "./service";
+import { useAppContext } from "@/lib/context";
+
 
 const ExploreSomeOfOurprojects: React.FC<IServiceDetailProps> = ({
   serviceDetails,
 }) => {
+
+  const { store } = useAppContext();
+  const { projects } = store;
+
   return (
     <div className="mx-auto py-16 lg:py-24 md:px-8 lg:mt-40 w-full bg-[#004AAD]">
       <div className="mx-auto max-w-7xl  text-[#fff]">
@@ -21,7 +27,7 @@ const ExploreSomeOfOurprojects: React.FC<IServiceDetailProps> = ({
           </h2>
         </div>
         <div className="mt- md:mt-20 lg:ml-5 lg:h-[460px] overflow-hidden">
-          <PortfolioGrid />
+        <PortfolioGrid projects={projects} />
         </div>
       </div>
       <button className="mx-auto flex items-center justify-between w-[130px] h-[48px] bg-transparent border-[0.5px] border-[#FFFFFF] rounded-full px-6 mt-16">

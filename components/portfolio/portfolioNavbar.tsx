@@ -1,14 +1,15 @@
-"use client"
-import React, {useState, useEffect} from 'react';
-import { portfolioProjects, PortfolioProject } from '../data';
+"use client";
+import React, { useState, useEffect } from "react";
+import { useAppContext } from "@/lib/context";
+import PortfolioGrid from "../shared/portfolioGrid";
+import Image from "next/image";
+import { IProjectData } from "@/lib/types";
 
-interface PortfolioItem {
-  id: number;
-  navItem: string;
-}
+const projectTypes = ["All", "Design", "Development", "Deployment", "Others"];
+
 
 const PortfolioNavbar: React.FC = () => {
-  const { store } = useAppContext();
+ const { store } = useAppContext();
   const { projects } = store;
   const [activeButton, setActiveButton] = useState<number>(0);
   const [currentProjects, setCurrentProjects] = useState<IProjectData[]>([]);
@@ -52,7 +53,8 @@ const PortfolioNavbar: React.FC = () => {
             </div>
         ))}
         </div>
-        </div>
+      </div>
+    </div>
     );
 };
 

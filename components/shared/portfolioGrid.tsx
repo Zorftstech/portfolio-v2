@@ -1,4 +1,5 @@
 "use client";
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,14 +7,17 @@ import { RiCircleFill } from "react-icons/ri";
 import { extractYear } from "@/lib/helpers/extractYearfromDateString";
 import { useAppContext } from "@/lib/context";
 import { SideWrapper } from "./Wrappers";
+import { IProjectData } from "@/lib/types";
 
-const PortfolioGrid: React.FC = () => {
-  const { store } = useAppContext();
-  const { projects } = store;
+interface IPortfolioGridProps {
+  projects: IProjectData[];
+}
 
+const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
+ 
   return (
     <SideWrapper>
-      <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
+      <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.map((project) => (
           <Link
             href={`/portfolio/${project.slug}?id=${project.id}`}
@@ -32,10 +36,10 @@ const PortfolioGrid: React.FC = () => {
             <div className="mt-4 flex justify-between">
               <div>
                 <h3 className="text-base text-white font-semibold leading-5">
-                  <Link href={project?.slug}>
+                  <p>
                     <span aria-hidden="true" className="absolute inset-0" />
                     {project?.brand_name}
-                  </Link>
+                  </p>
                 </h3>
                 <div className="mt-1 text-sm text-white">
                   <div className="flex gap-2">

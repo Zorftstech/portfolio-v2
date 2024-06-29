@@ -50,9 +50,9 @@ export default function Footer() {
 
       <hr className="w-[100%] bg-slate-50 my-8 " />
 
-      <div className="mx-auto max-w-7xl w-[100%] flex justify-between items-start gap-20 flex-wrap lg:flex-nowrap lg:mt-[60px]">
-        <div className="w-[100%] lg:w-[30%] flex justify-between items-start flex-col">
-          <div className="flex justify-between items-start flex-col text-white">
+      <div className="mx-auto max-w-7xl w-[100%] flex justify-between items-start gap-10 lg:gap-20 flex-wrap lg:flex-nowrap lg:mt-[60px]">
+        <div className="w-[100%] lg:w-[30%] flex gap-10 lg:gap-0 lg:justify-between items-start lg:flex-col">
+          <div className="flex justify-between items-start lg:flex-col text-white">
             <Image
               src={"/zorfts-icon.svg"}
               alt="Zorfts Technologies Ltd Icon"
@@ -69,13 +69,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <p className="text-white my-11 hidden lg:block">
+          <p className="text-white mt-3 lg:my-11 hidden md:block">
             {" "}
             © 2024 Zorfts Technologies Ltd. - All rights Reseved.
           </p>
         </div>
 
-        <div className="w-[100%] lg:w-[100%] flex items-start gap-10 flex-col lg:flex-row">
+        <div className="w-[100%] lg:w-[100%] flex items-start gap-10 flex-col md:flex-row">
           <div className="flex w-[100%] lg:w-[50%] justify-between">
             {footerLinks.slice(0, 2).map((footerLink) => (
               <div

@@ -4,7 +4,7 @@ import TestimonialCard from "../home/testimonialCard";
 
 const WhatOurCustomersSay: React.FC = () => {
 	return (
-		<div className="flex flex-col items-center lg:py-24 mt-20 lg:mt-40 w-full">
+		<div className="flex flex-col items-center lg:py-24 mt-10 lg:mt-40 w-full">
 
             <div className="hidden lg:block">
                 {/* ============= Section description ============= */}

@@ -5,7 +5,7 @@ import { IServiceDetailProps } from "./service";
 
 const AlternateCard: React.FC<IServiceDetailProps> = ({ serviceDetails }) => {
   return (
-    <div className="mx-auto flex gap-14 max-w-7xl items-center justify-center flex-col mt-8 md:mt-16 lg:mt-28 px-8 w-full">
+    <div className="mx-auto flex gap-14 max-w-7xl items-center justify-center flex-col mt-20 md:mt-16 lg:mt-28 px-8 w-full">
       {serviceDetails?.content?.map((service, index) => (
         <div
           key={service.id}
