@@ -55,7 +55,7 @@ const PortfolioGrid: React.FC = () => {
                 {extractYear(project?.date)}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       {/* <button className='mx-auto flex items-center justify-between w-[130px] h-[48px] bg-transparent border-[0.5px] border-[#FFFFFF] rounded-full px-6 mt-20'> 
