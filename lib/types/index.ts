@@ -129,12 +129,32 @@ export interface ITechnologies {
 
 export interface IService {
   id: number;
-  content: {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-  }[];
+  content: [
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    },
+    {
+      id: number;
+      title: string;
+      description: string;
+      image: string;
+    }
+  ];
   name: string;
   main_title: string;
   main_description: string;

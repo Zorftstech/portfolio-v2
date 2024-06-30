@@ -19,12 +19,12 @@ const WhyChooseUs: React.FC = () => {
   const hoveredReason = data && data[hoveredIndex];
 
   return (
-    <div className="mx-auto flex flex-col items-center justify-center mt-24 lg:my-24 w-full">
+    <div className="mx-auto flex flex-col items-center justify-center mt-20 lg:mt-64 w-full">
       <h2 className="text-[24px] leading-[27.6px] text-[#004AAD] font-bold self-start">
         Why Choose Zorfts?
       </h2>
-      <div className="flex flex-wrap items-center justify-between w-full mt-5 lg:mt-28 lg:ml-5">
-        <div className="bg-[#336EBD] w-[430px] px-9 py-12 self-start rounded-3xl mt-6 transition-all">
+      <div className="grid md:grid-cols-2 items-center justify-between w-full mt-5 lg:mt-28 lg:ml-5">
+        <div className="bg-[#336EBD] w-full sm:w-[430px] px-9 py-12 self-start rounded-3xl mt-6 transition-all">
           <h2 className="text-[18px] lg:text-[20px] leading-[26px] text-[#FFFFFF] font-bold transition-all">
             {hoveredReason?.subject}
           </h2>
@@ -32,17 +32,17 @@ const WhyChooseUs: React.FC = () => {
             {hoveredReason?.description}
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:justify-self-end">
           {data?.map((reason, index) => (
             <div
               key={reason?.id}
               onMouseEnter={() => setHoveredIndex(index)} // Set the hovered index when mouse enters
               onMouseLeave={() => setHoveredIndex(0)} // Reset hovered index to 0 when mouse leaves
-              className="cursor-pointer my-2 justify-self-start lg:ml-[-650px]"
+              className="cursor-pointer my-2 justify-self-start"
             >
               <ul className="mt-5 lg:mt-0">
                 <li
-                  className="text-[20px] lg:text-[44px] leading-[24px] lg:leading-[52.8px] text-[#D0D0D0] font-medium py-2 lg:py-5"
+                  className="text-xl lg:text-4xl leading-[24px] lg:leading-[52.8px] text-[#D0D0D0] font-medium py-2 lg:py-5"
                   style={{
                     color: hoveredIndex === index ? "#004AAD" : "#D0D0D0",
                   }}

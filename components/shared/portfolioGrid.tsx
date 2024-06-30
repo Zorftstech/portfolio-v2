@@ -1,4 +1,5 @@
 "use client";
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,9 +14,10 @@ interface IPortfolioGridProps {
 }
 
 const PortfolioGrid: React.FC<IPortfolioGridProps> = ({ projects }) => {
+ 
   return (
     <SideWrapper>
-      <div className="grid lg:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
+      <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 text-[#fff]">
         {projects?.map((project) => (
           <Link
             href={`/portfolio/${project.slug}?id=${project.id}`}

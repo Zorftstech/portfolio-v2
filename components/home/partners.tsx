@@ -10,12 +10,12 @@ const PartnersSection: React.FC = () => {
   const { store } = useAppContext();
   const { partners } = store;
   return (
-    <div className="pt-28 lg:my-24">
+    <div className="mt-28 lg:mt-44">
       <div className="w-[100%] lg:w-[60%] mb-12">
-        <h3 className="text-[#3B3D3F] text-4xl lg:text-[64px] leading-[38px] tracking-tight text-start lg:leading-[74px] font-semibold">
+        <h3 className="text-[#3B3D3F] text-3xl lg:text-[64px] leading-[38px] tracking-tight text-start lg:leading-[74px] font-semibold">
           At Zorft Technologies, we&apos;re more than just a tech company
         </h3>
-        <p className="text-[18px] lg:text-2xl leading-[28px] lg:leading-[30px] text-start text-[#8f8f92] max-w-[550px] tracking-tight mt-5">
+        <p className="text-lg lg:text-2xl lg:leading-[30px] text-start text-[#8f8f92] max-w-[550px] tracking-tight mt-5 lg:mt-10">
           We&#x201A;re your strategic partner in unlocking the full potential of
           your digital presence.
         </p>

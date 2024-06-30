@@ -7,8 +7,9 @@ import { IProjectData } from "@/lib/types";
 
 const projectTypes = ["All", "Design", "Development", "Deployment", "Others"];
 
+
 const PortfolioNavbar: React.FC = () => {
-  const { store } = useAppContext();
+ const { store } = useAppContext();
   const { projects } = store;
   const [activeButton, setActiveButton] = useState<number>(0);
   const [currentProjects, setCurrentProjects] = useState<IProjectData[]>([]);
@@ -50,19 +51,11 @@ const PortfolioNavbar: React.FC = () => {
                 {type}
               </button>
             </div>
-          ))}
-        </div>
-
-        <div className="mx-auto my-8 lg:my-24">
-          <PortfolioGrid projects={currentProjects} />
-          <button className="mx-auto flex items-center justify-between w-[152px] h-[48px] bg-[#454646] rounded-full px-6 mt-20">
-            <Image src={"Vector-4.svg"} alt="" width={15.5} height={4} />
-            <span className="text-white">Load More</span>
-          </button>
+        ))}
         </div>
       </div>
     </div>
-  );
+    );
 };
 
 export default PortfolioNavbar;

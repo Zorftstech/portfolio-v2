@@ -98,27 +98,6 @@ export const fetchTestimonials = async () => {
     }
   }
 };
-
-export const fetchServiceTestimonials = async (serviceId: string) => {
-  try {
-    const response: AxiosResponse = await api.get(
-      `/testimonials-by-services/${serviceId}`
-    );
-    // Handle successful response
-    const responseData = response.data;
-    return { success: true, data: responseData };
-  } catch (error) {
-    // Handle error response
-    if (axios.isAxiosError(error)) {
-      if (error.response) {
-        return { success: false, message: error.response.data.detail };
-      } else handleNonAxiosError(error);
-    } else {
-      handlOtherErrors(error);
-    }
-  }
-};
-
 export const fetchPartnersTestimonials = async () => {
   try {
     const response: AxiosResponse = await api.get(
@@ -158,7 +137,6 @@ export const fetchBlogPosts = async () => {
     }
   }
 };
-
 export const fetchSingleBlogPost = async (blogId: string) => {
   try {
     const response: AxiosResponse = await api.get(`/blog/${blogId}`);

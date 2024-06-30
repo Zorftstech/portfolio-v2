@@ -48,7 +48,7 @@ const BePartOfOurTeam: React.FC = () => {
                       className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full"
                     >
                       {employment.type}
-                    </Link>
+                    </button>
                   </div>
                 ))}
             </div> */}
@@ -60,7 +60,7 @@ const BePartOfOurTeam: React.FC = () => {
                     className="text-[14px] leading-[16.1px] text-[#3B3B3B] py-[16px] px-[24px] border-[1px] rounded-full"
                   >
                     {employment.type}
-                  </Link>
+                  </button>
                 </div>
               ))}
             </div> */}
