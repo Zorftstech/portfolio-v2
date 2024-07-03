@@ -4,6 +4,9 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import BioData from "./bioData";
 import { Talents, ITalent } from "../talents/data";
+import RecentProjects from "./recentProjects";
+import { SideWrapper } from "../shared/Wrappers";
+import TalentsInOtherTechFied from "./talentsInOtherTechField";
 
 const TalentsProfile: React.FC = () => {
   const searchParams = useSearchParams();
@@ -43,7 +46,11 @@ const TalentsProfile: React.FC = () => {
   } else {
     return (
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <BioData bioData={talent?.bio_data[0]} />
+        <SideWrapper>
+          <BioData bioData={talent?.bio_data[0]} />
+          <RecentProjects recentProjects={talent?.recent_projects} />
+          <TalentsInOtherTechFied />
+        </SideWrapper>
       </main>
     );
   }

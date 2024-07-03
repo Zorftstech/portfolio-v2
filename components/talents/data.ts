@@ -1,10 +1,15 @@
 import { profile } from "console";
+//Define the interface for the recent projects
+export interface IRecentProjects {
+	id: number;
+	img: string;
+	description: string;
+}
+
 // Define the interface for the account details
 export interface IAccount {
 	id: number;
-	img_1?: string;
-	img_2?: string;
-	img_3?: string;
+	img: string;
   }
   
   // Define the interface for the bio data
@@ -26,6 +31,7 @@ export interface ITalent {
 	name: string;
 	description: string;
 	bio_data: IBioData[];
+	recent_projects: IRecentProjects[]
   }
   
   // Define the Talents array with the ITalent interface
@@ -48,17 +54,34 @@ export const Talents: ITalent[] = [
 				accounts: [
 					{
 						id: 1,
-						img_1: '/talentsLinkedIn.svg',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
 						id: 2,
-						img_2: '/talentsBe.svg',
+						img: '/talentsBe.svg',
 					},
 					{
 						id: 3,
-						img_3: '/talentsGithub.svg',
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},
@@ -73,24 +96,41 @@ export const Talents: ITalent[] = [
 		bio_data: [
 			{
 				id: 1,
-				profile_img: '',
-				name: '',
-				title: '',
-				description: '',
+				profile_img: '/talentsProfileImg.svg',
+				name: 'Adeyemi Kolawole',
+				title: 'Front End Developer',
+				description: 'Jane Doe is an experienced Front End Developer adept at transforming design concepts into seamless web interfaces. Passionate about blending creativity with functionality, she specializes in crafting elegant, responsive, and intuitive user experiences.',
 				accounts: [
 					{
 						id: 1,
-						img_1: '',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
-						id: 1,
-						img_2: '',
+						id: 2,
+						img: '/talentsBe.svg',
 					},
 					{
-						id: 1,
-						img_3: '',
+						id: 3,
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},
@@ -105,24 +145,41 @@ export const Talents: ITalent[] = [
 		bio_data: [
 			{
 				id: 1,
-				profile_img: '',
-				name: '',
-				title: '',
-				description: '',
+				profile_img: '/talentsProfileImg.svg',
+				name: 'Adeyemi Kolawole',
+				title: 'Front End Developer',
+				description: 'Jane Doe is an experienced Front End Developer adept at transforming design concepts into seamless web interfaces. Passionate about blending creativity with functionality, she specializes in crafting elegant, responsive, and intuitive user experiences.',
 				accounts: [
 					{
 						id: 1,
-						img_1: '',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
-						id: 1,
-						img_2: '',
+						id: 2,
+						img: '/talentsBe.svg',
 					},
 					{
-						id: 1,
-						img_3: '',
+						id: 3,
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},
@@ -137,24 +194,41 @@ export const Talents: ITalent[] = [
 		bio_data: [
 			{
 				id: 1,
-				profile_img: '',
-				name: '',
-				title: '',
-				description: '',
+				profile_img: '/talentsProfileImg.svg',
+				name: 'Adeyemi Kolawole',
+				title: 'Front End Developer',
+				description: 'Jane Doe is an experienced Front End Developer adept at transforming design concepts into seamless web interfaces. Passionate about blending creativity with functionality, she specializes in crafting elegant, responsive, and intuitive user experiences.',
 				accounts: [
 					{
 						id: 1,
-						img_1: '',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
-						id: 1,
-						img_2: '',
+						id: 2,
+						img: '/talentsBe.svg',
 					},
 					{
-						id: 1,
-						img_3: '',
+						id: 3,
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},
@@ -169,24 +243,41 @@ export const Talents: ITalent[] = [
 		bio_data: [
 			{
 				id: 1,
-				profile_img: '',
-				name: '',
-				title: '',
-				description: '',
+				profile_img: '/talentsProfileImg.svg',
+				name: 'Adeyemi Kolawole',
+				title: 'Front End Developer',
+				description: 'Jane Doe is an experienced Front End Developer adept at transforming design concepts into seamless web interfaces. Passionate about blending creativity with functionality, she specializes in crafting elegant, responsive, and intuitive user experiences.',
 				accounts: [
 					{
 						id: 1,
-						img_1: '',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
-						id: 1,
-						img_2: '',
+						id: 2,
+						img: '/talentsBe.svg',
 					},
 					{
-						id: 1,
-						img_3: '',
+						id: 3,
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},
@@ -201,24 +292,41 @@ export const Talents: ITalent[] = [
 		bio_data: [
 			{
 				id: 1,
-				profile_img: '',
-				name: '',
-				title: '',
-				description: '',
+				profile_img: '/talentsProfileImg.svg',
+				name: 'Adeyemi Kolawole',
+				title: 'Front End Developer',
+				description: 'Jane Doe is an experienced Front End Developer adept at transforming design concepts into seamless web interfaces. Passionate about blending creativity with functionality, she specializes in crafting elegant, responsive, and intuitive user experiences.',
 				accounts: [
 					{
 						id: 1,
-						img_1: '',
+						img: '/talentsLinkedIn.svg',
 					},
 					{
-						id: 1,
-						img_2: '',
+						id: 2,
+						img: '/talentsBe.svg',
 					},
 					{
-						id: 1,
-						img_3: '',
+						id: 3,
+						img: '/talentsGithub.svg',
 					}
 				]
+			}
+		],
+		recent_projects: [
+			{
+				id: 1,
+				img: '/recentProjects-a.svg',
+				description: 'E-Commerce Website',
+			},
+			{
+				id: 2,
+				img: '/recentProjects-b.svg',
+				description: 'E-Learning Website',
+			},
+			{
+				id: 3,
+				img: '/recentProjects-c.svg',
+				description: 'Architectural Website'
 			}
 		]
 	},

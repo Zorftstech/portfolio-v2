@@ -1,16 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Talents } from "./data";
 
 const TalentsCard: React.FC = () => {
+
 	return (
-		<div className="grid grid-rows-1 xl:grid-cols-3 gap-8 mx-auto">
+		<div className="flex flex-wrap md:flex-nonwrap gap-8 mx-auto">
 			{Talents.map((talent) => (
 				<div
 					key={talent.id}
-					className="container max-w-[380px] h-[536px] bg-white rounded-[30px] p-4">
+					className="container max-w-[380px] h-[536px] bg-white rounded-[30px] p-4 border-[1px] border-[#E6EDF7]">
 					<div
 						style={{ background: talent.bg }}
 						className="relative bg-[#004AAD] rounded-[16px]">

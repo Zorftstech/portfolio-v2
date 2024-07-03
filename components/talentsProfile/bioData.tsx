@@ -20,18 +20,18 @@ const BioData: React.FC<BioDataProps> = ({ bioData }) => {
           alt="talent-img"
         />
       </div>
-      <div className="flex flex-col items-center p-6">
-        <h2 className="">{bioData?.name}</h2>
-        <h4 className="">{bioData?.title}</h4>
-        <p className="">{bioData?.description}</p>
-        <div className="mt-6 flex items-center gap-4">
+      <div className="flex flex-col items-center md:w-[67%] mt-10">
+        <h2 className="text-[#3B3B3B] text-2xl sm:text-5xl font-bold">{bioData?.name}</h2>
+        <h4 className="text-[#808080] text-base sm:text-3xl mt-5">{bioData?.title}</h4>
+        <p className="text-[#808080] text-base sm:text-2xl text-center mt-7 md:mt-10">{bioData?.description}</p>
+        <div className="mt-7 md:mt-12 flex items-center gap-7">
           {bioData?.accounts.map((account) => (
-            <Link key={account.id} className="text-[#004AAD] underline capitalize font-semibold" href={'/'}>
+            <Link key={account.id} className="bg-[#E2F6FF] rounded-full p-3 md:p-5" href={'/'}>
               <Image
-                width={64}
-                height={64}
-                className="max-h-[500px] w-full object-cover rounded-2xl h-full"
-                src={account.img_1 || account.img_2 || account.img_3 || ""}
+                width={23}
+                height={22}
+                className="object-contain md:w-10 md:h-10 xl:w-16 xl:h-16"
+                src={account.img || ""}
                 alt="link-img"
               />
             </Link>
