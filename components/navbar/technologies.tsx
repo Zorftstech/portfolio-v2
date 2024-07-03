@@ -72,7 +72,7 @@ const Technologies = ({
       <SideWrapper>
         <div className="lg:flex justify-between gap-10 xl:gap-20">
           {/* Heading */}
-          <div className="max-w-[280px]">
+          <div className="max-w-[280px] min-w-[180px]">
             <p
               className={`${
                 isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[#5F5E6C]"
@@ -89,7 +89,7 @@ const Technologies = ({
           {/* Items */}
           <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
             {technologies?.map((item) => (
-              <div key={item?.stack.id} className="w-[45%] lg:w-auto block">
+              <div key={item?.stack.id} className="w-full sm:w-auto block">
                 <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
                   {item?.stack.name}
                 </p>

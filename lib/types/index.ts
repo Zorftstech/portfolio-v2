@@ -203,3 +203,52 @@ export interface IJobFormData {
   cover_letter?: File | null;
   additional_attachment?: File | null;
 }
+
+export interface ITalentDetails {
+  id: number;
+  other_talents: [
+    {
+      id: number;
+      name: string;
+      image: string;
+      job_title: string;
+      description: string;
+    }
+  ];
+
+  name: string;
+  job_title: string;
+  slug: string;
+  image: string;
+  description: string;
+  created_at: string;
+  social_media_links: [];
+  recent_projects: [
+    {
+      id: number;
+      tags: {
+        id: number;
+        name: string;
+        description: string;
+      }[];
+      related_services: [];
+      brand_name: string;
+      project_name: string;
+      sub_text: string;
+      company_type: string;
+      description: string;
+      timeline: string;
+      problem_statement: string;
+      solution: string;
+      design_process: string;
+      development_process: string;
+      deployment_process: string;
+      image: string;
+      link: string;
+      date: string;
+      slug: string;
+      brand: 2;
+      related_projects: [];
+    }
+  ];
+}
