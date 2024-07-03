@@ -24,13 +24,13 @@ const TalentsCard: React.FC = () => {
           key={talent.id}
           className="container max-w-[380px] h-[536px] bg-white rounded-[30px] p-4"
         >
-          <div className="relative bg-[#004AAD] rounded-[16px]">
+          <div className="relative bg-[#004AAD] rounded-[16px] h-full max-h-[310px] ">
             <Image
               src={talent?.image || ""}
               alt=""
               width={453}
               height={411}
-              className="rounded-[16px]"
+              className="rounded-[16px] object-cover h-full"
             />
             <div className="absolute left-4 bottom-3 bg-[#E6EDF7] w-fit px-[12px] py-[8px] rounded-[37px] text-[12px] text-[#00357B]">
               <p>{talent?.job_title}</p>
