@@ -193,6 +193,25 @@ export const fetchProjects = async () => {
   }
 };
 
+export const fetchSingleProject = async (id: string) => {
+  try {
+    const response: AxiosResponse = await api.get(`/projects/${id}`);
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
 export const fetchWhyChooseZorfts = async () => {
   try {
     const response: AxiosResponse = await api.get("/why-choose-zorfts/");
@@ -231,9 +250,9 @@ export const fetchServices = async () => {
   }
 };
 
-export const fetchCareerOpenings = async () => {
+export const fetchSingleService = async (id: string) => {
   try {
-    const response: AxiosResponse = await api.get("/careers/");
+    const response: AxiosResponse = await api.get(`/services/${id}`);
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
@@ -269,9 +288,9 @@ export const fetchSingleCareerOpenings = async (id: string) => {
   }
 };
 
-export const fetchSingleService = async (id: string) => {
+export const fetchCareerOpenings = async () => {
   try {
-    const response: AxiosResponse = await api.get(`/services/${id}`);
+    const response: AxiosResponse = await api.get("/careers/");
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
@@ -305,10 +324,27 @@ export const fetchTechnologies = async () => {
     }
   }
 };
-
-export const fetchSingleProject = async (id: string) => {
+export const fetchTalents = async () => {
   try {
-    const response: AxiosResponse = await api.get(`/projects/${id}`);
+    const response: AxiosResponse = await api.get("/talents");
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
+
+export const fetchSingleTalent = async (id: string) => {
+  try {
+    const response: AxiosResponse = await api.get(`/talents/${id}`);
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
       return { success: true, data: responseData };
