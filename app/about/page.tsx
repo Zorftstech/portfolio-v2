@@ -7,7 +7,7 @@ import Mission from "@/components/about/mission";
 
 export default function About() {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <TopAndBottomWrapper>
         <SideWrapper>
           <AboutUs />

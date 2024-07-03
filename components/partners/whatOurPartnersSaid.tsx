@@ -29,7 +29,7 @@ const WhatOurPartnersSaid: React.FC = () => {
         {partnersTestimonials?.map((partner, index) => (
           <div
             key={index}
-            className="grid grid-cols-4 w-[380px] lg:w-[556px] h-[145px] lg:h-[119px] my-5"
+            className="grid grid-cols-4 w-full lg:w-[556px] h-[145px] lg:h-[119px] my-5"
           >
             <Image
               src={partner.image || ""}
