@@ -35,8 +35,8 @@ const PortfolioNavbar: React.FC = () => {
   };
   return (
     <div className="">
-      <div className="my-8 lg:my-24 overflow-x-auto w-[387px] lg:w-full">
-        <div className="flex items-center justify-center w-[1012px] lg:w-full">
+      <div className="my-8 lg:my-24 overflow-x-auto w-full">
+        <div className="flex items-center md:justify-center w-[1012px] md:w-full">
           {projectTypes.map((type, typeIndex) => (
             <div key={typeIndex} className="flex">
               <button
