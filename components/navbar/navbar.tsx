@@ -32,6 +32,7 @@ export default function Navbar() {
     setIsShowingBackdrop(false);
     setIsShowingServices(false);
     setIsShowingTechnologies(false);
+    setHamburgerOpen(false);
     if (pathname.includes("portfolio")) {
       setNavBG(COLORS[1]);
       setIsOnDarkMode(true);
@@ -99,7 +100,7 @@ export default function Navbar() {
               <Link href={"/"} className="cursor-pointer">
                 {isOnDarkMode ? (
                   <Image
-                    src={"/zorfts-white-logo.png"}
+                    src={"/zorft_logo_white__variation.svg"}
                     width={220}
                     height={37}
                     alt="Zorfts Technologies Ltd"
@@ -118,6 +119,7 @@ export default function Navbar() {
 
               <div className="block lg:hidden">
                 <Hamburger
+                  toggled={isHamburgerOpen}
                   onToggle={(toggled) => handleHamburgerToggle(toggled)}
                   size={24}
                 />
