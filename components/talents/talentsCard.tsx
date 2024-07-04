@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Talents } from "./data";
 import { fetchTalents } from "@/lib/apis/request";
 import { ITalentDetails } from "@/lib/types";

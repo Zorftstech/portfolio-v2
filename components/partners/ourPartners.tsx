@@ -2,14 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { useAppContext } from "@/lib/context";
+import { SideWrapper } from "../shared/Wrappers";
 
 const OurPartners: React.FC = () => {
   const { store } = useAppContext();
   const { partners } = store;
   return (
     <div className="">
-      <div className="bg-[url('/OurPartners.svg')] w-[428px] lg:w-full h-[224px] lg:h-[600px] mx-auto flex justify-center bg-cover bg-center lg:rounded-b-[100px] lg:-mt-16">
-        <div className="w-[380px] lg:w-[758px] h-[143px] lg:h-[156px] self-end text-center mb-5">
+      <div className="bg-[url('/OurPartners.svg')] w-[100%] h-[224px] lg:h-[600px] mx-auto flex justify-center bg-cover bg-center lg:rounded-b-[100px] lg:-mt-16">
+        <div className="w-[90vw] lg:w-[758px] h-[143px] lg:h-[156px] self-end text-center mb-10">
           <h2 className="text-[32px] lg:text-[64px] leading-[45px] lg:leading-[80px] font-bold text-[#FFFFFF]">
             Our Partners
           </h2>
@@ -22,8 +23,8 @@ const OurPartners: React.FC = () => {
       </div>
       <div className="overflow-hidden w-full bg-[#3B3D3F] mt-10 lg:mt-32">
         <div
-          className="mx-auto grid grid-cols-6 gap-[185px] lg:gap-[150.82px] w-[428.51px] lg:w-full
-          h-[109.88px] lg:h-[156.01px] lg:py-[40px] my-1 -skew-y-2 bg-[white] overflow-hidden"
+          className="mx-auto grid grid-cols-6 gap-[185px] md:gap-[200px] lg:gap-[250.82px] w-full
+          h-[109.88px] lg:h-[156.01px] lg:py-[40px] my-1 -skew-y-2 bg-[white] overflow-hidden justify-items-center"
         >
           {partners?.map((partner) => (
             <div
@@ -34,26 +35,28 @@ const OurPartners: React.FC = () => {
                 src={partner.logo || ""}
                 alt={partner?.brand_name}
                 width={233.15}
-                height={76.01}
+                height={80}
+                className=" h-[80px] object-contain"
               />
             </div>
           ))}
         </div>
       </div>
-      <div className="overflow-x-scroll lg:overflow-hidden w-[428px] h-full lg:w-full lg:px-36">
-        <div className="grid grid-cols-4 lg:grid-cols-2 gap-[450px] lg:gap-20 lg:justify-items-center my-8 lg:my-52 w-full">
+      <SideWrapper>
+      <div className="overflow-x-scroll lg:overflow-hidden mt-16 md:mt-28 lg:my-52">
+        <div className="grid grid-cols-4 lg:grid-cols-2 gap-96 md:gap-[800px] lg:gap-20 lg:justify-items-center">
           {partners?.slice(0, 4)?.map((partner, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-[428px] lg:w-[610px] h-[px] lg:h-[px] px-8 lg:px-0 pt-10 lg:pt-0"
+              className="flex flex-col items-center w-[353px] md:w-[768px] lg:w-[410px] xl:w-[605px]"
             >
-              <div className="min-h-[230px]">
+              <div className="min-h-[80px]">
                 <Image
                   src={partner.logo || ""}
                   alt={partner?.brand_name}
                   width={233.15}
-                  height={76.01}
-                  className=""
+                  height={50}
+                  className="md:h-[80px] object-contain"
                 />
               </div>
               <p className="text-[16px] leading-[25px] text-[#777680] lg:text-center mt-5">
@@ -63,6 +66,7 @@ const OurPartners: React.FC = () => {
           ))}
         </div>
       </div>
+      </SideWrapper>
     </div>
   );
 };

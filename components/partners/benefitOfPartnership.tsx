@@ -5,20 +5,20 @@ import Link from "next/link";
 
 const BenefitOfParnership: React.FC = () => {
   return (
-    <div className="mx-auto mt-24 lg:mt-8 mb-20 lg:my-40 w-full">
+    <div className="mx-auto mt-16 md:mt-40 lg::mt-60 mb-20 w-full ">
       {partners.slice(0, 1).map((partner) => (
         <div
           key={partner.id}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-x-[97px] gap-y-[50px] lg:gap-y-[97px]"
+          className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center"
         >
-          <div className="lg:mt-16 w-[380px] lg:w-[610px]">
-            <h2 className="text-[28px] lg:text-[40px] leading-[38px] lg:leading-[52px] font-bold text-[#004AAD] mb-[40px]">
+          <div className="w-full">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl leading-[38px] lg:leading-[52px] font-bold text-[#004AAD]">
               Benefits of Partnership
             </h2>
-            <p className="text-[18px] lg:text-[20px] leading-[28px] lg:leading-[29px] text-[#5F5E6C]">
+            <p className="text-[18px] lg:text-[20px] leading-[28px] lg:leading-[29px] text-[#5F5E6C] mt-9">
               {partner.benefit}
             </p>
-            <div className="flex justify-around align-center bg-[#E6EDF7] border-[#B0C7E6] w-[253px] lg:w-[277px] h-[48px] lg:h-[63px] lg:w- mt-10 rounded-full px-3 lg:px-8">
+            <div className="flex gap-3 justify-center align-center bg-[#E6EDF7] border-[#B0C7E6] w-fit lg:w-[277px] h-[48px] lg:h-[63px] lg:w- mt-10 rounded-full px-5 md:px-8">
               <Image src={"Vector-3.svg"} alt="icon" width={15.5} height={4} />
               <Link
                 href="/"
@@ -31,9 +31,10 @@ const BenefitOfParnership: React.FC = () => {
           <Image
             src={"partnership.svg"}
             alt={partner.name}
+            layout=""
             width={380}
             height={267.58}
-            className="rounded lg:w-full object-fit"
+            className="rounded w-full object-fit"
           />
         </div>
       ))}
