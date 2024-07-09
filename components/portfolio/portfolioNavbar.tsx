@@ -41,7 +41,7 @@ const PortfolioNavbar: React.FC = () => {
             <div key={typeIndex} className="flex">
               <button
                 onClick={() => handleButtonClick(type, typeIndex)}
-                className={`text-[16px] leading-[24px] border-[1px] rounded-full px-5 lg:px-5 py-5 mx-3 min-w-[120px] ${
+                className={`text-[16px] leading-[24px] border-[1px] rounded-full p-3 md:p-4 lg:p-5 mx-3 min-w-[120px] ${
                   activeButton === typeIndex
                     ? "bg-[#004AAD] text-white border-blue-500"
                     : "bg-[] text-[#9897A7] border-[#3B3D3F]"

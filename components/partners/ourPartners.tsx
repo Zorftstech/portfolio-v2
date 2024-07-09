@@ -56,7 +56,7 @@ const OurPartners: React.FC = () => {
                   alt={partner?.brand_name}
                   width={233.15}
                   height={50}
-                  className="md:h-[80px] object-contain"
+                  className="max-h-[50px] object-contain"
                 />
               </div>
               <p className="text-[16px] leading-[25px] text-[#777680] lg:text-center mt-5">
