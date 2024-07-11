@@ -128,9 +128,9 @@ export default function Navbar() {
 
             <div className={`${isHamburgerOpen ? "block" : "hidden lg:block"}`}>
               <ul
-                className={`flex flex-col lg:flex-row justify-center items-center
+                className={`flex flex-col text-base lg:flex-row justify-center items-center
               gap-x-2.5 gap-y-6 font-bold lg:font-normal  ${
-                isOnDarkMode ? "text-[#9897A7EE]" : "text-dark-gray"
+                isOnDarkMode ? "text-[#9897A7EE]" : "text-[#424247]"
               } text-base tracking-tight`}
               >
                 <li>

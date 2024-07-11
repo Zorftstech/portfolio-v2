@@ -9,7 +9,7 @@ const WhyChooseUs: React.FC = () => {
 
   useEffect(() => {
     fetchWhyChooseZorfts().then((res) => {
-      setData(res?.data.results);
+      setData(res?.data?.results);
     });
   }, []);
 
