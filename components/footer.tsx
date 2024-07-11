@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,19 +22,21 @@ export default function Footer() {
 
   return (
     <div className="flex items-center justify-center flex-col px-6 lg:px-8 mt-0 bg-[#1B1B1E]">
-      <div className="flex justify-center items-center flex-col text-[#fff] mt-[80px]">
-        <p className="sm:text-[26px] leading-4">Subscribe to our newsletter</p>
-        <div className="flex flex-wrap lg:flex-nowrap lg:justify-center items-center flex-row gap-4 my-6">
+      <div className="flex justify-center sm:items-center flex-col text-[#fff] mt-[80px]">
+        <p className="text-[22px] sm:text-3xl md:text-4xl leading-8 font-bold">
+          Subscribe to our newsletter
+        </p>
+        <div className="flex flex-wrap lg:flex-nowrap lg:justify-center items-center flex-row gap-3 my-8">
           <input
             onChange={(e) => setSubscriberMail(e.target.value)}
             value={subscriberMail}
             type="email"
             placeholder="Enter your email address"
-            className="outline-none border-0  rounded-3xl py-3 px-8 w-full sm:w-[380px] lg:w-[500px] bg-[#39393E] focus:bg-[#39393E]"
+            className="outline-none border-0 text-sm md:text-base font-normal rounded-3xl py-3 px-8 w-full sm:w-[380px] lg:w-[500px] bg-[#39393E] focus:bg-[#39393E]"
           />
           <button
             type="button"
-            className={`w-300px py-3 px-5 text-white bg-[#004AAD] ${
+            className={`py-3 px-7 text-sm md:text-base font-normal text-white bg-[#004AAD] ${
               !isSubmitting && "hover:opacity-90"
             }
               rounded-3xl flex items-center flex-row gap-2 ${
@@ -54,11 +56,11 @@ export default function Footer() {
         <div className="w-[100%] lg:w-[30%] flex gap-10 lg:gap-0 lg:justify-between items-start lg:flex-col">
           <div className="flex justify-between items-start lg:flex-col text-white">
             <Image
-              src={"/zorfts-icon.svg"}
+              src={"/zorft_logo_white__variation.svg"}
               alt="Zorfts Technologies Ltd Icon"
-              height={50}
-              width={50}
-              className="object-fit"
+              width={220}
+              height={37}
+              className="object-fit w-[210px] h-auto"
             />
             <p className="text-[#D9D9D9] text-base leading-6 mt-6 hidden lg:block">
               At Zorfts Technologies Ltd, our focus is on crafting bespoke
@@ -82,12 +84,12 @@ export default function Footer() {
                 className="text-start text-[#D9D9D9] capitalize w-[100%] lg:w-[50%]"
                 key={footerLink.id}
               >
-                <p className="text-[#8F8F92] uppercase mb-8">
+                <p className="text-[#8F8F92] uppercase mb-8 tracking-[0.3em] text-sm">
                   {footerLink.title}
                 </p>
                 {footerLink.links.map((item, index) => (
                   <ul key={index}>
-                    <li className="text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer">
+                    <li className="text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer tracking-tight">
                       <Link
                         style={{ cursor: "pointer" }}
                         href={item.link}
@@ -107,12 +109,12 @@ export default function Footer() {
                 className="text-start text-[#D9D9D9] capitalize w-[100%] lg:w-[50%]"
                 key={footerLink.id}
               >
-                <p className="text-[#8F8F92] uppercase mb-8">
+                <p className="text-[#8F8F92] uppercase mb-8 tracking-[0.3em] text-sm">
                   {footerLink.title}
                 </p>
                 {footerLink.links.map((item, index) => (
                   <ul key={index}>
-                    <li className="text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer">
+                    <li className="text-[#D9D9D9] text-base font-normal leading-10 cursor-pointer tracking-tight">
                       <Link
                         style={{ cursor: "pointer" }}
                         href={item.link}

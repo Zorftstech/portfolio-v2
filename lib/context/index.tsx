@@ -7,6 +7,7 @@ import {
   IProjectData,
   IService,
   ITechnologies,
+  ITestimonialData,
 } from "../types";
 
 interface IStore {
@@ -20,6 +21,8 @@ interface IStore {
   setServices: (services: IService[]) => void;
   technologies: ITechnologies[];
   setTechnologies: (technologies: ITechnologies[]) => void;
+  testimonials: ITestimonialData[];
+  setTestimonials: (testimonials: ITestimonialData[]) => void;
 }
 
 interface IAppContextType {
@@ -34,6 +37,7 @@ export function ContextWrapper({ children }: { children: React.ReactNode }) {
   const [blogs, setBlogs] = useState<IBlog[]>([]);
   const [services, setServices] = useState<IService[]>([]);
   const [technologies, setTechnologies] = useState<ITechnologies[]>([]);
+  const [testimonials, setTestimonials] = useState<ITestimonialData[]>([]);
   const store: IStore = {
     partners,
     setPartners,
@@ -45,6 +49,8 @@ export function ContextWrapper({ children }: { children: React.ReactNode }) {
     setServices,
     technologies,
     setTechnologies,
+    testimonials,
+    setTestimonials,
   };
 
   return (

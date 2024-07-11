@@ -3,6 +3,7 @@ import React from "react";
 import { BiX } from "react-icons/bi";
 import { SideWrapper } from "../shared/Wrappers";
 import { useAppContext } from "@/lib/context";
+import { ServicesLoadingState } from "./services";
 
 const technologies = [
   {
@@ -88,23 +89,27 @@ const Technologies = ({
 
           {/* Items */}
           <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
-            {technologies?.map((item) => (
-              <div key={item?.stack.id} className="w-full sm:w-auto block">
-                <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
-                  {item?.stack.name}
-                </p>
-                {item?.technologies.map((listItem) => (
-                  <p
-                    className={`text-sm md:text-base ${
-                      isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[##424247]"
-                    } block`}
-                    key={listItem?.id}
-                  >
-                    {listItem?.name}
+            {technologies?.length !== 0 ? (
+              technologies?.map((item) => (
+                <div key={item?.stack.id} className="w-full sm:w-auto block">
+                  <p className="text-[#8F8F92] font-bold uppercase text-xs tracking-widest">
+                    {item?.stack.name}
                   </p>
-                ))}
-              </div>
-            ))}
+                  {item?.technologies.map((listItem) => (
+                    <p
+                      className={`text-sm md:text-base ${
+                        isOnDarkMode ? "text-[#f5f5f5]/70" : "text-[##424247]"
+                      } block`}
+                      key={listItem?.id}
+                    >
+                      {listItem?.name}
+                    </p>
+                  ))}
+                </div>
+              ))
+            ) : (
+              <ServicesLoadingState />
+            )}
           </div>
 
           {/* Close Button */}
