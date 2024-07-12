@@ -1,14 +1,14 @@
-'use client'
-import React, { useEffect, useState } from 'react';
-import './slideShow.css'
+"use client";
+import React, { useEffect, useState } from "react";
+import "./slideShow.css";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import { slides } from './data';
+import { slides } from "./data";
 
 const SlideShow: React.FC = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
 
   const plusSlides = (n: number): void => {
-    setActiveSlideIndex(prevIndex => {
+    setActiveSlideIndex((prevIndex) => {
       let newIndex = prevIndex + n;
       if (newIndex >= slides.length) {
         newIndex = 0;
@@ -32,17 +32,20 @@ const SlideShow: React.FC = () => {
   }, [activeSlideIndex]);
 
   return (
-    <div className="flex flex-col gap-y-10 lg:block relative lg:w-[663px] h-[px] lg:h-[450px]">
+    <div className="flex flex-col gap-y-10 lg:block relative xl:w-[663px] lg:h-[450px]">
       {/* Full-width slides/quotes */}
       {slides.map((slide, index) => (
-        <div key={index} className={index === activeSlideIndex ? "block" : "block lg:hidden"}>
-          <p className="text-[18px] lg:text-[24px] leading-[28px] lg:leading-[41px] text-[#5F5E6C] w-full lg:h-[128px] lg:mt-[130px]">
+        <div
+          key={index}
+          className={index === activeSlideIndex ? "block" : "block lg:hidden"}
+        >
+          <p className="text-[18px] lg:text-[24px] leading-[28px] lg:leading-[41px] text-[#5F5E6C] w-full lg:h-[128p] lg:mt-[130px]">
             {slide.mission}
           </p>
         </div>
       ))}
 
-      <div className='hidden lg:flex justify-between mt-12'>
+      <div className="hidden lg:flex justify-between mt-12">
         {/* Dots/bullets/indicators */}
         <div className="self-start dot-container">
           {slides.map((_, index) => (
@@ -55,14 +58,14 @@ const SlideShow: React.FC = () => {
         </div>
 
         {/* Next/prev buttons */}
-        <div className='hidden lg:grid grid-cols-2 gap-6 mr-16'>
+        <div className="hidden lg:grid grid-cols-2 gap-6 mr-16">
           <a className="pre" onClick={() => plusSlides(-1)}>
             {/* <Image src={'/Vector-5.svg'} width={15.5} height={4} alt={''} /> */}
-            <FaArrowLeftLong className='text-[20px]' />
+            <FaArrowLeftLong className="text-[20px]" />
           </a>
           <a className="nex" onClick={() => plusSlides(1)}>
             {/* <Image src={'/Vector-3.svg'} width={15.5} height={4} alt={''} /> */}
-            <FaArrowRightLong className='text-[20px]' />
+            <FaArrowRightLong className="text-[20px]" />
           </a>
         </div>
       </div>
