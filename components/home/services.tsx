@@ -13,7 +13,7 @@ const ServicesSection: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-28 lg:mt-72 w-full">
+    <div className="flex flex-col items-center justify-center mt-28 lg:mt-64 w-full">
       {/* ============= Section description ============= */}
       <h2
         className="text-[28px] sm:text-4xl md:text-5xl lg:text-7xl leading-[38px]
@@ -21,12 +21,12 @@ const ServicesSection: React.FC = () => {
       >
         Services that we provide
       </h2>
-      <p className="text-base sm:text-lg lg:text-xl text-[#5F5E6C] text-center lg:px-36 tracking-[-0.015em]">
+      <p className="text-lg lg:text-xl text-[#5F5E6C] text-center lg:px-36 tracking-[-0.015em]">
         At Zorfts Technologies Ltd, we propel innovation forward and deliver
         top-tier technology solutions that empower businesses to excel in the
-        digital era. <br /> <br /> Fueled by a passion for excellence and a
-        commitment to customer success, we offer a wide range of services
-        tailored to meet the unique needs of our clients.
+        digital era. Fueled by a passion for excellence and a commitment to
+        customer success, we offer a wide range of services tailored to meet the
+        unique needs of our clients.
       </p>
 
       {/* ============= Services grid ============= */}
