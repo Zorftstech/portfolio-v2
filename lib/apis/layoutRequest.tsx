@@ -26,7 +26,6 @@ const LayoutRequests = ({ children }: IChildrenProps) => {
   useEffect(() => {
     fetchPartners().then((res) => {
       if (res?.success) {
-        console.log(res);
         setPartners(res?.data?.results);
       }
     });

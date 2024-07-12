@@ -30,7 +30,7 @@ const ServicesSection: React.FC = () => {
       </p>
 
       {/* ============= Services grid ============= */}
-      <div className="overflow-x-scroll lg:overflow-visible mt-12 lg:mt-20 px- lg:ml-auto w-full sm:w-[21.938rem] lg:w-full">
+      <div className="overflow-x-auto lg:overflow-visible mt-12 lg:mt-20 px- lg:ml-auto w-full sm:w-[21.938rem] lg:w-full">
         <div>
           {services?.length !== 0 ? (
             <div className="grid grid-cols-10 lg:grid-cols-3 gap-x-96 lg:gap-10 lg:w-full">

@@ -88,7 +88,7 @@ const Technologies = ({
           </div>
 
           {/* Items */}
-          <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5">
+          <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5 w-full">
             {technologies?.length !== 0 ? (
               technologies?.map((item) => (
                 <div key={item?.stack.id} className="w-full sm:w-auto block">

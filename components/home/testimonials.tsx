@@ -1,8 +1,12 @@
 "use client";
 import React from "react";
-import TestimonialCard from "./testimonialCard";
+import TestimonialCard from "../shared/testimonialCard";
+import { useAppContext } from "@/lib/context";
 
 const Testimonials: React.FC = () => {
+  const { store } = useAppContext();
+  const { testimonials } = store;
+
   return (
     <div className="mb-8 mt-16 lg:mt-40 w-full">
       <div className="flex justify-start items-center">
@@ -16,7 +20,7 @@ const Testimonials: React.FC = () => {
         What they said about us from the people we shared experiences with.
       </h3>
 
-      <TestimonialCard />
+      <TestimonialCard testimonials={testimonials} />
     </div>
   );
 };
