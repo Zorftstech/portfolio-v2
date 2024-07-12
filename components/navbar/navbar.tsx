@@ -122,6 +122,7 @@ export default function Navbar() {
                   toggled={isHamburgerOpen}
                   onToggle={(toggled) => handleHamburgerToggle(toggled)}
                   size={24}
+                  color={isOnDarkMode ? "#fff" : "#424247"}
                 />
               </div>
             </div>

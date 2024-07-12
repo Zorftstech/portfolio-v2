@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { fetchSingleProject } from "@/lib/apis/request";
 import { IProjectData } from "@/lib/types";
 import ProjectInformation from "@/components/portfolio-v2/project";
+import FullScreenLoader from "../loadingStates/fullScreenLoader";
 
 const SingleProjectPage = () => {
   const searchParams = useSearchParams();
@@ -17,10 +18,13 @@ const SingleProjectPage = () => {
   const [isProjectNotFound, setIsProjectNotFound] = useState(false);
 
   useEffect(() => {
-    if (projectId !== null) {
+    if (projectId !== null && projectId !== "") {
       fetchSingleProject(projectId).then((res) => {
         if (res?.success) {
           setProjectDetails(res?.data);
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 3000);
         } else {
           setIsProjectNotFound(true);
         }
@@ -29,6 +33,10 @@ const SingleProjectPage = () => {
       setIsProjectNotFound(true);
     }
   }, [projectId]);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
 
   if (isProjectNotFound) {
     return (
