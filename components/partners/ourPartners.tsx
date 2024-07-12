@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useAppContext } from "@/lib/context";
 import { SideWrapper } from "../shared/Wrappers";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const OurPartners: React.FC = () => {
   const { store } = useAppContext();
@@ -22,25 +23,29 @@ const OurPartners: React.FC = () => {
         </div>
       </div>
       <div className="overflow-hidden w-full bg-[#3B3D3F] mt-10 lg:mt-32">
-        <div
-          className="mx-auto grid grid-cols-6 gap-[185px] md:gap-[200px] lg:gap-[250.82px] w-full
+        {partners?.length !== 0 ? (
+          <div
+            className="mx-auto grid grid-cols-6 gap-[185px] md:gap-[200px] lg:gap-[250.82px] w-full
           h-[109.88px] lg:h-[156.01px] lg:py-[40px] my-1 -skew-y-2 bg-[white] overflow-hidden justify-items-center"
-        >
-          {partners?.map((partner) => (
-            <div
-              key={partner.id}
-              className="w-[158.36px] lg:w-[233.15px] h-[51.63px] lg:h-[76.01px] ml-[-33px] pt-7 lg:pt-0"
-            >
-              <Image
-                src={partner.logo || ""}
-                alt={partner?.brand_name}
-                width={233.15}
-                height={80}
-                className=" h-[80px] object-contain"
-              />
-            </div>
-          ))}
-        </div>
+          >
+            {partners?.map((partner) => (
+              <div
+                key={partner.id}
+                className="w-[158.36px] lg:w-[233.15px] h-[51.63px] lg:h-[76.01px] ml-[-33px] pt-7 lg:pt-0"
+              >
+                <Image
+                  src={partner.logo || ""}
+                  alt={partner?.brand_name}
+                  width={233.15}
+                  height={80}
+                  className=" h-[80px] object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <LogoLoadingState />
+        )}
       </div>
       <SideWrapper>
       <div className="overflow-x-scroll lg:overflow-hidden mt-16 md:mt-28 lg:my-52">
@@ -72,3 +77,41 @@ const OurPartners: React.FC = () => {
 };
 
 export default OurPartners;
+
+const LogoLoadingState = () => {
+  const filledArray = new Array(6).fill("");
+  return (
+    <SkeletonTheme baseColor="#336EBD" highlightColor="#8AACD9">
+      <div
+        className="grid grid-cols-6 gap-[185px] md:gap-[200px]
+        lg:gap-[250.82px] w-full h-[109.88px] lg:h-[156.01px] lg:py-[40px]
+        my-1 -skew-y-2 bg-[white] overflow-hidden justify-items-center"
+      >
+        {filledArray.map((_, itemIndex) => (
+          <div
+            className="w-[180px] md:w-[195px] lg:w-[220px] xl:w-[250px]"
+            key={itemIndex}
+          >
+            <Skeleton className="h-[85px]" />
+          </div>
+        ))}
+      </div>
+    </SkeletonTheme>
+  );
+};
+
+const DetailsLoadingState = () => {
+  const filledArray = new Array(2).fill("");
+  return (
+    <div className="grid md:grid-cols-2 gap-20">
+      {filledArray.map((_, itemIndex) => (
+        <div key={itemIndex} className="w-full">
+          <div className="w-1/3 mx-auto mb-5" key={itemIndex}>
+            <Skeleton className="h-[80px]" />
+          </div>
+          <Skeleton count={5} />
+        </div>
+      ))}
+    </div>
+  );
+};

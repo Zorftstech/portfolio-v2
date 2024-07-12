@@ -37,11 +37,11 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="mt-12 lg:mt-28">
         <Image
-          src={"/hero-img.svg"}
+          src={"/hero-dashboard.jpg"}
           alt="Zorfts Technologies Ltd Projects"
           width={1200}
           height={800}
-          className="w-full"
+          className="w-full grayscale hover:grayscale-0 transition-all duration-400 ease-in-out"
         />
       </div>
     </div>
