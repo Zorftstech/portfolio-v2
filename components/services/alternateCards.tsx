@@ -6,7 +6,7 @@ import { IServiceDetailProps } from "./service";
 
 const AlternateCard: React.FC<IServiceDetailProps> = ({ serviceDetails }) => {
   return (
-    <div className="mx-auto flex gap-14 max-w-7xl items-center justify-center flex-col lg:mt-28 mt-8 px-8">
+    <div className="flex gap-14 items-center flex-col mt-20 lg:mt-28">
       {serviceDetails?.content?.map((service, index) => (
         <Card key={index} content={service} index={index} />
       ))}

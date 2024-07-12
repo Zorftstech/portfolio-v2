@@ -21,7 +21,7 @@ const AchievementsSection: React.FC = () => {
         }
       }
     });
-  }, []);
+  }, [data.length]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

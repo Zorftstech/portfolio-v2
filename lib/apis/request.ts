@@ -118,6 +118,26 @@ export const fetchPartnersTestimonials = async () => {
     }
   }
 };
+export const fetchServiceTestimonials = async (service_id: number) => {
+  try {
+    const response: AxiosResponse = await api.get(
+      `/testimonials-by-services/${service_id}/`
+    );
+    if (response.status >= 200 && response.status < 300) {
+      const responseData = response.data;
+      return { success: true, data: responseData };
+    }
+  } catch (error) {
+    // Handle error response
+    if (axios.isAxiosError(error)) {
+      if (error.response) {
+        return { success: false };
+      } else handleNonAxiosError(error);
+    } else {
+      handlOtherErrors(error);
+    }
+  }
+};
 
 export const fetchBlogPosts = async () => {
   try {
@@ -388,7 +408,7 @@ export const sendJobForm = async (data: any) => {
     const response: AxiosResponse = await api.post("/job-application/", data);
     if (response.status >= 200 && response.status < 300) {
       const responseData = response.data;
-      console.log(response);
+
       toast.success("Application suceessful", {
         toastId: "success",
       });

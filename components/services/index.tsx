@@ -11,6 +11,7 @@ import ServiceDetail from "./service";
 import Solution from "./solution";
 import { fetchSingleService } from "@/lib/apis/request";
 import { SideWrapper } from "../shared/Wrappers";
+import FullScreenLoader from "../loadingStates/fullScreenLoader";
 
 const ServiceInnerPageComp = () => {
   const searchParams = useSearchParams();
@@ -20,10 +21,14 @@ const ServiceInnerPageComp = () => {
   const [isServiceNotFound, setIsServiceNotFound] = useState(false);
 
   useEffect(() => {
-    if (serviceId !== null) {
+    if (serviceId !== null && serviceId !== "") {
       fetchSingleService(serviceId).then((res) => {
         if (res?.success) {
           setServiceDetails(res?.data);
+
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 3000);
         } else {
           setIsServiceNotFound(true);
         }
@@ -32,6 +37,10 @@ const ServiceInnerPageComp = () => {
       setIsServiceNotFound(true);
     }
   }, [serviceId]);
+
+  if (isLoading) {
+    return <FullScreenLoader />;
+  }
 
   if (isServiceNotFound) {
     return (
@@ -57,11 +66,13 @@ const ServiceInnerPageComp = () => {
     return (
       <>
         <ServiceDetail serviceDetails={serviceDetails} />
-        <Solution serviceDetails={serviceDetails} />
-        <AlternateCard serviceDetails={serviceDetails} />
+        <SideWrapper>
+          <Solution serviceDetails={serviceDetails} />
+          <AlternateCard serviceDetails={serviceDetails} />
+        </SideWrapper>
         <TechnologiesWeUse />
         <SideWrapper>
-        <WhatOurCustomersSay />
+          <WhatOurCustomersSay id={serviceId || 0} />
         </SideWrapper>
         <ExploreSomeOfOurprojects serviceDetails={serviceDetails} />
       </>

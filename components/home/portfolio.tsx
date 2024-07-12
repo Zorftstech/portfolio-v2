@@ -39,7 +39,7 @@ const PortfolioSection: React.FC = () => {
 
 export default PortfolioSection;
 
-const ProjectsLoadingState = () => {
+export const ProjectsLoadingState = () => {
   return (
     <SideWrapper>
       <SkeletonTheme baseColor="#336EBD" highlightColor="#8AACD9">
