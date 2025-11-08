@@ -33,6 +33,12 @@ export default function AdminDashboard() {
             <li><Link className="text-blue-600 hover:underline" href="/admin/about/meet-the-team">Meet The Team</Link></li>
           </ul>
         </div>
+        <div className="rounded border bg-white p-4">
+          <h3 className="font-medium">Careers</h3>
+          <ul className="mt-2 list-disc pl-5 text-sm">
+            <li><Link className="text-blue-600 hover:underline" href="/admin/careers">Manage Openings</Link></li>
+          </ul>
+        </div>
       </div>
     </section>
   );

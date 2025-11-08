@@ -94,7 +94,7 @@ export default function AuthGate({ children }: { children: React.ReactNode }) {
     <div>
       <div className="mb-4 flex items-center justify-between">
         <p className="text-sm text-gray-600">Signed in as {user.email}</p>
-        <button onClick={logout} className="rounded bg-gray-200 px-3 py-1 text-sm">Sign out</button>
+        <button onClick={logout} className="rounded bg-red-200 px-3 py-1 text-sm">Sign out</button>
       </div>
       {children}
     </div>

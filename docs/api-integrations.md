@@ -164,3 +164,25 @@ While `lib/cloudinary.ts` configures server-side usage, client-side uploads shou
 - See `components/shared/CloudinaryUpload.tsx`
 - Props: `onUploaded?: (result) => void`, `accept?: string`, `buttonText?: string`
 - Renders a file input and triggers upload, returning `secure_url` and other metadata
+
+---
+
+## Resend (Email Notifications)
+
+Used to send a confirmation email after a successful job application submission.
+
+### Required Environment Variables
+- `RESEND_API_KEY` — server-side API key for Resend
+
+### API Route
+- File: `app/api/send/route.ts`
+- Method: `POST`
+- Payload (JSON):
+  - `email` (string) — recipient email
+  - `first_name` (string)
+  - `title` (string) — job title applied for
+- Behavior: Sends an acknowledgment using template `components/email/JobApplicationReceived.tsx`
+
+### Client Integration
+- File: `components/careerChoice/jobApplication.tsx`
+- On successful `POST /job-application/`, triggers `POST /api/send` to email the applicant.

@@ -145,8 +145,23 @@ const JobForm: React.FC<ICareerInnerPageProps> = ({
       formDataObj.append("additional_attachment", files.additionalAttachment);
     }
 
-    sendJobForm(formDataObj).then((res) => {
+    sendJobForm(formDataObj).then(async (res) => {
       if (res?.success) {
+        // Fire off a confirmation email via Resend
+        try {
+          await fetch("/api/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: formData.email,
+              first_name: formData.first_name,
+              title: openingDetails?.job_title || "",
+            }),
+          });
+        } catch (e) {
+          // non-blocking; log toast but proceed
+          toast.error("Could not send confirmation email", { toastId: "email-error" });
+        }
         setCurrentPage(1);
         scrollToTop();
       }

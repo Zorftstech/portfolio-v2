@@ -1,6 +1,6 @@
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial } from "./types";
+import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial, CareerOpening } from "./types";
 
 // Achievements: single document ("default") in collection "achievements"
 export async function getAchievements(): Promise<Achievements | null> {
@@ -143,5 +143,27 @@ export async function updatePartnersTestimonial(id: string, item: Partial<Partne
 
 export async function deletePartnersTestimonial(id: string): Promise<void> {
   const ref = doc(collection(db, "partnersTestimonials"), id);
+  await deleteDoc(ref);
+}
+
+// Careers: CRUD list in collection "careers"
+export async function listCareers(): Promise<CareerOpening[]> {
+  const q = query(collection(db, "careers"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as CareerOpening) }));
+}
+
+export async function addCareer(item: Omit<CareerOpening, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "careers"), { ...item, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updateCareer(id: string, item: Partial<CareerOpening>): Promise<void> {
+  const ref = doc(collection(db, "careers"), id);
+  await updateDoc(ref, { ...item });
+}
+
+export async function deleteCareer(id: string): Promise<void> {
+  const ref = doc(collection(db, "careers"), id);
   await deleteDoc(ref);
 }

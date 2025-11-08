@@ -52,3 +52,10 @@ export type PartnerTestimonial = {
   avatar_url?: string;
   created_at?: number;
 };
+
+export type CareerOpening = {
+  id?: string;
+  job_title: string;
+  description: string;
+  created_at?: number;
+};
