@@ -71,7 +71,7 @@ export default function Footer() {
 
           <p className="text-white mt-3 lg:my-11 hidden md:block">
             {" "}
-            © 2024 Zorfts Technologies Ltd. - All rights Reseved.
+            © 2025 Zorfts Technologies Ltd. - All rights Reseved.
           </p>
         </div>
 
