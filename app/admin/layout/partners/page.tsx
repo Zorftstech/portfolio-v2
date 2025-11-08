@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { addPartner, deletePartner, listPartners, updatePartner } from "@/lib/admin/firestore";
 import type { Partner } from "@/lib/admin/types";
 import CloudinaryUpload from "@/components/shared/CloudinaryUpload";
+import type { CloudinaryUploadResult } from "@/lib/cloudinaryClient";
 
 type Editing = { id: string; name: string; website_url?: string; logo_url: string } | null;
 
@@ -95,8 +96,10 @@ export default function AdminPartnersPage() {
           <label className="block text-sm font-medium">Logo</label>
           <div className="mt-2">
             <CloudinaryUpload
-              onUploadComplete={(res) => setNewItem((s) => ({ ...s, logo_url: res.secure_url }))}
-              buttonLabel={newItem.logo_url ? "Replace Logo" : "Upload Logo"}
+              onUploaded={(res: CloudinaryUploadResult) =>
+                setNewItem((s) => ({ ...s, logo_url: res.secure_url }))
+              }
+              buttonText={newItem.logo_url ? "Replace Logo" : "Upload Logo"}
               accept="image/*"
             />
             {newItem.logo_url && (
@@ -117,7 +120,7 @@ export default function AdminPartnersPage() {
           <ul className="divide-y">
             {partners.map((p) => (
               <li key={p.id} className="py-3">
-                {editing?.id === p.id ? (
+                {editing && editing.id === p.id ? (
                   <div className="space-y-2">
                     <input
                       type="text"
@@ -133,8 +136,10 @@ export default function AdminPartnersPage() {
                     />
                     <div>
                       <CloudinaryUpload
-                        onUploadComplete={(res) => setEditing((s) => (s ? { ...s, logo_url: res.secure_url } : s))}
-                        buttonLabel={"Replace Logo"}
+                        onUploaded={(res: CloudinaryUploadResult) =>
+                          setEditing((s) => (s ? { ...s, logo_url: res.secure_url } : s))
+                        }
+                        buttonText={"Replace Logo"}
                         accept="image/*"
                       />
                       {editing.logo_url && (

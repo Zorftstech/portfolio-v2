@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { getAchievements, saveAchievements } from "@/lib/admin/firestore";
 import type { Achievements } from "@/lib/admin/types";
+import { toast } from "react-toastify";
 
 const initialState: Achievements = {
   founded_date: "",
@@ -13,7 +14,6 @@ const initialState: Achievements = {
 export default function AdminAchievementsPage() {
   const [form, setForm] = useState<Achievements>(initialState);
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -22,6 +22,7 @@ export default function AdminAchievementsPage() {
         if (data) setForm({ ...initialState, ...data });
       } catch (e) {
         console.error(e);
+        toast.error("Failed to load achievements.", { toastId: "achievements-load-error" });
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -30,13 +31,12 @@ export default function AdminAchievementsPage() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setMessage(null);
     try {
       await saveAchievements(form);
-      setMessage("Achievements saved successfully.");
+      toast.success("Achievements saved successfully.", { toastId: "achievements-save-success" });
     } catch (err) {
       console.error(err);
-      setMessage("Failed to save achievements.");
+      toast.error("Failed to save achievements.", { toastId: "achievements-save-error" });
     } finally {
       setLoading(false);
     }
@@ -95,7 +95,6 @@ export default function AdminAchievementsPage() {
         >
           {loading ? "Saving..." : "Save"}
         </button>
-        {message && <p className="text-sm text-gray-600">{message}</p>}
       </form>
     </section>
   );

@@ -41,7 +41,7 @@ const Services = ({
 
           {/* Items */}
           <div className="flex flex-wrap gap-10 xl:gap-20 mt-10 lg:mt-1.5 w-full">
-            {services.length !== 0 ? (
+            {services?.length !== 0 ? (
               services?.map((item) => (
                 <Link
                   href={`/services/${hyphenateSpaces(item.name)}?id=${item.id}`}

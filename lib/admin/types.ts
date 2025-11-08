@@ -20,3 +20,18 @@ export type Partner = {
   website_url?: string;
   created_at?: number;
 };
+
+export type Faq = {
+  id?: string;
+  question: string;
+  answer: string;
+  created_at?: number;
+};
+
+export type Testimonial = {
+  id?: string;
+  name: string;
+  comment: string;
+  avatar_url?: string;
+  created_at?: number;
+};
