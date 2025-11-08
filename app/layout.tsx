@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from '@vercel/analytics/next';
 
 import Navbar from "@/components/navbar/navbar";
 import { ContextWrapper } from "@/lib/context";
@@ -60,6 +61,7 @@ export default function RootLayout({
             <Footer />
           </LayoutRequests>
         </ContextWrapper>
+        <Analytics />
       </body>
     </html>
   );
