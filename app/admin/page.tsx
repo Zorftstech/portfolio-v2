@@ -18,12 +18,19 @@ export default function AdminDashboard() {
           <h3 className="font-medium">Layout</h3>
           <ul className="mt-2 list-disc pl-5 text-sm">
             <li><Link className="text-blue-600 hover:underline" href="/admin/layout/partners">Partners</Link></li>
+            <li><Link className="text-blue-600 hover:underline" href="/admin/partners/what-our-partners-said">Partners' Testimonials</Link></li>
           </ul>
         </div>
         <div className="rounded border bg-white p-4">
           <h3 className="font-medium">Shared</h3>
           <ul className="mt-2 list-disc pl-5 text-sm">
             <li><Link className="text-blue-600 hover:underline" href="/admin/faqs">FAQ</Link></li>
+          </ul>
+        </div>
+        <div className="rounded border bg-white p-4">
+          <h3 className="font-medium">About</h3>
+          <ul className="mt-2 list-disc pl-5 text-sm">
+            <li><Link className="text-blue-600 hover:underline" href="/admin/about/meet-the-team">Meet The Team</Link></li>
           </ul>
         </div>
       </div>

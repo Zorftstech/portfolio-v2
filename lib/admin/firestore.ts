@@ -1,6 +1,6 @@
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial } from "./types";
+import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial } from "./types";
 
 // Achievements: single document ("default") in collection "achievements"
 export async function getAchievements(): Promise<Achievements | null> {
@@ -99,5 +99,49 @@ export async function updateTestimonial(id: string, item: Partial<Testimonial>):
 
 export async function deleteTestimonial(id: string): Promise<void> {
   const ref = doc(collection(db, "testimonials"), id);
+  await deleteDoc(ref);
+}
+
+// Team Members: CRUD list in collection "teamMembers"
+export async function listTeamMembers(): Promise<TeamMember[]> {
+  const q = query(collection(db, "teamMembers"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as TeamMember) }));
+}
+
+export async function addTeamMember(item: Omit<TeamMember, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "teamMembers"), { ...item, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updateTeamMember(id: string, item: Partial<TeamMember>): Promise<void> {
+  const ref = doc(collection(db, "teamMembers"), id);
+  await updateDoc(ref, { ...item });
+}
+
+export async function deleteTeamMember(id: string): Promise<void> {
+  const ref = doc(collection(db, "teamMembers"), id);
+  await deleteDoc(ref);
+}
+
+// Partners' Testimonials: CRUD list in collection "partnersTestimonials"
+export async function listPartnersTestimonials(): Promise<PartnerTestimonial[]> {
+  const q = query(collection(db, "partnersTestimonials"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as PartnerTestimonial) }));
+}
+
+export async function addPartnersTestimonial(item: Omit<PartnerTestimonial, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "partnersTestimonials"), { ...item, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updatePartnersTestimonial(id: string, item: Partial<PartnerTestimonial>): Promise<void> {
+  const ref = doc(collection(db, "partnersTestimonials"), id);
+  await updateDoc(ref, { ...item });
+}
+
+export async function deletePartnersTestimonial(id: string): Promise<void> {
+  const ref = doc(collection(db, "partnersTestimonials"), id);
   await deleteDoc(ref);
 }

@@ -35,3 +35,20 @@ export type Testimonial = {
   avatar_url?: string;
   created_at?: number;
 };
+
+export type TeamMember = {
+  id?: string;
+  first_name: string;
+  last_name: string;
+  role: string;
+  profile_picture_url?: string;
+  created_at?: number;
+};
+
+export type PartnerTestimonial = {
+  id?: string;
+  name: string;
+  comment: string;
+  avatar_url?: string;
+  created_at?: number;
+};
