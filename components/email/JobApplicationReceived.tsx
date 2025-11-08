@@ -17,7 +17,7 @@ export function JobApplicationReceived({ firstName, jobTitle }: Props) {
         review your application and get back to you soon.
       </p>
       <p>
-        If you have any questions, just reply to this email.
+        We appreciate the time you took to apply and wish you the best in your career journey.
       </p>
       <p>— Zorfts Hiring Team</p>
     </div>

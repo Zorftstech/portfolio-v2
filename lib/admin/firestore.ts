@@ -1,6 +1,6 @@
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial, CareerOpening } from "./types";
+import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial, CareerOpening, ContactMessage, NewsletterSubscriber } from "./types";
 
 // Achievements: single document ("default") in collection "achievements"
 export async function getAchievements(): Promise<Achievements | null> {
@@ -165,5 +165,49 @@ export async function updateCareer(id: string, item: Partial<CareerOpening>): Pr
 
 export async function deleteCareer(id: string): Promise<void> {
   const ref = doc(collection(db, "careers"), id);
+  await deleteDoc(ref);
+}
+
+// Contact Messages: CRUD list in collection "contactMessages"
+export async function listContactMessages(): Promise<ContactMessage[]> {
+  const q = query(collection(db, "contactMessages"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as ContactMessage) }));
+}
+
+export async function addContactMessage(item: Omit<ContactMessage, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "contactMessages"), { ...item, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updateContactMessage(id: string, item: Partial<ContactMessage>): Promise<void> {
+  const ref = doc(collection(db, "contactMessages"), id);
+  await updateDoc(ref, { ...item });
+}
+
+export async function deleteContactMessage(id: string): Promise<void> {
+  const ref = doc(collection(db, "contactMessages"), id);
+  await deleteDoc(ref);
+}
+
+// Newsletter Subscribers: CRUD list in collection "newsletterSubscribers"
+export async function listNewsletterSubscribers(): Promise<NewsletterSubscriber[]> {
+  const q = query(collection(db, "newsletterSubscribers"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as NewsletterSubscriber) }));
+}
+
+export async function addNewsletterSubscriber(item: Omit<NewsletterSubscriber, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "newsletterSubscribers"), { ...item, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updateNewsletterSubscriber(id: string, item: Partial<NewsletterSubscriber>): Promise<void> {
+  const ref = doc(collection(db, "newsletterSubscribers"), id);
+  await updateDoc(ref, { ...item });
+}
+
+export async function deleteNewsletterSubscriber(id: string): Promise<void> {
+  const ref = doc(collection(db, "newsletterSubscribers"), id);
   await deleteDoc(ref);
 }

@@ -59,3 +59,17 @@ export type CareerOpening = {
   description: string;
   created_at?: number;
 };
+
+export type ContactMessage = {
+  id?: string;
+  subject: string;
+  email: string;
+  message: string;
+  created_at?: number;
+};
+
+export type NewsletterSubscriber = {
+  id?: string;
+  email: string;
+  created_at?: number;
+};

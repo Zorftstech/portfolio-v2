@@ -363,23 +363,20 @@ export const fetchSingleTalent = async (id: string) => {
 
 export const sendContactMessage = async (data: IContactData) => {
   try {
-    const response: AxiosResponse = await api.post("/contact-us/", data);
-    if (response.status >= 200 && response.status < 300) {
-      const responseData = response.data;
-      toast.success("Message sent successfully", {
-        toastId: "success",
-      });
-      return { success: true, message: responseData.message };
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: "contact", ...data }),
+    });
+    if (res.ok) {
+      const responseData = await res.json();
+      toast.success("Message sent successfully", { toastId: "success" });
+      return { success: true, message: responseData?.message ?? "Sent" };
     }
+    toast.error("Failed to send message", { toastId: "error" });
+    return { success: false };
   } catch (error) {
-    // Handle error response
-    if (axios.isAxiosError(error)) {
-      if (error.response) {
-        return { success: false };
-      } else handleNonAxiosError(error);
-    } else {
-      handlOtherErrors(error);
-    }
+    handlOtherErrors(error);
   }
 };
 
@@ -408,27 +405,19 @@ export const sendJobForm = async (data: any) => {
 
 export const sendNewsLetter = async (email: string) => {
   try {
-    const response: AxiosResponse = await api.post("/newsletter/", {
-      email: email,
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: "newsletter", email }),
     });
-    if (response.status >= 200 && response.status < 300) {
-      const responseData = response.data;
-      toast.success("Subscription successful", {
-        toastId: "success",
-      });
-      return { success: true, message: responseData.message };
+    if (res.ok) {
+      const responseData = await res.json();
+      toast.success("Subscription successful", { toastId: "success" });
+      return { success: true, message: responseData?.message ?? "Subscribed" };
     }
+    toast.error("Subscription failed", { toastId: "error" });
+    return { success: false };
   } catch (error) {
-    // Handle error response
-    if (axios.isAxiosError(error)) {
-      if (error.response) {
-        toast.warning(error?.response.data.email[0], {
-          toastId: "warning",
-        });
-        return { success: false };
-      } else handleNonAxiosError(error);
-    } else {
-      handlOtherErrors(error);
-    }
+    handlOtherErrors(error);
   }
 };
