@@ -18,7 +18,7 @@ export default function AdminDashboard() {
           <h3 className="font-medium">Layout</h3>
           <ul className="mt-2 list-disc pl-5 text-sm">
             <li><Link className="text-blue-600 hover:underline" href="/admin/layout/partners">Partners</Link></li>
-            <li><Link className="text-blue-600 hover:underline" href="/admin/partners/what-our-partners-said">Partners' Testimonials</Link></li>
+            <li><Link className="text-blue-600 hover:underline" href="/admin/partners/what-our-partners-said">Partners&apos; Testimonials</Link></li>
           </ul>
         </div>
         <div className="rounded border bg-white p-4">
@@ -37,6 +37,18 @@ export default function AdminDashboard() {
           <h3 className="font-medium">Careers</h3>
           <ul className="mt-2 list-disc pl-5 text-sm">
             <li><Link className="text-blue-600 hover:underline" href="/admin/careers">Manage Openings</Link></li>
+          </ul>
+        </div>
+        <div className="rounded border bg-white p-4">
+          <h3 className="font-medium">Contact</h3>
+          <ul className="mt-2 list-disc pl-5 text-sm">
+            <li><Link className="text-blue-600 hover:underline" href="/admin/contact">Messages</Link></li>
+          </ul>
+        </div>
+        <div className="rounded border bg-white p-4">
+          <h3 className="font-medium">Newsletter</h3>
+          <ul className="mt-2 list-disc pl-5 text-sm">
+            <li><Link className="text-blue-600 hover:underline" href="/admin/newsletter">Subscribers</Link></li>
           </ul>
         </div>
       </div>

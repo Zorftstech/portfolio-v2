@@ -5,7 +5,7 @@ import ContactMessageReceived from "@/components/email/ContactMessageReceived";
 import NewsletterWelcome from "@/components/email/NewsletterWelcome";
 import { addContactMessage, addNewsletterSubscriber } from "@/lib/admin/firestore";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       }
 
       const { data, error } = await resend.emails.send({
-        from: "Zorfts Support <hello@zorfts.com>",
+        from: "Yusuf from Zorfts <hello@zorfts.agency>",
         to: [email],
         subject: "We received your message",
         react: ContactMessageReceived({ subject, message, senderEmail: email }),
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
     if (type === "newsletter") {
       const { data, error } = await resend.emails.send({
-        from: "Zorfts Updates <hello@zorfts.com>",
+        from: "Tolu from Zorfts <hello@zorfts.agency>",
         to: [email],
         subject: "Welcome to our newsletter",
         react: NewsletterWelcome({ email }),
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     const jobTitle: string = body?.title || "";
 
     const { data, error } = await resend.emails.send({
-      from: "Zorfts Hiring <careers@zorfts.com>",
+      from: "Amina from Zorfts <careers@zorfts.agency>",
       to: [email],
       subject: `We received your application${jobTitle ? ` for ${jobTitle}` : ""}`,
       react: JobApplicationReceived({ firstName, jobTitle }),

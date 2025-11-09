@@ -12,7 +12,7 @@ export default function ContactMessageReceived({ subject, message, senderEmail }
       <h2>Thanks for reaching out</h2>
       <p>Hi {senderEmail},</p>
       <p>
-        We received your message with the subject "{subject}". Our team will review it and get back to you shortly.
+        We received your message with the subject &quot;{subject}&quot;. Our team will review it and get back to you shortly.
       </p>
       <p>Here’s a copy of your message:</p>
       <div style={{ backgroundColor: "#f8fafc", padding: "12px", borderRadius: 6 }}>

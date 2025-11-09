@@ -79,12 +79,16 @@ This document catalogs all API integrations used across the application, includi
 
 ## Contact (`app/contact/page.tsx`)
 - Contact form (`components/contact/Form.tsx`)
-  - Endpoint: `POST /contact-us/`
+  - Endpoint: `POST /api/send` (Next.js route)
   - Payload (JSON):
+    - `type`: `"contact"`
     - `subject` (string)
     - `email` (string)
     - `message` (string)
   - Behavior: On success, shows toast "Message sent successfully"
+  - Side effects:
+    - Sends acknowledgment email via Resend using `components/email/ContactMessageReceived.tsx`
+    - Logs message to Firestore collection `contactMessages`
 - Testimonials section reused (see Homepage)
 
 ## Portfolio
@@ -115,9 +119,12 @@ This document catalogs all API integrations used across the application, includi
 
 ## Newsletter (Footer)
 - Newsletter subscription (`components/footer.tsx`)
-  - Endpoint: `POST /newsletter/`
-  - Payload (JSON): `{ email: string }`
-  - Behavior: On success, toast "Subscription successful"; on error, shows server-provided validation message `error.response.data.email[0]`
+  - Endpoint: `POST /api/send` (Next.js route)
+  - Payload (JSON): `{ type: "newsletter", email: string }`
+  - Behavior: On success, toast "Subscription successful"
+  - Side effects:
+    - Sends welcome email via Resend using `components/email/NewsletterWelcome.tsx`
+    - Logs subscriber to Firestore collection `newsletterSubscribers`
 
 ## Endpoint Reference (`lib/apis/request.ts`)
 - `GET /auth/meet-the-team/` → `fetchTeamMembers`
@@ -138,9 +145,9 @@ This document catalogs all API integrations used across the application, includi
 - `GET /stacks-with-technologies` → `fetchTechnologies`
 - `GET /talents` → `fetchTalents`
 - `GET /talents/{id}` → `fetchSingleTalent`
-- `POST /contact-us/` (JSON) → `sendContactMessage`
+- `POST /api/send` (JSON) → `sendContactMessage` (type: `"contact"`)
 - `POST /job-application/` (multipart/form-data) → `sendJobForm`
-- `POST /newsletter/` (JSON) → `sendNewsLetter`
+- `POST /api/send` (JSON) → `sendNewsLetter` (type: `"newsletter"`)
 
 ---
 
@@ -169,7 +176,7 @@ While `lib/cloudinary.ts` configures server-side usage, client-side uploads shou
 
 ## Resend (Email Notifications)
 
-Used to send a confirmation email after a successful job application submission.
+Sends acknowledgment emails for job applications, contact messages, and newsletter subscriptions.
 
 ### Required Environment Variables
 - `RESEND_API_KEY` — server-side API key for Resend
@@ -177,12 +184,19 @@ Used to send a confirmation email after a successful job application submission.
 ### API Route
 - File: `app/api/send/route.ts`
 - Method: `POST`
-- Payload (JSON):
-  - `email` (string) — recipient email
-  - `first_name` (string)
-  - `title` (string) — job title applied for
-- Behavior: Sends an acknowledgment using template `components/email/JobApplicationReceived.tsx`
+- Payloads (JSON):
+  - Job application: `{ email, first_name, title }`
+  - Contact: `{ type: "contact", email, subject, message }`
+  - Newsletter: `{ type: "newsletter", email }`
+- Behavior:
+  - Job application → `components/email/JobApplicationReceived.tsx`
+  - Contact → `components/email/ContactMessageReceived.tsx` and logs to `contactMessages`
+  - Newsletter → `components/email/NewsletterWelcome.tsx` and logs to `newsletterSubscribers`
 
 ### Client Integration
-- File: `components/careerChoice/jobApplication.tsx`
-- On successful `POST /job-application/`, triggers `POST /api/send` to email the applicant.
+- Job application: `components/careerChoice/jobApplication.tsx`
+  - On successful `POST /job-application/`, triggers `POST /api/send` to email the applicant.
+- Contact: `components/contact/Form.tsx`
+  - Submits directly to `POST /api/send` (type: contact) and displays success toast.
+- Newsletter: `components/footer.tsx`
+  - Submits directly to `POST /api/send` (type: newsletter) and displays success toast.
