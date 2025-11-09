@@ -941,6 +941,7 @@ export const blog = [
     img: "/blog-a.svg",
   },
 ];
+
 export const slides = [
   {
     mission:
