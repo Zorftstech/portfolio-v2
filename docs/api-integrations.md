@@ -94,7 +94,8 @@ This document catalogs all API integrations used across the application, includi
 ## Portfolio
 - Single Project (`app/portfolio/[name]/page.tsx` → `components/portfolio-v2/index.tsx`)
   - `GET /projects/{id}` via `fetchSingleProject(id)`
-  - Displays detailed project information across multiple subcomponents
+  - Displays `image`, `project_title`, `description`, `company_name`, `project_url`, `stack[]`, `timeline`, `date`, `problem_statement`, `solution`, `results[]`. 
+  - Results: `{ sections[] }`
 - Portfolio list (`app/portfolio/page.tsx`)
   - Uses static UI components; cards typically rely on global `projects` store
 
@@ -122,6 +123,41 @@ This document catalogs all API integrations used across the application, includi
   - Manage structured `sections` (add/remove, edit heading and paragraph)
   - Delete blog entries
 
+### Admin: Portfolio CRUD
+- Admin page: `app/admin/portfolio/page.tsx`
+- Firestore collection: `projects`
+- Admin helpers (`lib/admin/firestore.ts`):
+  - `listProjects()` — lists all projects
+  - `addProject(project)` — adds a project
+  - `updateProject(id, project)` — updates a project
+  - `deleteProject(id)` — deletes a project
+- Types (`lib/admin/types.ts`):
+  - `PortfolioProject` — `{ id?, project_title, description?, company_name?, project_url?, cover_image?, stack?, timeline?, date?, sections?, results?, created_at?, updated_at? }`
+  - `PortfolioSection` — `{ heading, paragraph, image? }`
+- Admin UI capabilities:
+  - Create/edit project metadata (title, company, URL, stack, timeline, date, cover image)
+  - Optional `description`
+  - Manage structured `sections` and `results` (add/remove, edit heading/paragraph, optional image)
+  - Delete projects
+
+### Admin: Services CRUD
+- Admin page: `app/admin/services/page.tsx`
+- Firestore collection: `services`
+- Admin helpers (`lib/admin/firestore.ts`):
+  - `listServices()` — lists all services
+  - `addService(service)` — adds a service
+  - `updateService(id, service)` — updates a service
+  - `deleteService(id)` — deletes a service
+- Types (`lib/admin/types.ts`):
+  - `ServiceItem` — `{ id?, service_title, description?, services_subtitle?, service_subdescription?, cover_image?, technologies?, sections?, created_at?, updated_at? }`
+  - `ServiceTechnology` — `{ name, icon? }`
+  - `ServiceSection` — `{ heading, paragraph, image? }`
+- Admin UI capabilities:
+  - Create/edit service metadata (title, cover image, subtitle, short description, description)
+  - Manage `technologies` (name and optional Cloudinary icon)
+  - Manage structured `sections` (add/remove, edit heading/paragraph, optional image)
+  - Delete services
+
 ## Talents
 - Talents list (`app/talents/page.tsx` → `components/talents/talentsCard.tsx`)
   - `GET /talents`
@@ -132,7 +168,9 @@ This document catalogs all API integrations used across the application, includi
 ## Services
 - Service detail (`app/services/[id]/page.tsx` → `components/services/index.tsx`)
   - `GET /services/{id}` via `fetchSingleService(id)`
-  - Displays service details; handles not-found state
+  - Displays `service_title`, `description`, `services_subtitle`, `service_subdescription`, `technologies[]`, `sections[]`.
+  - technologies: `{ name, icon }`
+  - sections: `{ heading, paragraph, image? }`
 
 ## Newsletter (Footer)
 - Newsletter subscription (`components/footer.tsx`)

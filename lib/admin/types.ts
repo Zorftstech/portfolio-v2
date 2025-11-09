@@ -93,3 +93,51 @@ export type BlogPost = {
   created_at?: number;
   updated_at?: number;
 };
+
+// Portfolio types with structured sections
+export type PortfolioSection = {
+  heading: string;
+  paragraph: string;
+  image?: string; // optional image per section
+};
+
+export type PortfolioProject = {
+  id?: string;
+  project_title: string;
+  description?: string;
+  company_name?: string;
+  project_url?: string;
+  cover_image?: string;
+  stack?: string[]; // technologies used
+  timeline?: string; // e.g., Q1 2024, 6 weeks, etc.
+  date?: string; // ISO date string if applicable
+  sections?: PortfolioSection[]; // general narrative sections
+  results?: PortfolioSection[]; // outcomes/results sections
+  created_at?: number;
+  updated_at?: number;
+};
+
+// Services types with technologies and sections
+export type ServiceTechnology = {
+  name: string;
+  icon?: string; // optional icon URL
+};
+
+export type ServiceSection = {
+  heading: string;
+  paragraph: string;
+  image?: string; // optional image per section
+};
+
+export type ServiceItem = {
+  id?: string;
+  service_title: string;
+  description?: string;
+  services_subtitle?: string;
+  service_subdescription?: string;
+  cover_image?: string;
+  technologies?: ServiceTechnology[];
+  sections?: ServiceSection[];
+  created_at?: number;
+  updated_at?: number;
+};

@@ -1,17 +1,17 @@
 "use client";
-import { fetchDataStatistics } from "@/lib/apis/request";
 import { extractYear } from "@/lib/helpers/extractYearfromDateString";
-import { IDataStatistics } from "@/lib/types";
 import React, { useEffect, useState } from "react";
 import CountUp from "react-countup";
+import type { Achievements } from "@/lib/admin/types";
+import { getAchievements } from "@/lib/admin/firestore";
 
 const AchievementsSection: React.FC = () => {
-	const [data, setData] = useState<IDataStatistics[]>([]);
+	const [data, setData] = useState<Achievements | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		fetchDataStatistics().then((res) => {
-			setData(res?.data);
+		getAchievements().then((res) => {
+			setData(res);
 			setIsLoading(false);
 		});
 	}, []);
@@ -34,9 +34,9 @@ const AchievementsSection: React.FC = () => {
 				<div className="w-full grid grid-cols-2 gap-5 lg:gap-7 text-[#fff]">
 					<div className="w-full h-[199.22px] lg:h-[340px] bg-[#336EBD] rounded-3xl flex justify-between items-start flex-col text-start px-2 sm:px-4 py-6">
 						<div className="text-[#fff]">
-							<h2 className="text-4xl lg:text-7xl">
-								{isLoading ? "Year" : extractYear(data && data[0].founded_date)}
-							</h2>
+                            <h2 className="text-4xl lg:text-7xl">
+                                {isLoading ? "Year" : extractYear(data?.founded_date ?? "")}
+                            </h2>
 							<p>Founded</p>
 						</div>
 
@@ -49,10 +49,9 @@ const AchievementsSection: React.FC = () => {
 					</div>
 					<div className="w-full h-[199.22px] lg:h-[340px] bg-[#5486C8] rounded-3xl flex justify-between items-start flex-col text-start px-2 sm:px-4 py-6">
 						<div className="text-[#fff]">
-							<h2 className="text-4xl lg:text-7xl">
-								<CountUp end={isLoading ? 0 : data && data[0].no_of_projects} />
-								+
-							</h2>
+                            <h2 className="text-4xl lg:text-7xl">
+                                <CountUp end={isLoading ? 0 : (data?.no_of_projects ?? 0)} />+
+                            </h2>
 							<p>Projects</p>
 						</div>
 
@@ -65,9 +64,9 @@ const AchievementsSection: React.FC = () => {
 					</div>
 					<div className="w-full h-[199.22px] lg:h-[340px] bg-[#00439D] rounded-3xl flex justify-between items-start flex-col text-start px-2 sm:px-4 py-6">
 						<div className="text-[#fff]">
-							<h2 className="text-4xl lg:text-7xl">
-								<CountUp end={isLoading ? 0 : data && data[0].no_of_staffs} />+
-							</h2>
+                            <h2 className="text-4xl lg:text-7xl">
+                                <CountUp end={isLoading ? 0 : (data?.no_of_staffs ?? 0)} />+
+                            </h2>
 							<p>Staffs</p>
 						</div>
 
@@ -80,9 +79,9 @@ const AchievementsSection: React.FC = () => {
 					</div>
 					<div className="w-full h-[199.22px] lg:h-[340px] bg-[#8AACD9] rounded-3xl flex justify-between items-start flex-col text-start px-2 sm:px-4 py-6">
 						<div className="text-[#fff]">
-							<h2 className="text-4xl lg:text-7xl">
-								<CountUp end={isLoading ? 0 : data && data[0].no_of_clients} />+
-							</h2>
+                            <h2 className="text-4xl lg:text-7xl">
+                                <CountUp end={isLoading ? 0 : (data?.no_of_clients ?? 0)} />+
+                            </h2>
 							<p>Happy clients</p>
 						</div>
 

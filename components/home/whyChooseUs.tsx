@@ -1,15 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { whyChooseUs } from "../data";
-import { IWhyChoseUseData } from "@/lib/types";
-import { fetchWhyChooseZorfts } from "@/lib/apis/request";
+import type { WhyChooseUsReason } from "@/lib/admin/types";
+import { listReasons } from "@/lib/admin/firestore";
 
 const WhyChooseUs: React.FC = () => {
-  const [data, setData] = useState<IWhyChoseUseData[]>([]);
+  const [data, setData] = useState<WhyChooseUsReason[]>([]);
 
   useEffect(() => {
-    fetchWhyChooseZorfts().then((res) => {
-      setData(res?.data.results);
+    listReasons().then((res) => {
+      setData(res);
     });
   }, []);
 

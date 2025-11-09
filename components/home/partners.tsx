@@ -3,12 +3,15 @@ import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { FaArrowRight } from "react-icons/fa";
-import { partnersLogo } from "../data";
-import { useAppContext } from "@/lib/context";
+import { useEffect, useState } from "react";
+import type { Partner } from "@/lib/admin/types";
+import { listPartners } from "@/lib/admin/firestore";
 
 const PartnersSection: React.FC = () => {
-  const { store } = useAppContext();
-  const { partners } = store;
+  const [partners, setPartners] = useState<Partner[]>([]);
+  useEffect(() => {
+    listPartners().then((res) => setPartners(res));
+  }, []);
   return (
     <div className="mt-28 lg:mt-44">
       <div className="w-[100%] lg:w-[60%] mb-12">
@@ -24,10 +27,10 @@ const PartnersSection: React.FC = () => {
         {partners?.map((partner) => (
           <div key={partner.id} className="px-4">
             <Image
-              src={partner.logo || ""}
+              src={partner.logo_url || ""}
               width={150}
               height={30}
-              alt={partner?.brand_name}
+              alt={partner?.name}
               className="object-fit"
             />
           </div>
