@@ -43,12 +43,12 @@ const InfoSection: React.FC = () => {
           </h4>
           <ul className="text-[#5F5E6C] tracking-tight">
             <ListLink
-              data="zorftstech@gmail.com"
-              url="mailto:zorftstech@gmail.com"
+              data="zorfts.technologies@gmail.com"
+              url="mailto:zorfts.technologies@gmail.com"
             />
             <ListLink
-              url="mailto:info@zorftstech.com"
-              data="info@zorftstech.com"
+              url="mailto:info@zorfts.agency"
+              data="info@zorfts.agency"
             />
           </ul>
         </div>

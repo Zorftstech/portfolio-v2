@@ -1,6 +1,6 @@
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial, CareerOpening, ContactMessage, NewsletterSubscriber } from "./types";
+import type { Achievements, WhyChooseUsReason, Partner, Faq, Testimonial, TeamMember, PartnerTestimonial, CareerOpening, ContactMessage, NewsletterSubscriber, BlogPost } from "./types";
 
 // Achievements: single document ("default") in collection "achievements"
 export async function getAchievements(): Promise<Achievements | null> {
@@ -209,5 +209,27 @@ export async function updateNewsletterSubscriber(id: string, item: Partial<Newsl
 
 export async function deleteNewsletterSubscriber(id: string): Promise<void> {
   const ref = doc(collection(db, "newsletterSubscribers"), id);
+  await deleteDoc(ref);
+}
+
+// Blogs: CRUD list in collection "blogs"
+export async function listBlogs(): Promise<BlogPost[]> {
+  const q = query(collection(db, "blogs"));
+  const snap = await getDocs(q);
+  return snap.docs.map((d) => ({ id: d.id, ...(d.data() as BlogPost) }));
+}
+
+export async function addBlog(post: Omit<BlogPost, "id">): Promise<string> {
+  const ref = await addDoc(collection(db, "blogs"), { ...post, created_at: Date.now() });
+  return ref.id;
+}
+
+export async function updateBlog(id: string, post: Partial<BlogPost>): Promise<void> {
+  const ref = doc(collection(db, "blogs"), id);
+  await updateDoc(ref, { ...post, updated_at: Date.now() });
+}
+
+export async function deleteBlog(id: string): Promise<void> {
+  const ref = doc(collection(db, "blogs"), id);
   await deleteDoc(ref);
 }

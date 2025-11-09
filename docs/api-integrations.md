@@ -103,7 +103,24 @@ This document catalogs all API integrations used across the application, includi
   - Uses global `blogs` from store (populated by `GET /blog/`)
 - Single Blog (`app/blog/[id]/page.tsx` → `components/blogDetails/index.tsx`)
   - `GET /blog/{id}` via `fetchSingleBlogPost(id)`
-  - Displays: blog owner, content, related topics; handles not-found state
+  - Displays: `id`, `title`, `author`, `content`, `minute_read`, `created_at`, `updated_at`, `tags[]`, `cover_image`, `sections[]`
+
+### Admin: Blog CRUD
+- Admin page: `app/admin/blog/page.tsx`
+- Firestore collection: `blogs`
+- Admin helpers (`lib/admin/firestore.ts`):
+  - `listBlogs()` — lists all blogs
+  - `addBlog(post)` — adds a blog
+  - `updateBlog(id, post)` — updates a blog
+  - `deleteBlog(id)` — deletes a blog
+- Types (`lib/admin/types.ts`):
+  - `BlogPost` — `{ id?, title, author, content?, minute_read?, tags?, cover_image?, sections?, created_at?, updated_at? }`
+  - `BlogSection` — `{ heading, paragraph }`
+- Admin UI capabilities:
+  - Create/edit blog metadata (title, author, minutes, tags, cover image)
+  - Optional root `content`
+  - Manage structured `sections` (add/remove, edit heading and paragraph)
+  - Delete blog entries
 
 ## Talents
 - Talents list (`app/talents/page.tsx` → `components/talents/talentsCard.tsx`)

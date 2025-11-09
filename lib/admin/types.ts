@@ -73,3 +73,23 @@ export type NewsletterSubscriber = {
   email: string;
   created_at?: number;
 };
+
+// Blog types with structured sections
+export type BlogSection = {
+  heading: string;
+  paragraph: string;
+  image?: string; // optional image per section
+};
+
+export type BlogPost = {
+  id?: string;
+  title: string;
+  author: string;
+  content?: string; // optional root content; detailed content lives in sections
+  minute_read?: number;
+  tags?: string[];
+  cover_image?: string;
+  sections?: BlogSection[];
+  created_at?: number;
+  updated_at?: number;
+};

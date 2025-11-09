@@ -51,6 +51,12 @@ export default function AdminDashboard() {
             <li><Link className="text-blue-600 hover:underline" href="/admin/newsletter">Subscribers</Link></li>
           </ul>
         </div>
+        <div className="rounded border bg-white p-4">
+          <h3 className="font-medium">Blog</h3>
+          <ul className="mt-2 list-disc pl-5 text-sm">
+            <li><Link className="text-blue-600 hover:underline" href="/admin/blog">Manage Blogs</Link></li>
+          </ul>
+        </div>
       </div>
     </section>
   );
